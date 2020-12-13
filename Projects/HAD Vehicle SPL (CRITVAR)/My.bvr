@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bvr:BVRModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bvr="http:///bvr.ecore/2.0.0" name="HADVehicle">
+  <variabilityModel xsi:type="bvr:Choice" name="VehicleConfig" target="//@variabilityModel/@ownedTargets.0" isImpliedByParent="true">
+    <member xsi:type="bvr:Choice" name="OperationContext" target="//@variabilityModel/@ownedTargets.1" isImpliedByParent="true">
+      <groupMultiplicity upper="-1" lower="1"/>
+      <member xsi:type="bvr:Choice" name="Street" target="//@variabilityModel/@ownedTargets.3">
+        <ownedConstraint xsi:type="bvr:BCLConstraint" name="Constraint0">
+          <expression xsi:type="bvr:OperationCallExp" operation="logImplies">
+            <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.3"/>
+            <argument xsi:type="bvr:OperationCallExp">
+              <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.31"/>
+            </argument>
+          </expression>
+        </ownedConstraint>
+        <note name="comment" kind="comment" expr=""/>
+      </member>
+      <member xsi:type="bvr:Choice" name="Road" target="//@variabilityModel/@ownedTargets.4">
+        <note name="comment" kind="comment" expr=""/>
+      </member>
+      <note name="comment" kind="comment" expr=""/>
+    </member>
+    <member xsi:type="bvr:Choice" name="OperationMode" target="//@variabilityModel/@ownedTargets.2" isImpliedByParent="true">
+      <groupMultiplicity upper="-1" lower="1"/>
+      <member xsi:type="bvr:Choice" name="Monitored" target="//@variabilityModel/@ownedTargets.6" isImpliedByParent="true">
+        <ownedConstraint xsi:type="bvr:BCLConstraint" name="Constraint2">
+          <expression xsi:type="bvr:OperationCallExp" operation="logImplies">
+            <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.6"/>
+            <argument xsi:type="bvr:OperationCallExp" operation="logAnd">
+              <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.31"/>
+              <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.32"/>
+            </argument>
+          </expression>
+        </ownedConstraint>
+        <note name="comment" kind="comment" expr=""/>
+      </member>
+      <member xsi:type="bvr:Choice" name="Assisted" target="//@variabilityModel/@ownedTargets.7" isImpliedByParent="true">
+        <groupMultiplicity upper="-1" lower="1"/>
+        <ownedConstraint xsi:type="bvr:BCLConstraint" name="Constraint2">
+          <expression xsi:type="bvr:OperationCallExp" operation="logImplies">
+            <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.32"/>
+            <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.41"/>
+          </expression>
+        </ownedConstraint>
+        <member xsi:type="bvr:Choice" name="AutoSteering" target="//@variabilityModel/@ownedTargets.31">
+          <note name="comment" kind="comment" expr=""/>
+        </member>
+        <member xsi:type="bvr:Choice" name="AutoAcceleration" target="//@variabilityModel/@ownedTargets.32">
+          <note name="comment" kind="comment" expr=""/>
+        </member>
+        <note name="comment" kind="comment" expr=""/>
+      </member>
+      <member xsi:type="bvr:Choice" name="Manual" target="//@variabilityModel/@ownedTargets.43" isImpliedByParent="true">
+        <ownedConstraint xsi:type="bvr:BCLConstraint" name="Constraint2">
+          <expression xsi:type="bvr:OperationCallExp" operation="logImplies">
+            <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.43"/>
+            <argument xsi:type="bvr:OperationCallExp" operation="logAnd">
+              <argument xsi:type="bvr:OperationCallExp">
+                <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.6"/>
+              </argument>
+              <argument xsi:type="bvr:OperationCallExp">
+                <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.7"/>
+              </argument>
+            </argument>
+          </expression>
+        </ownedConstraint>
+        <note name="comment" kind="comment" expr=""/>
+      </member>
+      <note name="comment" kind="comment" expr=""/>
+    </member>
+    <member xsi:type="bvr:Choice" name="VehicleComputer" target="//@variabilityModel/@ownedTargets.9" isImpliedByParent="true">
+      <member xsi:type="bvr:Choice" name="CompManufacturer" target="//@variabilityModel/@ownedTargets.10" isImpliedByParent="true">
+        <groupMultiplicity upper="1" lower="1"/>
+        <member xsi:type="bvr:Choice" name="CompManufacturer1" target="//@variabilityModel/@ownedTargets.11">
+          <note name="comment" kind="comment" expr=""/>
+        </member>
+        <member xsi:type="bvr:Choice" name="CompManufacturer2" target="//@variabilityModel/@ownedTargets.12">
+          <note name="comment" kind="comment" expr=""/>
+        </member>
+        <note name="comment" kind="comment" expr=""/>
+      </member>
+      <note name="comment" kind="comment" expr=""/>
+    </member>
+    <member xsi:type="bvr:Choice" name="Camera" target="//@variabilityModel/@ownedTargets.13" isImpliedByParent="true">
+      <member xsi:type="bvr:Choice" name="CameraManufacturer" target="//@variabilityModel/@ownedTargets.14" isImpliedByParent="true">
+        <groupMultiplicity upper="1" lower="1"/>
+        <member xsi:type="bvr:Choice" name="CameraManufacturer1" target="//@variabilityModel/@ownedTargets.15">
+          <note name="comment" kind="comment" expr=""/>
+        </member>
+        <member xsi:type="bvr:Choice" name="CameraManufacturer2" target="//@variabilityModel/@ownedTargets.16">
+          <note name="comment" kind="comment" expr=""/>
+        </member>
+        <note name="comment" kind="comment" expr=""/>
+      </member>
+      <member xsi:type="bvr:Choice" name="CameraSetting" target="//@variabilityModel/@ownedTargets.24" isImpliedByParent="true">
+        <groupMultiplicity upper="-1" lower="1"/>
+        <member xsi:type="bvr:Choice" name="CameraFrontANDRear" target="//@variabilityModel/@ownedTargets.41">
+          <note name="comment" kind="comment" expr=""/>
+        </member>
+        <member xsi:type="bvr:Choice" name="CameraSides" target="//@variabilityModel/@ownedTargets.42" isImpliedByParent="true">
+          <note name="comment" kind="comment" expr=""/>
+        </member>
+        <note name="comment" kind="comment" expr=""/>
+      </member>
+      <note name="comment" kind="comment" expr=""/>
+    </member>
+    <ownedTargets name="VehicleConfig"/>
+    <ownedTargets name="OperationContext"/>
+    <ownedTargets name="OperationMode"/>
+    <ownedTargets name="Street"/>
+    <ownedTargets name="Road"/>
+    <ownedTargets name="Indoors"/>
+    <ownedTargets name="Monitored"/>
+    <ownedTargets name="Assisted"/>
+    <ownedTargets name="Autonomous"/>
+    <ownedTargets name="VehicleComputer"/>
+    <ownedTargets name="CompManufacturer"/>
+    <ownedTargets name="CompManufacturer1"/>
+    <ownedTargets name="CompManufacturer2"/>
+    <ownedTargets name="Camera"/>
+    <ownedTargets name="CameraManufacturer"/>
+    <ownedTargets name="CameraManufacturer1"/>
+    <ownedTargets name="CameraManufacturer2"/>
+    <ownedTargets name="OperationEnvironment"/>
+    <ownedTargets name="People"/>
+    <ownedTargets name="Populated"/>
+    <ownedTargets name="Unpopulated"/>
+    <ownedTargets name="EnviroObjects"/>
+    <ownedTargets name="Stationary"/>
+    <ownedTargets name="Choice23"/>
+    <ownedTargets name="CameraSetting"/>
+    <ownedTargets name="FrontANDRear"/>
+    <ownedTargets name="SensorSides"/>
+    <ownedTargets name="Sensor"/>
+    <ownedTargets name="SensorSetting"/>
+    <ownedTargets name="SensorFrontANDRear"/>
+    <ownedTargets name="Choice30"/>
+    <ownedTargets name="AutoSteering"/>
+    <ownedTargets name="AutoAcceleration"/>
+    <ownedTargets name="GPS"/>
+    <ownedTargets name="CameraSensorSetting"/>
+    <ownedTargets name="Choice37"/>
+    <ownedTargets name="Choice38"/>
+    <ownedTargets name="Setting"/>
+    <ownedTargets name="Choice42"/>
+    <ownedTargets name="Choice43"/>
+    <ownedTargets name="Choice44"/>
+    <ownedTargets name="CameraFrontANDRear"/>
+    <ownedTargets name="CameraSides"/>
+    <ownedTargets name="Manual"/>
+    <note name="comment" kind="comment" expr=""/>
+  </variabilityModel>
+  <resolutionModels xsi:type="bvr:PosResolution" name="RoadAutoSteeringAccelC1C1" resolvedVSpec="//@variabilityModel" resolvedChoice="//@variabilityModel">
+    <members xsi:type="bvr:PosResolution" name="OperationContext" resolvedVSpec="//@variabilityModel/@member.0" resolvedChoice="//@variabilityModel/@member.0">
+      <members xsi:type="bvr:NegResolution" name="Street" resolvedVSpec="//@variabilityModel/@member.0/@member.0" resolvedChoice="//@variabilityModel/@member.0/@member.0"/>
+      <members xsi:type="bvr:PosResolution" name="Road" resolvedVSpec="//@variabilityModel/@member.0/@member.1" resolvedChoice="//@variabilityModel/@member.0/@member.1"/>
+    </members>
+    <members xsi:type="bvr:PosResolution" name="OperationMode" resolvedVSpec="//@variabilityModel/@member.1" resolvedChoice="//@variabilityModel/@member.1">
+      <members xsi:type="bvr:PosResolution" name="Monitored" resolvedVSpec="//@variabilityModel/@member.1/@member.0" resolvedChoice="//@variabilityModel/@member.1/@member.0"/>
+      <members xsi:type="bvr:PosResolution" name="Assisted" resolvedVSpec="//@variabilityModel/@member.1/@member.1" resolvedChoice="//@variabilityModel/@member.1/@member.1">
+        <members xsi:type="bvr:PosResolution" name="AutoSteering" resolvedVSpec="//@variabilityModel/@member.1/@member.1/@member.0" resolvedChoice="//@variabilityModel/@member.1/@member.1/@member.0"/>
+        <members xsi:type="bvr:PosResolution" name="AutoAcceleration" resolvedVSpec="//@variabilityModel/@member.1/@member.1/@member.1" resolvedChoice="//@variabilityModel/@member.1/@member.1/@member.1"/>
+      </members>
+      <members xsi:type="bvr:NegResolution" name="Manual" resolvedVSpec="//@variabilityModel/@member.1/@member.2" resolvedChoice="//@variabilityModel/@member.1/@member.2"/>
+    </members>
+    <members xsi:type="bvr:PosResolution" name="VehicleComputer" resolvedVSpec="//@variabilityModel/@member.2" resolvedChoice="//@variabilityModel/@member.2">
+      <members xsi:type="bvr:PosResolution" name="CompManufacturer" resolvedVSpec="//@variabilityModel/@member.2/@member.0" resolvedChoice="//@variabilityModel/@member.2/@member.0">
+        <members xsi:type="bvr:PosResolution" name="CompManufacturer1" resolvedVSpec="//@variabilityModel/@member.2/@member.0/@member.0" resolvedChoice="//@variabilityModel/@member.2/@member.0/@member.0"/>
+        <members xsi:type="bvr:NegResolution" name="CompManufacturer2" resolvedVSpec="//@variabilityModel/@member.2/@member.0/@member.1" resolvedChoice="//@variabilityModel/@member.2/@member.0/@member.1"/>
+      </members>
+    </members>
+    <members xsi:type="bvr:PosResolution" name="Camera" resolvedVSpec="//@variabilityModel/@member.3" resolvedChoice="//@variabilityModel/@member.3">
+      <members xsi:type="bvr:PosResolution" name="CameraManufacturer" resolvedVSpec="//@variabilityModel/@member.3/@member.0" resolvedChoice="//@variabilityModel/@member.3/@member.0">
+        <members xsi:type="bvr:PosResolution" name="CameraManufacturer1" resolvedVSpec="//@variabilityModel/@member.3/@member.0/@member.0" resolvedChoice="//@variabilityModel/@member.3/@member.0/@member.0"/>
+        <members xsi:type="bvr:NegResolution" name="CameraManufacturer2" resolvedVSpec="//@variabilityModel/@member.3/@member.0/@member.1" resolvedChoice="//@variabilityModel/@member.3/@member.0/@member.1"/>
+      </members>
+      <members xsi:type="bvr:PosResolution" name="CameraSetting" resolvedVSpec="//@variabilityModel/@member.3/@member.1" resolvedChoice="//@variabilityModel/@member.3/@member.1">
+        <members xsi:type="bvr:PosResolution" name="CameraFrontANDRear" resolvedVSpec="//@variabilityModel/@member.3/@member.1/@member.0" resolvedChoice="//@variabilityModel/@member.3/@member.1/@member.0"/>
+        <members xsi:type="bvr:PosResolution" name="CameraSides" resolvedVSpec="//@variabilityModel/@member.3/@member.1/@member.1" resolvedChoice="//@variabilityModel/@member.3/@member.1/@member.1"/>
+      </members>
+    </members>
+  </resolutionModels>
+  <resolutionModels xsi:type="bvr:PosResolution" name="StreetRoadAutoAccelC2C2" resolvedVSpec="//@variabilityModel" resolvedChoice="//@variabilityModel">
+    <members xsi:type="bvr:PosResolution" name="OperationContext" resolvedVSpec="//@variabilityModel/@member.0" resolvedChoice="//@variabilityModel/@member.0">
+      <members xsi:type="bvr:PosResolution" name="Street" resolvedVSpec="//@variabilityModel/@member.0/@member.0" resolvedChoice="//@variabilityModel/@member.0/@member.0"/>
+      <members xsi:type="bvr:PosResolution" name="Road" resolvedVSpec="//@variabilityModel/@member.0/@member.1" resolvedChoice="//@variabilityModel/@member.0/@member.1"/>
+    </members>
+    <members xsi:type="bvr:PosResolution" name="OperationMode" resolvedVSpec="//@variabilityModel/@member.1" resolvedChoice="//@variabilityModel/@member.1">
+      <members xsi:type="bvr:PosResolution" name="Monitored" resolvedVSpec="//@variabilityModel/@member.1/@member.0" resolvedChoice="//@variabilityModel/@member.1/@member.0"/>
+      <members xsi:type="bvr:PosResolution" name="Assisted" resolvedVSpec="//@variabilityModel/@member.1/@member.1" resolvedChoice="//@variabilityModel/@member.1/@member.1">
+        <members xsi:type="bvr:NegResolution" name="AutoSteering" resolvedVSpec="//@variabilityModel/@member.1/@member.1/@member.0" resolvedChoice="//@variabilityModel/@member.1/@member.1/@member.0"/>
+        <members xsi:type="bvr:PosResolution" name="AutoAcceleration" resolvedVSpec="//@variabilityModel/@member.1/@member.1/@member.1" resolvedChoice="//@variabilityModel/@member.1/@member.1/@member.1"/>
+      </members>
+      <members xsi:type="bvr:NegResolution" name="Manual" resolvedVSpec="//@variabilityModel/@member.1/@member.2" resolvedChoice="//@variabilityModel/@member.1/@member.2"/>
+    </members>
+    <members xsi:type="bvr:PosResolution" name="VehicleComputer" resolvedVSpec="//@variabilityModel/@member.2" resolvedChoice="//@variabilityModel/@member.2">
+      <members xsi:type="bvr:PosResolution" name="CompManufacturer" resolvedVSpec="//@variabilityModel/@member.2/@member.0" resolvedChoice="//@variabilityModel/@member.2/@member.0">
+        <members xsi:type="bvr:NegResolution" name="CompManufacturer1" resolvedVSpec="//@variabilityModel/@member.2/@member.0/@member.0" resolvedChoice="//@variabilityModel/@member.2/@member.0/@member.0"/>
+        <members xsi:type="bvr:PosResolution" name="CompManufacturer2" resolvedVSpec="//@variabilityModel/@member.2/@member.0/@member.1" resolvedChoice="//@variabilityModel/@member.2/@member.0/@member.1"/>
+      </members>
+    </members>
+    <members xsi:type="bvr:PosResolution" name="Camera" resolvedVSpec="//@variabilityModel/@member.3" resolvedChoice="//@variabilityModel/@member.3">
+      <members xsi:type="bvr:PosResolution" name="CameraManufacturer" resolvedVSpec="//@variabilityModel/@member.3/@member.0" resolvedChoice="//@variabilityModel/@member.3/@member.0">
+        <members xsi:type="bvr:NegResolution" name="CameraManufacturer1" resolvedVSpec="//@variabilityModel/@member.3/@member.0/@member.0" resolvedChoice="//@variabilityModel/@member.3/@member.0/@member.0"/>
+        <members xsi:type="bvr:PosResolution" name="CameraManufacturer2" resolvedVSpec="//@variabilityModel/@member.3/@member.0/@member.1" resolvedChoice="//@variabilityModel/@member.3/@member.0/@member.1"/>
+      </members>
+      <members xsi:type="bvr:PosResolution" name="CameraSetting" resolvedVSpec="//@variabilityModel/@member.3/@member.1" resolvedChoice="//@variabilityModel/@member.3/@member.1">
+        <members xsi:type="bvr:NegResolution" name="CameraFrontANDRear" resolvedVSpec="//@variabilityModel/@member.3/@member.1/@member.0" resolvedChoice="//@variabilityModel/@member.3/@member.1/@member.0"/>
+        <members xsi:type="bvr:PosResolution" name="CameraSides" resolvedVSpec="//@variabilityModel/@member.3/@member.1/@member.1" resolvedChoice="//@variabilityModel/@member.3/@member.1/@member.1"/>
+      </members>
+    </members>
+  </resolutionModels>
+  <resolutionModels xsi:type="bvr:PosResolution" name="StreetRoadManC1C2" resolvedVSpec="//@variabilityModel" resolvedChoice="//@variabilityModel">
+    <members xsi:type="bvr:PosResolution" name="OperationContext" resolvedVSpec="//@variabilityModel/@member.0" resolvedChoice="//@variabilityModel/@member.0">
+      <members xsi:type="bvr:PosResolution" name="Street" resolvedVSpec="//@variabilityModel/@member.0/@member.0" resolvedChoice="//@variabilityModel/@member.0/@member.0"/>
+      <members xsi:type="bvr:PosResolution" name="Road" resolvedVSpec="//@variabilityModel/@member.0/@member.1" resolvedChoice="//@variabilityModel/@member.0/@member.1"/>
+    </members>
+    <members xsi:type="bvr:PosResolution" name="OperationMode" resolvedVSpec="//@variabilityModel/@member.1" resolvedChoice="//@variabilityModel/@member.1">
+      <members xsi:type="bvr:NegResolution" name="Monitored" resolvedVSpec="//@variabilityModel/@member.1/@member.0" resolvedChoice="//@variabilityModel/@member.1/@member.0"/>
+      <members xsi:type="bvr:NegResolution" name="Assisted" resolvedVSpec="//@variabilityModel/@member.1/@member.1" resolvedChoice="//@variabilityModel/@member.1/@member.1"/>
+      <members xsi:type="bvr:PosResolution" name="Manual" resolvedVSpec="//@variabilityModel/@member.1/@member.2" resolvedChoice="//@variabilityModel/@member.1/@member.2"/>
+    </members>
+    <members xsi:type="bvr:PosResolution" name="VehicleComputer" resolvedVSpec="//@variabilityModel/@member.2" resolvedChoice="//@variabilityModel/@member.2">
+      <members xsi:type="bvr:PosResolution" name="CompManufacturer" resolvedVSpec="//@variabilityModel/@member.2/@member.0" resolvedChoice="//@variabilityModel/@member.2/@member.0">
+        <members xsi:type="bvr:PosResolution" name="CompManufacturer1" resolvedVSpec="//@variabilityModel/@member.2/@member.0/@member.0" resolvedChoice="//@variabilityModel/@member.2/@member.0/@member.0"/>
+        <members xsi:type="bvr:NegResolution" name="CompManufacturer2" resolvedVSpec="//@variabilityModel/@member.2/@member.0/@member.1" resolvedChoice="//@variabilityModel/@member.2/@member.0/@member.1"/>
+      </members>
+    </members>
+    <members xsi:type="bvr:PosResolution" name="Camera" resolvedVSpec="//@variabilityModel/@member.3" resolvedChoice="//@variabilityModel/@member.3">
+      <members xsi:type="bvr:PosResolution" name="CameraManufacturer" resolvedVSpec="//@variabilityModel/@member.3/@member.0" resolvedChoice="//@variabilityModel/@member.3/@member.0">
+        <members xsi:type="bvr:NegResolution" name="CameraManufacturer1" resolvedVSpec="//@variabilityModel/@member.3/@member.0/@member.0" resolvedChoice="//@variabilityModel/@member.3/@member.0/@member.0"/>
+        <members xsi:type="bvr:PosResolution" name="CameraManufacturer2" resolvedVSpec="//@variabilityModel/@member.3/@member.0/@member.1" resolvedChoice="//@variabilityModel/@member.3/@member.0/@member.1"/>
+      </members>
+      <members xsi:type="bvr:PosResolution" name="CameraSetting" resolvedVSpec="//@variabilityModel/@member.3/@member.1" resolvedChoice="//@variabilityModel/@member.3/@member.1">
+        <members xsi:type="bvr:NegResolution" name="CameraFrontANDRear" resolvedVSpec="//@variabilityModel/@member.3/@member.1/@member.0" resolvedChoice="//@variabilityModel/@member.3/@member.1/@member.0"/>
+        <members xsi:type="bvr:PosResolution" name="CameraSides" resolvedVSpec="//@variabilityModel/@member.3/@member.1/@member.1" resolvedChoice="//@variabilityModel/@member.3/@member.1/@member.1"/>
+      </members>
+    </members>
+  </resolutionModels>
+</bvr:BVRModel>

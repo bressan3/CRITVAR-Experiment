@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flaxml:system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flaxml="http://www.polarsys.org/chess/fla/flaxml">
+  <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::HAD Vehicle" name="HAD Vehicle">
+    <flaxml:inputPorts/>
+    <flaxml:outputPorts>
+      <flaxml:outputPort id="model::modelSystemView::HAD Vehicle::alert" name="alert">
+        <outputFailure type="noFailure"/>
+      </flaxml:outputPort>
+    </flaxml:outputPorts>
+    <flaxml:connections>
+      <flaxml:connection sourceComponent="model::modelSystemView::HAD Vehicle::leftCamera" sourceId="model::modelSystemView::Camera::video" targetComponent="model::modelSystemView::HAD Vehicle::vehicleComputer" targetId="model::modelSystemView::VehicleComputer::cameraLeftIn"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::HAD Vehicle::rightCamera" sourceId="model::modelSystemView::Camera::video" targetComponent="model::modelSystemView::HAD Vehicle::vehicleComputer" targetId="model::modelSystemView::VehicleComputer::cameraRightIn"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::HAD Vehicle::vehicleComputer" sourceId="model::modelSystemView::VehicleComputer::alert" targetComponent="model::modelSystemView::HAD Vehicle" targetId="model::modelSystemView::HAD Vehicle::alert"/>
+    </flaxml:connections>
+    <flaxml:components>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::HAD Vehicle::leftCamera" name="leftCamera">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Camera::lensSensor" name="lensSensor">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Camera::video" name="video">
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="lensSensor.valueCoarse->video.valueCoarse"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::HAD Vehicle::vehicleComputer" name="vehicleComputer">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::VehicleComputer::cameraLeftIn" name="cameraLeftIn">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::VehicleComputer::cameraRightIn" name="cameraRightIn">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::VehicleComputer::alert" name="alert">
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::VehicleComputer::torque" name="torque">
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse->alert.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::HAD Vehicle::rightCamera" name="rightCamera">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Camera::lensSensor" name="lensSensor">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Camera::video" name="video">
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="lensSensor.valueCoarse->video.valueCoarse"/>
+        </flaxml:rules>
+      </flaxml:component>
+    </flaxml:components>
+  </flaxml:component>
+</flaxml:system>

@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bvr:BVRModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bvr="http:///bvr.ecore/2.0.0" name="HADVehicle">
+  <packageElement xsi:type="bvr:ReplacementFragmentType" name="EmptyReplacement">
+    <replacementBoundaryElement xsi:type="bvr:ToReplacement" name="NULL" insideBoundaryElement="//@packageElement.0/@sourceObject.0" outsideBoundaryElement="//@packageElement.0/@sourceObject.0"/>
+    <sourceObject/>
+  </packageElement>
+  <variabilityModel xsi:type="bvr:Choice" name="VehicleConfig" target="//@variabilityModel/@ownedTargets.0" isImpliedByParent="true">
+    <member xsi:type="bvr:Choice" name="OperationContext" target="//@variabilityModel/@ownedTargets.1" isImpliedByParent="true">
+      <groupMultiplicity upper="-1" lower="1"/>
+      <member xsi:type="bvr:Choice" name="Street" target="//@variabilityModel/@ownedTargets.3">
+        <ownedConstraint xsi:type="bvr:BCLConstraint" name="Constraint0">
+          <expression xsi:type="bvr:OperationCallExp" operation="logImplies">
+            <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.3"/>
+            <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.45"/>
+          </expression>
+        </ownedConstraint>
+        <note name="comment" kind="comment" expr=""/>
+      </member>
+      <member xsi:type="bvr:Choice" name="Road" target="//@variabilityModel/@ownedTargets.4">
+        <note name="comment" kind="comment" expr=""/>
+      </member>
+      <note name="comment" kind="comment" expr=""/>
+    </member>
+    <member xsi:type="bvr:Choice" name="OperationMode" target="//@variabilityModel/@ownedTargets.2" isImpliedByParent="true">
+      <groupMultiplicity upper="-1" lower="1"/>
+      <member xsi:type="bvr:Choice" name="Monitored" target="//@variabilityModel/@ownedTargets.6" isImpliedByParent="true">
+        <ownedConstraint xsi:type="bvr:BCLConstraint" name="Constraint2">
+          <expression xsi:type="bvr:OperationCallExp" operation="logImplies">
+            <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.6"/>
+            <argument xsi:type="bvr:OperationCallExp" operation="logAnd">
+              <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.44"/>
+              <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.46"/>
+            </argument>
+          </expression>
+        </ownedConstraint>
+        <note name="comment" kind="comment" expr="Monitored by one or more persons in the vehicle"/>
+      </member>
+      <member xsi:type="bvr:Choice" name="Assisted" target="//@variabilityModel/@ownedTargets.7" isImpliedByParent="true">
+        <groupMultiplicity upper="-1" lower="1"/>
+        <member xsi:type="bvr:Choice" name="AutoSteering" target="//@variabilityModel/@ownedTargets.31">
+          <groupMultiplicity upper="1" lower="1"/>
+          <member xsi:type="bvr:Choice" name="AutoSteeringSys" target="//@variabilityModel/@ownedTargets.44">
+            <note name="comment" kind="comment" expr=""/>
+          </member>
+          <member xsi:type="bvr:Choice" name="NoAutoSteeringSys" target="//@variabilityModel/@ownedTargets.45">
+            <note name="comment" kind="comment" expr=""/>
+          </member>
+          <note name="comment" kind="comment" expr=""/>
+        </member>
+        <member xsi:type="bvr:Choice" name="AutoAcceleration" target="//@variabilityModel/@ownedTargets.32">
+          <groupMultiplicity upper="1" lower="1"/>
+          <member xsi:type="bvr:Choice" name="AutoPowertrain" target="//@variabilityModel/@ownedTargets.46">
+            <ownedConstraint xsi:type="bvr:BCLConstraint" name="Constraint0">
+              <expression xsi:type="bvr:OperationCallExp" operation="logImplies">
+                <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.46"/>
+                <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.41"/>
+              </expression>
+            </ownedConstraint>
+            <note name="comment" kind="comment" expr=""/>
+          </member>
+          <member xsi:type="bvr:Choice" name="NoAutoPowertrain" target="//@variabilityModel/@ownedTargets.47">
+            <note name="comment" kind="comment" expr=""/>
+          </member>
+          <note name="comment" kind="comment" expr=""/>
+        </member>
+        <note name="comment" kind="comment" expr="Accelaration or steering is done by an occupant"/>
+      </member>
+      <member xsi:type="bvr:Choice" name="Manual" target="//@variabilityModel/@ownedTargets.43" isImpliedByParent="true">
+        <ownedConstraint xsi:type="bvr:BCLConstraint" name="Constraint2">
+          <expression xsi:type="bvr:OperationCallExp" operation="logImplies">
+            <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.43"/>
+            <argument xsi:type="bvr:OperationCallExp" operation="logAnd">
+              <argument xsi:type="bvr:OperationCallExp">
+                <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.6"/>
+              </argument>
+              <argument xsi:type="bvr:OperationCallExp" operation="logAnd">
+                <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.45"/>
+                <argument xsi:type="bvr:TargetRef" target="//@variabilityModel/@ownedTargets.47"/>
+              </argument>
+            </argument>
+          </expression>
+        </ownedConstraint>
+        <note name="comment" kind="comment" expr=""/>
+      </member>
+      <note name="comment" kind="comment" expr=""/>
+    </member>
+    <member xsi:type="bvr:Choice" name="VehicleComputer" target="//@variabilityModel/@ownedTargets.9" isImpliedByParent="true">
+      <member xsi:type="bvr:Choice" name="CompManufacturer" target="//@variabilityModel/@ownedTargets.10" isImpliedByParent="true">
+        <groupMultiplicity upper="1" lower="1"/>
+        <member xsi:type="bvr:Choice" name="CompManufacturer1" target="//@variabilityModel/@ownedTargets.11">
+          <note name="comment" kind="comment" expr=""/>
+        </member>
+        <member xsi:type="bvr:Choice" name="CompManufacturer2" target="//@variabilityModel/@ownedTargets.12">
+          <note name="comment" kind="comment" expr=""/>
+        </member>
+        <note name="comment" kind="comment" expr=""/>
+      </member>
+      <note name="comment" kind="comment" expr=""/>
+    </member>
+    <member xsi:type="bvr:Choice" name="Camera" target="//@variabilityModel/@ownedTargets.13" isImpliedByParent="true">
+      <member xsi:type="bvr:Choice" name="CameraManufacturer" target="//@variabilityModel/@ownedTargets.14" isImpliedByParent="true">
+        <groupMultiplicity upper="1" lower="1"/>
+        <member xsi:type="bvr:Choice" name="CameraManufacturer1" target="//@variabilityModel/@ownedTargets.15">
+          <note name="comment" kind="comment" expr=""/>
+        </member>
+        <member xsi:type="bvr:Choice" name="CameraManufacturer2" target="//@variabilityModel/@ownedTargets.16">
+          <note name="comment" kind="comment" expr=""/>
+        </member>
+        <note name="comment" kind="comment" expr=""/>
+      </member>
+      <member xsi:type="bvr:Choice" name="CameraSetting" target="//@variabilityModel/@ownedTargets.24" isImpliedByParent="true">
+        <groupMultiplicity upper="-1" lower="1"/>
+        <member xsi:type="bvr:Choice" name="CameraFrontANDRear" target="//@variabilityModel/@ownedTargets.41">
+          <groupMultiplicity upper="1" lower="1"/>
+          <member xsi:type="bvr:Choice" name="CameraFAR" target="//@variabilityModel/@ownedTargets.48">
+            <note name="comment" kind="comment" expr=""/>
+          </member>
+          <member xsi:type="bvr:Choice" name="NoCameraFAR" target="//@variabilityModel/@ownedTargets.49">
+            <note name="comment" kind="comment" expr=""/>
+          </member>
+          <note name="comment" kind="comment" expr=""/>
+        </member>
+        <member xsi:type="bvr:Choice" name="CameraSides" target="//@variabilityModel/@ownedTargets.42" isImpliedByParent="true">
+          <note name="comment" kind="comment" expr=""/>
+        </member>
+        <note name="comment" kind="comment" expr=""/>
+      </member>
+      <note name="comment" kind="comment" expr=""/>
+    </member>
+    <ownedTargets name="VehicleConfig"/>
+    <ownedTargets name="OperationContext"/>
+    <ownedTargets name="OperationMode"/>
+    <ownedTargets name="Street"/>
+    <ownedTargets name="Road"/>
+    <ownedTargets name="Indoors"/>
+    <ownedTargets name="Monitored"/>
+    <ownedTargets name="Assisted"/>
+    <ownedTargets name="Autonomous"/>
+    <ownedTargets name="VehicleComputer"/>
+    <ownedTargets name="CompManufacturer"/>
+    <ownedTargets name="CompManufacturer1"/>
+    <ownedTargets name="CompManufacturer2"/>
+    <ownedTargets name="Camera"/>
+    <ownedTargets name="CameraManufacturer"/>
+    <ownedTargets name="CameraManufacturer1"/>
+    <ownedTargets name="CameraManufacturer2"/>
+    <ownedTargets name="OperationEnvironment"/>
+    <ownedTargets name="People"/>
+    <ownedTargets name="Populated"/>
+    <ownedTargets name="Unpopulated"/>
+    <ownedTargets name="EnviroObjects"/>
+    <ownedTargets name="Stationary"/>
+    <ownedTargets name="Choice23"/>
+    <ownedTargets name="CameraSetting"/>
+    <ownedTargets name="FrontANDRear"/>
+    <ownedTargets name="SensorSides"/>
+    <ownedTargets name="Sensor"/>
+    <ownedTargets name="SensorSetting"/>
+    <ownedTargets name="SensorFrontANDRear"/>
+    <ownedTargets name="Choice30"/>
+    <ownedTargets name="AutoSteering"/>
+    <ownedTargets name="AutoAcceleration"/>
+    <ownedTargets name="GPS"/>
+    <ownedTargets name="CameraSensorSetting"/>
+    <ownedTargets name="Choice37"/>
+    <ownedTargets name="Choice38"/>
+    <ownedTargets name="Setting"/>
+    <ownedTargets name="Choice42"/>
+    <ownedTargets name="Choice43"/>
+    <ownedTargets name="Choice44"/>
+    <ownedTargets name="CameraFrontANDRear"/>
+    <ownedTargets name="CameraSides"/>
+    <ownedTargets name="Manual"/>
+    <ownedTargets name="AutoSteeringSys"/>
+    <ownedTargets name="NoAutoSteeringSys"/>
+    <ownedTargets name="AutoPowertrain"/>
+    <ownedTargets name="NoAutoPowertrain"/>
+    <ownedTargets name="CameraFAR"/>
+    <ownedTargets name="NoCameraFAR"/>
+    <note name="comment" kind="comment" expr=""/>
+  </variabilityModel>
+  <resolutionModels xsi:type="bvr:PosResolution" name="VehicleConfig[0]" resolvedVSpec="//@variabilityModel" resolvedChoice="//@variabilityModel">
+    <members xsi:type="bvr:PosResolution" name="OperationContext" resolvedVSpec="//@variabilityModel/@member.0" resolvedChoice="//@variabilityModel/@member.0">
+      <members xsi:type="bvr:PosResolution" name="Street" resolvedVSpec="//@variabilityModel/@member.0/@member.0" resolvedChoice="//@variabilityModel/@member.0/@member.0"/>
+      <members xsi:type="bvr:PosResolution" name="Road" resolvedVSpec="//@variabilityModel/@member.0/@member.1" resolvedChoice="//@variabilityModel/@member.0/@member.1"/>
+    </members>
+    <members xsi:type="bvr:PosResolution" name="OperationMode" resolvedVSpec="//@variabilityModel/@member.1" resolvedChoice="//@variabilityModel/@member.1">
+      <members xsi:type="bvr:NegResolution" name="Monitored" resolvedVSpec="//@variabilityModel/@member.1/@member.0" resolvedChoice="//@variabilityModel/@member.1/@member.0"/>
+      <members xsi:type="bvr:PosResolution" name="Assisted" resolvedVSpec="//@variabilityModel/@member.1/@member.1" resolvedChoice="//@variabilityModel/@member.1/@member.1">
+        <members xsi:type="bvr:PosResolution" name="AutoSteering" resolvedVSpec="//@variabilityModel/@member.1/@member.1/@member.0" resolvedChoice="//@variabilityModel/@member.1/@member.1/@member.0">
+          <members xsi:type="bvr:NegResolution" name="AutoSteeringSys" resolvedVSpec="//@variabilityModel/@member.1/@member.1/@member.0/@member.0" resolvedChoice="//@variabilityModel/@member.1/@member.1/@member.0/@member.0"/>
+          <members xsi:type="bvr:PosResolution" name="NoAutoSteeringSys" resolvedVSpec="//@variabilityModel/@member.1/@member.1/@member.0/@member.1" resolvedChoice="//@variabilityModel/@member.1/@member.1/@member.0/@member.1"/>
+        </members>
+        <members xsi:type="bvr:PosResolution" name="AutoAcceleration" resolvedVSpec="//@variabilityModel/@member.1/@member.1/@member.1" resolvedChoice="//@variabilityModel/@member.1/@member.1/@member.1">
+          <members xsi:type="bvr:NegResolution" name="AutoPowertrain" resolvedVSpec="//@variabilityModel/@member.1/@member.1/@member.1/@member.0" resolvedChoice="//@variabilityModel/@member.1/@member.1/@member.1/@member.0"/>
+          <members xsi:type="bvr:PosResolution" name="NoAutoPowertrain" resolvedVSpec="//@variabilityModel/@member.1/@member.1/@member.1/@member.1" resolvedChoice="//@variabilityModel/@member.1/@member.1/@member.1/@member.1"/>
+        </members>
+      </members>
+      <members xsi:type="bvr:PosResolution" name="Manual" resolvedVSpec="//@variabilityModel/@member.1/@member.2" resolvedChoice="//@variabilityModel/@member.1/@member.2"/>
+    </members>
+    <members xsi:type="bvr:PosResolution" name="VehicleComputer" resolvedVSpec="//@variabilityModel/@member.2" resolvedChoice="//@variabilityModel/@member.2">
+      <members xsi:type="bvr:PosResolution" name="CompManufacturer" resolvedVSpec="//@variabilityModel/@member.2/@member.0" resolvedChoice="//@variabilityModel/@member.2/@member.0">
+        <members xsi:type="bvr:PosResolution" name="CompManufacturer1" resolvedVSpec="//@variabilityModel/@member.2/@member.0/@member.0" resolvedChoice="//@variabilityModel/@member.2/@member.0/@member.0"/>
+        <members xsi:type="bvr:NegResolution" name="CompManufacturer2" resolvedVSpec="//@variabilityModel/@member.2/@member.0/@member.1" resolvedChoice="//@variabilityModel/@member.2/@member.0/@member.1"/>
+      </members>
+    </members>
+    <members xsi:type="bvr:PosResolution" name="Camera" resolvedVSpec="//@variabilityModel/@member.3" resolvedChoice="//@variabilityModel/@member.3">
+      <members xsi:type="bvr:PosResolution" name="CameraManufacturer" resolvedVSpec="//@variabilityModel/@member.3/@member.0" resolvedChoice="//@variabilityModel/@member.3/@member.0">
+        <members xsi:type="bvr:PosResolution" name="CameraManufacturer1" resolvedVSpec="//@variabilityModel/@member.3/@member.0/@member.0" resolvedChoice="//@variabilityModel/@member.3/@member.0/@member.0"/>
+        <members xsi:type="bvr:NegResolution" name="CameraManufacturer2" resolvedVSpec="//@variabilityModel/@member.3/@member.0/@member.1" resolvedChoice="//@variabilityModel/@member.3/@member.0/@member.1"/>
+      </members>
+      <members xsi:type="bvr:PosResolution" name="CameraSetting" resolvedVSpec="//@variabilityModel/@member.3/@member.1" resolvedChoice="//@variabilityModel/@member.3/@member.1">
+        <members xsi:type="bvr:PosResolution" name="CameraFrontANDRear" resolvedVSpec="//@variabilityModel/@member.3/@member.1/@member.0" resolvedChoice="//@variabilityModel/@member.3/@member.1/@member.0">
+          <members xsi:type="bvr:NegResolution" name="CameraFAR" resolvedVSpec="//@variabilityModel/@member.3/@member.1/@member.0/@member.0" resolvedChoice="//@variabilityModel/@member.3/@member.1/@member.0/@member.0"/>
+          <members xsi:type="bvr:PosResolution" name="NoCameraFAR" resolvedVSpec="//@variabilityModel/@member.3/@member.1/@member.0/@member.1" resolvedChoice="//@variabilityModel/@member.3/@member.1/@member.0/@member.1"/>
+        </members>
+        <members xsi:type="bvr:PosResolution" name="CameraSides" resolvedVSpec="//@variabilityModel/@member.3/@member.1/@member.1" resolvedChoice="//@variabilityModel/@member.3/@member.1/@member.1"/>
+      </members>
+    </members>
+  </resolutionModels>
+  <realizationModel xsi:type="bvr:PlacementFragment" name="Powertrain">
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((FlowPort) 'EClassImpl').&lt;Port>base_Port" propertyName="base_Port" insideBoundaryElement="//@realizationModel.0/@sourceObject.0" outsideBoundaryElement="//@realizationModel.0/@sourceObject.1"/>
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((Class) VehicleComputer).&lt;Property>ownedAttribute" propertyName="ownedAttribute" insideBoundaryElement="//@realizationModel.0/@sourceObject.0" outsideBoundaryElement="//@realizationModel.0/@sourceObject.2"/>
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((FlowPort) 'EClassImpl').&lt;Port>base_Port" propertyName="base_Port" insideBoundaryElement="//@realizationModel.0/@sourceObject.3" outsideBoundaryElement="//@realizationModel.0/@sourceObject.4"/>
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((Class) HAD Vehicle).&lt;Property>ownedAttribute" propertyName="ownedAttribute" insideBoundaryElement="//@realizationModel.0/@sourceObject.3 //@realizationModel.0/@sourceObject.14" outsideBoundaryElement="//@realizationModel.0/@sourceObject.5"/>
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((Class) HAD Vehicle).&lt;Connector>ownedConnector" propertyName="ownedConnector" insideBoundaryElement="//@realizationModel.0/@sourceObject.6 //@realizationModel.0/@sourceObject.18" outsideBoundaryElement="//@realizationModel.0/@sourceObject.5"/>
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((Block) 'EClassImpl').&lt;Class>base_Class" propertyName="base_Class" insideBoundaryElement="//@realizationModel.0/@sourceObject.7" outsideBoundaryElement="//@realizationModel.0/@sourceObject.8"/>
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((Package) modelSystemView).&lt;PackageableElement>packagedElement" propertyName="packagedElement" insideBoundaryElement="//@realizationModel.0/@sourceObject.7" outsideBoundaryElement="//@realizationModel.0/@sourceObject.9"/>
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((FlowPort) 'EClassImpl').&lt;Port>base_Port" propertyName="base_Port" insideBoundaryElement="//@realizationModel.0/@sourceObject.10" outsideBoundaryElement="//@realizationModel.0/@sourceObject.11"/>
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((FlowPort) 'EClassImpl').&lt;Port>base_Port" propertyName="base_Port" insideBoundaryElement="//@realizationModel.0/@sourceObject.12" outsideBoundaryElement="//@realizationModel.0/@sourceObject.13"/>
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((Association) Association10).&lt;Property>memberEnd" propertyName="memberEnd" insideBoundaryElement="//@realizationModel.0/@sourceObject.14" outsideBoundaryElement="//@realizationModel.0/@sourceObject.15"/>
+    <placementBoundaryElement xsi:type="bvr:FromPlacement" name="((Property) powertrain).&lt;Association>association[1]={Association10}" outsideBoundaryElement="//@realizationModel.0/@sourceObject.15" insideBoundaryElement="//@realizationModel.0/@sourceObject.14"/>
+    <placementBoundaryElement xsi:type="bvr:FromPlacement" name="((ConnectorEnd) 'EClassImpl').&lt;Property>partWithPort[1]={vehicleComputer}" outsideBoundaryElement="//@realizationModel.0/@sourceObject.16" insideBoundaryElement="//@realizationModel.0/@sourceObject.17"/>
+    <placementBoundaryElement xsi:type="bvr:FromPlacement" name="NULL" outsideBoundaryElement="//@realizationModel.0/@sourceObject.19" insideBoundaryElement="//@realizationModel.0/@sourceObject.19"/>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_svaAkME4EeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_s4MwMcE4EeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_bVQd4ME4EeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_KIFnQME4EeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_KJk1AME4EeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_-7ZsYME3EeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_PO9pYMFXEeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_km-g4ME4EeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_km-g4cE4EeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_oTUsQME3EeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_4ilm0MFQEeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_4ivX0MFQEeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_qzD7wMFQEeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_qzNFsMFQEeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_9i0NMMFVEeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_9i9XIMFVEeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_trwf0MFTEeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_PO9pYcFXEeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_QYuGwMFXEeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject/>
+  </realizationModel>
+  <realizationModel xsi:type="bvr:PlacementFragment" name="Steering">
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((Class) HAD Vehicle).&lt;Connector>ownedConnector" propertyName="ownedConnector" insideBoundaryElement="//@realizationModel.1/@sourceObject.0 //@realizationModel.1/@sourceObject.8" outsideBoundaryElement="//@realizationModel.1/@sourceObject.1"/>
+    <placementBoundaryElement xsi:type="bvr:FromPlacement" name="((ConnectorEnd) 'EClassImpl').&lt;Property>partWithPort[1]={vehicleComputer}" outsideBoundaryElement="//@realizationModel.1/@sourceObject.2" insideBoundaryElement="//@realizationModel.1/@sourceObject.3"/>
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((FlowPort) 'EClassImpl').&lt;Port>base_Port" propertyName="base_Port" insideBoundaryElement="//@realizationModel.1/@sourceObject.4" outsideBoundaryElement="//@realizationModel.1/@sourceObject.5"/>
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((FlowPort) 'EClassImpl').&lt;Port>base_Port" propertyName="base_Port" insideBoundaryElement="//@realizationModel.1/@sourceObject.6" outsideBoundaryElement="//@realizationModel.1/@sourceObject.7"/>
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((Class) HAD Vehicle).&lt;Property>ownedAttribute" propertyName="ownedAttribute" insideBoundaryElement="//@realizationModel.1/@sourceObject.6 //@realizationModel.1/@sourceObject.14" outsideBoundaryElement="//@realizationModel.1/@sourceObject.1"/>
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((FlowPort) 'EClassImpl').&lt;Port>base_Port" propertyName="base_Port" insideBoundaryElement="//@realizationModel.1/@sourceObject.9" outsideBoundaryElement="//@realizationModel.1/@sourceObject.10"/>
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((Class) VehicleComputer).&lt;Property>ownedAttribute" propertyName="ownedAttribute" insideBoundaryElement="//@realizationModel.1/@sourceObject.9" outsideBoundaryElement="//@realizationModel.1/@sourceObject.11"/>
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((FlowPort) 'EClassImpl').&lt;Port>base_Port" propertyName="base_Port" insideBoundaryElement="//@realizationModel.1/@sourceObject.12" outsideBoundaryElement="//@realizationModel.1/@sourceObject.13"/>
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((Association) Association11).&lt;Property>memberEnd" propertyName="memberEnd" insideBoundaryElement="//@realizationModel.1/@sourceObject.14" outsideBoundaryElement="//@realizationModel.1/@sourceObject.15"/>
+    <placementBoundaryElement xsi:type="bvr:FromPlacement" name="((Property) steering).&lt;Association>association[1]={Association11}" outsideBoundaryElement="//@realizationModel.1/@sourceObject.15" insideBoundaryElement="//@realizationModel.1/@sourceObject.14"/>
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((Block) 'EClassImpl').&lt;Class>base_Class" propertyName="base_Class" insideBoundaryElement="//@realizationModel.1/@sourceObject.16" outsideBoundaryElement="//@realizationModel.1/@sourceObject.17"/>
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((Package) modelSystemView).&lt;PackageableElement>packagedElement" propertyName="packagedElement" insideBoundaryElement="//@realizationModel.1/@sourceObject.16" outsideBoundaryElement="//@realizationModel.1/@sourceObject.18"/>
+    <placementBoundaryElement xsi:type="bvr:FromPlacement" name="NULL" outsideBoundaryElement="//@realizationModel.1/@sourceObject.19" insideBoundaryElement="//@realizationModel.1/@sourceObject.19"/>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_S0u2MMFXEeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_-7ZsYME3EeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_trwf0MFTEeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_RwCfAcFXEeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_rkFJAMFQEeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_rkO6AMFQEeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_Qqu04ME4EeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_Qqu04cE4EeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_RwCfAMFXEeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_s4MwMME4EeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_s4WhMME4EeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_bVQd4ME4EeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_5pOewMFQEeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_5pOewcFQEeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_ZrrVUMFWEeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_Zr0fQMFWEeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_nReYQME4EeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_nReYQcE4EeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_oTUsQME3EeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject/>
+  </realizationModel>
+  <realizationModel xsi:type="bvr:FragmentSubstitution" name="NoSteering" bindingVSpec="//@variabilityModel/@member.1/@member.1/@member.0/@member.1" placement="//@realizationModel.1" replacement="//@packageElement.0">
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.1/@placementBoundaryElement.0" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.1/@placementBoundaryElement.2" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.1/@placementBoundaryElement.3" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.1/@placementBoundaryElement.4" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.1/@placementBoundaryElement.5" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.1/@placementBoundaryElement.6" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.1/@placementBoundaryElement.7" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.1/@placementBoundaryElement.8" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.1/@placementBoundaryElement.10" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.1/@placementBoundaryElement.11" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+  </realizationModel>
+  <realizationModel xsi:type="bvr:FragmentSubstitution" name="NoPowertrain" bindingVSpec="//@variabilityModel/@member.1/@member.1/@member.1/@member.1" placement="//@realizationModel.0" replacement="//@packageElement.0">
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.0/@placementBoundaryElement.0" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.0/@placementBoundaryElement.1" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.0/@placementBoundaryElement.2" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.0/@placementBoundaryElement.3" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.0/@placementBoundaryElement.4" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.0/@placementBoundaryElement.5" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.0/@placementBoundaryElement.6" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.0/@placementBoundaryElement.7" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.0/@placementBoundaryElement.8" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.0/@placementBoundaryElement.9" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+  </realizationModel>
+  <realizationModel xsi:type="bvr:PlacementFragment" name="FrontRearCameras">
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((Association) Association12).&lt;Property>memberEnd" propertyName="memberEnd" insideBoundaryElement="//@realizationModel.4/@sourceObject.0" outsideBoundaryElement="//@realizationModel.4/@sourceObject.1"/>
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((Class) HAD Vehicle).&lt;Property>ownedAttribute" propertyName="ownedAttribute" insideBoundaryElement="//@realizationModel.4/@sourceObject.0 //@realizationModel.4/@sourceObject.8" outsideBoundaryElement="//@realizationModel.4/@sourceObject.2"/>
+    <placementBoundaryElement xsi:type="bvr:FromPlacement" name="((Property) frontCameraPlacement).&lt;Type>type[1]={Camera}" outsideBoundaryElement="//@realizationModel.4/@sourceObject.3" insideBoundaryElement="//@realizationModel.4/@sourceObject.0"/>
+    <placementBoundaryElement xsi:type="bvr:FromPlacement" name="((Property) frontCameraPlacement).&lt;Association>association[1]={Association12}" outsideBoundaryElement="//@realizationModel.4/@sourceObject.1" insideBoundaryElement="//@realizationModel.4/@sourceObject.0"/>
+    <placementBoundaryElement xsi:type="bvr:FromPlacement" name="((ConnectorEnd) 'EClassImpl').&lt;ConnectableElement>role[1]={video}" outsideBoundaryElement="//@realizationModel.4/@sourceObject.4" insideBoundaryElement="//@realizationModel.4/@sourceObject.5"/>
+    <placementBoundaryElement xsi:type="bvr:FromPlacement" name="((ConnectorEnd) 'EClassImpl').&lt;ConnectableElement>role[1]={video}" outsideBoundaryElement="//@realizationModel.4/@sourceObject.4" insideBoundaryElement="//@realizationModel.4/@sourceObject.6"/>
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((Class) HAD Vehicle).&lt;Connector>ownedConnector" propertyName="ownedConnector" insideBoundaryElement="//@realizationModel.4/@sourceObject.7 //@realizationModel.4/@sourceObject.15" outsideBoundaryElement="//@realizationModel.4/@sourceObject.2"/>
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((Association) Association13).&lt;Property>memberEnd" propertyName="memberEnd" insideBoundaryElement="//@realizationModel.4/@sourceObject.8" outsideBoundaryElement="//@realizationModel.4/@sourceObject.9"/>
+    <placementBoundaryElement xsi:type="bvr:FromPlacement" name="((Property) rearCameraPlacement).&lt;Type>type[1]={Camera}" outsideBoundaryElement="//@realizationModel.4/@sourceObject.3" insideBoundaryElement="//@realizationModel.4/@sourceObject.8"/>
+    <placementBoundaryElement xsi:type="bvr:FromPlacement" name="((Property) rearCameraPlacement).&lt;Association>association[1]={Association13}" outsideBoundaryElement="//@realizationModel.4/@sourceObject.9" insideBoundaryElement="//@realizationModel.4/@sourceObject.8"/>
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((FlowPort) 'EClassImpl').&lt;Port>base_Port" propertyName="base_Port" insideBoundaryElement="//@realizationModel.4/@sourceObject.10" outsideBoundaryElement="//@realizationModel.4/@sourceObject.11"/>
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((Class) VehicleComputer).&lt;Property>ownedAttribute" propertyName="ownedAttribute" insideBoundaryElement="//@realizationModel.4/@sourceObject.10 //@realizationModel.4/@sourceObject.13" outsideBoundaryElement="//@realizationModel.4/@sourceObject.12"/>
+    <placementBoundaryElement xsi:type="bvr:ToPlacement" name="((FlowPort) 'EClassImpl').&lt;Port>base_Port" propertyName="base_Port" insideBoundaryElement="//@realizationModel.4/@sourceObject.13" outsideBoundaryElement="//@realizationModel.4/@sourceObject.14"/>
+    <placementBoundaryElement xsi:type="bvr:FromPlacement" name="((ConnectorEnd) 'EClassImpl').&lt;Property>partWithPort[1]={vehicleComputer}" outsideBoundaryElement="//@realizationModel.4/@sourceObject.16" insideBoundaryElement="//@realizationModel.4/@sourceObject.17"/>
+    <placementBoundaryElement xsi:type="bvr:FromPlacement" name="((ConnectorEnd) 'EClassImpl').&lt;Property>partWithPort[1]={vehicleComputer}" outsideBoundaryElement="//@realizationModel.4/@sourceObject.16" insideBoundaryElement="//@realizationModel.4/@sourceObject.18"/>
+    <placementBoundaryElement xsi:type="bvr:FromPlacement" name="NULL" outsideBoundaryElement="//@realizationModel.4/@sourceObject.19" insideBoundaryElement="//@realizationModel.4/@sourceObject.19"/>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_aqabgMw4Eeqkwq4Zl0MMdw"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_arKpcMw4Eeqkwq4Zl0MMdw"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_-7ZsYME3EeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_WW8w0ME4EeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_7-dGMMFPEeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_xWPBQMw6Eeqkwq4Zl0MMdw"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_6BEDYcw6Eeqkwq4Zl0MMdw"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_xV8GUMw6Eeqkwq4Zl0MMdw"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_ztYe0Mw6Eeqkwq4Zl0MMdw"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_zthowMw6Eeqkwq4Zl0MMdw"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_HwhbgMFPEeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_HwrMgMFPEeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_bVQd4ME4EeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_Jo8VsMFPEeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_JpGGsMFPEeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_6BEDYMw6Eeqkwq4Zl0MMdw"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_trwf0MFTEeqMCpqAriphVA"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_6BEDYsw6Eeqkwq4Zl0MMdw"/>
+    </sourceObject>
+    <sourceObject>
+      <MOFRef href="HAD%20Vehicle%20SPL.uml#_xWPBQcw6Eeqkwq4Zl0MMdw"/>
+    </sourceObject>
+    <sourceObject/>
+  </realizationModel>
+  <realizationModel xsi:type="bvr:FragmentSubstitution" name="NoFrontReadCameras" bindingVSpec="//@variabilityModel/@member.3/@member.1/@member.0/@member.1" placement="//@realizationModel.4" replacement="//@packageElement.0">
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.4/@placementBoundaryElement.0" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.4/@placementBoundaryElement.1" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.4/@placementBoundaryElement.6" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.4/@placementBoundaryElement.7" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.4/@placementBoundaryElement.10" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.4/@placementBoundaryElement.11" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+    <boundaryElementBinding xsi:type="bvr:ToBinding" toPlacement="//@realizationModel.4/@placementBoundaryElement.12" toReplacement="//@packageElement.0/@replacementBoundaryElement.0"/>
+  </realizationModel>
+</bvr:BVRModel>

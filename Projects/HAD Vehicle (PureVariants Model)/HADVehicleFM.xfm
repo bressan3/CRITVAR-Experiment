@@ -1,0 +1,663 @@
+<cm:consulmodel xmlns:cm="http://www.pure-systems.com/consul/model" cm:id="ighIVclWBDvNAjQwq" cm:version="1.5" cm:type="ps:fm">
+  <cm:head>
+    <cm:properties>
+      <cm:property cm:id="ikxr9DVLqKQYmkgFD" cm:type="ps:string" cm:invisible="true" cm:name="ps:name">
+        <cm:constant cm:id="irzYmL13x68qZV6Uu" cm:type="ps:string">HADVehicleFM</cm:constant>
+      </cm:property>
+      <cm:property cm:id="iAp6ekfGejGwf1vRX" cm:type="ps:string" cm:invisible="true" cm:name="ps:author">
+        <cm:constant cm:id="iuMOmlv2a8hKjdzhg" cm:type="ps:string">Lucas</cm:constant>
+      </cm:property>
+      <cm:property cm:id="ivcBCQ4JMjSlDOLpU" cm:type="ps:string" cm:invisible="true" cm:name="ps:version">
+        <cm:constant cm:id="iUjm21Vg_KDZSv-QU" cm:type="ps:string">1.0</cm:constant>
+      </cm:property>
+      <cm:property cm:id="ijPgreY40vDToXPtD" cm:type="ps:datetime" cm:invisible="true" cm:name="ps:created">
+        <cm:constant cm:id="inkukLA58wJwwoDh1" cm:type="ps:datetime">2020-10-23T13:55:57.806Z</cm:constant>
+      </cm:property>
+      <cm:property cm:id="iHyBHz0XP9qZ-J9Fl" cm:type="ps:mimetype" cm:invisible="true" cm:name="ps:DescriptionType">
+        <cm:constant cm:id="iZAw5b-Mx68fmTFAa" cm:type="ps:mimetype">text/html</cm:constant>
+      </cm:property>
+    </cm:properties>
+  </cm:head>
+  <cm:restrictions>
+    <cm:restset cm:id="iV9-OVIySmcAeZrrj" cm:constraint="true">
+      <cm:restriction cm:id="ihWBjHlUs85ItYPrB">
+        <cm:script cm:id="isko3TcsNiXRdT7CY" cm:language="ps:pvscl" cm:type="ps:boolean">Street IMPLIES NOT(AutoSteering)</cm:script>
+      </cm:restriction>
+      <cm:restriction cm:id="iaxPT9vBNksNg9gcR">
+        <cm:script cm:id="ifuBG5cIE8UyMKJIi" cm:language="ps:pvscl" cm:type="ps:boolean">Monitored IMPLIES (AutoSteering AND AutoAcceleration)</cm:script>
+      </cm:restriction>
+      <cm:restriction cm:id="iNOqg-QiA2D5E9P8B">
+        <cm:script cm:id="ilyETpS-qlZQcBHhT" cm:language="ps:pvscl" cm:type="ps:boolean">AutoAcceleration IMPLIES CameraFrontANDRear</cm:script>
+      </cm:restriction>
+      <cm:restriction cm:id="iXM89cya7gDCX4qBv">
+        <cm:script cm:id="ifrkSwwIe31ugtDi3" cm:language="ps:pvscl" cm:type="ps:boolean">Manual IMPLIES (NOT(Monitored) AND NOT(Assisted))</cm:script>
+      </cm:restriction>
+    </cm:restset>
+  </cm:restrictions>
+  <cm:elements cm:rootid="iTeCjk0Eu4MUR1DI_">
+    <cm:element cm:id="iTeCjk0Eu4MUR1DI_" cm:name="HADVehicleFM" cm:type="ps:feature" cm:class="ps:feature" cm:default="on" cm:constraint="iV9-OVIySmcAeZrrj">
+      <cm:relations cm:id="iO63QpBxSbExg19wS" cm:class="ps:children">
+        <cm:relation cm:id="itpdq9Rtbo_6W76sP" cm:type="ps:mandatory" cm:range="n">
+          <cm:target cm:id="i0RMVtfYuB6zphe6-">./i6QR0utFRD72TjasM</cm:target>
+          <cm:target cm:id="iyZt0hBPFP9ZFwOFv">./izOjVPrfj6cYdr1U3</cm:target>
+          <cm:target cm:id="iGEVRdMJCHQaQ5P9_">./im_pMySc1OPI1VI1l</cm:target>
+          <cm:target cm:id="iPt5ZvRh2yC8zGGhw">./i0kH87hsI-YNFgGry</cm:target>
+          <cm:target cm:id="iNUEoAfeDFY2ASBdw">./iVV-D1IkSs58Wutvq</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iSG1jZUZlUaYtjPVH" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="i1_HXXkAtWtXmZv7A" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ibyg8W5EbD2Z6VAM_" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iHXNQjE9DNCYzqrF_" cm:type="ps:datetime">2020-10-23T13:55:57.774Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ix0BRyJMkkv9YxZ5U" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="itfASiyVTNKZwtHiI" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iM3DZHAJlSLpESBra" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="igmULATkWQYOR9EJ6" cm:type="ps:datetime">2020-12-11T12:43:03.261Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="i6QR0utFRD72TjasM" cm:name="OperationContext" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="imEvZHvpdeeHPo2Aa" cm:class="ps:parents">
+        <cm:relation cm:id="iF7WrMtiRRiAWjyO5" cm:type="ps:parent">
+          <cm:target cm:id="iWWC47bVzRdxd12hr">./iTeCjk0Eu4MUR1DI_</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="iFUOzLm-1-IBJRcQh" cm:class="ps:children">
+        <cm:relation cm:id="iQ_1wf42MHWyRJGxp" cm:type="ps:or" cm:range="[1,n]">
+          <cm:target cm:id="i-Cfwa5LSuZSYiJtg">./ixVxpNGjM_cXpI7jH</cm:target>
+          <cm:target cm:id="iEuIV59Naje2Jz6EU">./i8w6GOg0kgFJfOpxs</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iCgtkMgS-odZ3TJrr" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iiWVBXgPn5NixWvNz" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ibxEm1BWnZpWTj0JB" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iD_sI1XhQ3G5V9OK1" cm:type="ps:datetime">2020-10-23T13:57:44.692Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ibi3uCkW-3TqvKDQ0" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iwDQjsHJz-1D0B_sU" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iFgSfRb9LqOvAeEkn" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iUP7tfYQKSFSgrQc8" cm:type="ps:datetime">2020-10-23T13:58:25.708Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="ixVxpNGjM_cXpI7jH" cm:name="Street" cm:type="ps:feature" cm:class="ps:feature">
+      <cm:relations cm:id="iS1LCJ407BSx2hHI2" cm:class="ps:parents">
+        <cm:relation cm:id="iSPOoLTpKyQkPb9GA" cm:type="ps:parent">
+          <cm:target cm:id="iWzFBV00raUbsTVip">./i6QR0utFRD72TjasM</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iz-4UpcsAP87OUK0x" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iPAl9tGL5ljs1mErc" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="if_0ZH5JnKJgouEQ_" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="i6zuTQ6j-WFAwHMIr" cm:type="ps:datetime">2020-10-23T13:58:15.996Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iY4YRbCWKWCvIxxdw" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iU5W7qeV-dm3068P2" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="itqCC742gZxWue_2y" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="ifH9nPrMZHlOKl0Ei" cm:type="ps:datetime">2020-10-23T13:58:15.996Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="i8w6GOg0kgFJfOpxs" cm:name="Road" cm:type="ps:feature" cm:class="ps:feature" cm:default="off">
+      <cm:relations cm:id="i86Xj_Z3hnPaZXOfv" cm:class="ps:parents">
+        <cm:relation cm:id="i6j4nsKNM1GfRXT5x" cm:type="ps:parent">
+          <cm:target cm:id="ifmuO4lmiOZunYQZ7">./i6QR0utFRD72TjasM</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="i7kzssvrhYAapGcnO" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iHoTC5BB16BJYcwrV" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i8jvCJAJVWKcsfzf6" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="i4VycOHubWrbZ23NR" cm:type="ps:datetime">2020-10-23T13:58:25.708Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i4Y2NsNcQQAmz2Zgk" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iD8N1flaozAgB8YCq" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ijNraVYzrlKPftN8h" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iNsuf-V4yjYbd2HUB" cm:type="ps:datetime">2020-10-23T13:58:25.708Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="izOjVPrfj6cYdr1U3" cm:name="OperationMode" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="iMR3eA4YR52aJkjAj" cm:class="ps:parents">
+        <cm:relation cm:id="iJKzoJOyiUe-Y-PM4" cm:type="ps:parent">
+          <cm:target cm:id="ixhYPxlwWvFZf9hNZ">./iTeCjk0Eu4MUR1DI_</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="ilwztMfqXugKGeD_D" cm:class="ps:children">
+        <cm:relation cm:id="ikTRTZnyljt_4gEU6" cm:type="ps:or" cm:range="[1,n]">
+          <cm:target cm:id="id35V7NTdK93UqRuF">./iF3otUu9kbYUW2wlC</cm:target>
+          <cm:target cm:id="iTn9SGXiGbS7bZYqw">./i9f6oqzGSlO18_KSk</cm:target>
+          <cm:target cm:id="iqtRFlvgIi00jBZMz">./ighzLU-tQDv5xAsJm</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iPHWOQBfnq1lk2SFJ" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iHSd-9mhJmk50BzT3" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iF4Z_eedAR_mrx8-4" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iFAkVcoez86PjWdZn" cm:type="ps:datetime">2020-10-23T13:58:38.551Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iR7pUr3Dg038xSAUC" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iX5SKOtLhrJceeHsC" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i0-vdBw5AEOim1H0L" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="ijZDbYDHKMimbri1j" cm:type="ps:datetime">2020-10-23T13:59:41.189Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="iF3otUu9kbYUW2wlC" cm:name="Monitored" cm:type="ps:feature" cm:class="ps:feature">
+      <cm:relations cm:id="iRtmHhVGyJnJ3n119" cm:class="ps:parents">
+        <cm:relation cm:id="iJOa-H_H6_4xhaoba" cm:type="ps:parent">
+          <cm:target cm:id="iJFv5_sdxAQsBbpcz">./izOjVPrfj6cYdr1U3</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="ixx7CucR8s4sH3h4_" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="ii50QcHNTP0ts1TtP" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iDskB75c2lT0VAfDY" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iLNvPGa12XztD5sDT" cm:type="ps:datetime">2020-10-23T13:59:16.941Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iV5l9-XrhH0FY7DtY" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iZmqgWEDV7nNNh1Kd" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iY6Qu-CfmoDLAuyvJ" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="ipTmRnon3EHPpm4GR" cm:type="ps:datetime">2020-10-23T13:59:16.941Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="i9f6oqzGSlO18_KSk" cm:name="Assisted" cm:type="ps:feature" cm:class="ps:feature" cm:default="off">
+      <cm:relations cm:id="i0kT96cHjZf1GUcud" cm:class="ps:parents">
+        <cm:relation cm:id="iYf4i1Vfd3gjV-btK" cm:type="ps:parent">
+          <cm:target cm:id="iwQKi5Zf_QfBjClMf">./izOjVPrfj6cYdr1U3</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="iIObWFvBpNTEhIkvq" cm:class="ps:children">
+        <cm:relation cm:id="iJjKpZ5eAzXY3ECtf" cm:type="ps:or">
+          <cm:target cm:id="iT8Rf_Env8997iVfo">./iS2Ps0Bjo4WNzTcuj</cm:target>
+          <cm:target cm:id="insjzbKimZTshUOcP">./iqZd3-4xf5R4hNWgU</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="izpS9TrmpTWYT1aFQ" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iGyY2CdCXDIMSig62" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iPoyJO_t0b6fVvUnb" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="ickbeYZttrH9M9wW_" cm:type="ps:datetime">2020-10-23T13:59:32.556Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iFV6UqKgn7twCFB7g" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iXcnrtocCYQB3oVIX" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iedNY1XQ8s3EA_Gmo" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iRX9oCwbWc5TPvrxL" cm:type="ps:datetime">2020-10-23T14:00:15.407Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="ighzLU-tQDv5xAsJm" cm:name="Manual" cm:type="ps:feature" cm:class="ps:feature" cm:default="off">
+      <cm:relations cm:id="iGMS21P1Xq-7Ze6Li" cm:class="ps:parents">
+        <cm:relation cm:id="iQ7VxRwslxm8h_E_x" cm:type="ps:parent">
+          <cm:target cm:id="ihu4M1v44BHvxOp09">./izOjVPrfj6cYdr1U3</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iMU_iObrHYLIuMqyg" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iSvDkVN5o5m1JPCHh" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i7PE_9cIo0qm4DHTZ" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iA2rzfzWFFFQaId6W" cm:type="ps:datetime">2020-10-23T13:59:41.189Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iS0yOnXa-jL1SxtiH" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="i3cRQ5n59NttnTsJl" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iREVx7YIGfsuNQahp" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="imSyl-yiB_uB_fs1B" cm:type="ps:datetime">2020-10-23T13:59:41.189Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="iS2Ps0Bjo4WNzTcuj" cm:name="AutoSteering" cm:type="ps:feature" cm:class="ps:feature" cm:default="off">
+      <cm:relations cm:id="iDBcTJK6CImCg6908" cm:class="ps:parents">
+        <cm:relation cm:id="iEc2SRtyedO-cRJn2" cm:type="ps:parent">
+          <cm:target cm:id="ib8a00JCjUVqtgG03">./i9f6oqzGSlO18_KSk</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="i2oNr_TEyqElfF3aS" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iy7mW7TgiQStP8oji" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iQOS4PkRqtWwTLcip" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iDAzn5y5eQ80FbUce" cm:type="ps:datetime">2020-10-23T14:00:01.773Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i4CUGScsESgNEWsSG" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iQBoSSYWkG31IWuMw" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iYSY2PDNqZVHyuSh3" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iSv2NOzabs9sDANNb" cm:type="ps:datetime">2020-10-23T14:00:01.773Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="iqZd3-4xf5R4hNWgU" cm:name="AutoAcceleration" cm:type="ps:feature" cm:class="ps:feature" cm:default="off">
+      <cm:relations cm:id="if7B3wgEtKVdApX3p" cm:class="ps:parents">
+        <cm:relation cm:id="isOJKMrSY2n_4gHAF" cm:type="ps:parent">
+          <cm:target cm:id="iqtydXbUyVlAPg5ue">./i9f6oqzGSlO18_KSk</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iAAIKvRVIJ6hsr6i0" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iG7lL2bfm-kxCV3fC" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iLv_bJoWf6QJn97ls" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iosHKHm-kEZCmh_Ru" cm:type="ps:datetime">2020-10-23T14:00:15.407Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iehynZSzaZZ2EEknD" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iyvrjqgIjyrCcqUio" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i0O_5mBM7tvgv2a-u" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iRiVKY-IkP-ls7PkI" cm:type="ps:datetime">2020-10-23T14:00:15.407Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="im_pMySc1OPI1VI1l" cm:name="VehicleWeight" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="i8TiTBv9lZ-qTbgjH" cm:class="ps:parents">
+        <cm:relation cm:id="iApjJczIhxZjkzkH7" cm:type="ps:parent">
+          <cm:target cm:id="iN_IPm2wDo7foecDO">./iTeCjk0Eu4MUR1DI_</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="ikNk2yMJbVdgShrqp" cm:class="ps:children">
+        <cm:relation cm:id="inPlwF-jRmPteBhQf" cm:type="ps:alternative" cm:range="1">
+          <cm:target cm:id="iz40wFwNTSU8CDzgi">./irRxRjk91ISuvaL2g</cm:target>
+          <cm:target cm:id="ihO7bYHAVbcr7ebMO">./i-_F0vkVLlppvbzHq</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iFkwDe6hovMqrIrK8" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="isD-3gXy3rIx_pl2_" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iJAzUONkCEVs2vjgp" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iJC_7GLFraUgKOA_H" cm:type="ps:datetime">2020-10-23T14:00:28.102Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="irlSwVR-7y1hRSVpD" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iLO4z2g3C0hEab_Lf" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="izfZL64rYvx6f0VJC" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iaPV3HOwk8y7trYey" cm:type="ps:datetime">2020-10-23T14:00:47.918Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="irRxRjk91ISuvaL2g" cm:name="Light" cm:type="ps:feature" cm:class="ps:feature">
+      <cm:relations cm:id="i00oC5jVz5Ff_Wsa7" cm:class="ps:parents">
+        <cm:relation cm:id="idjuGjSP9F08AA9FO" cm:type="ps:parent">
+          <cm:target cm:id="iXbbrfZSKiy4BHrm9">./im_pMySc1OPI1VI1l</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iR__drqpox1WY5ZPm" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="ijl2lNkam9qsQj3DG" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iTySP02AoTJAOsIiG" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iXqxrzwevQ3SQ-u24" cm:type="ps:datetime">2020-10-23T14:00:40.261Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i_Ghb_W8XEwT9O3T9" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iyBw2xXM6iqobPYtx" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ipjfPs85unmS6Hnvr" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="idk3UX8peVhmNcKyo" cm:type="ps:datetime">2020-10-23T14:00:40.261Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="i-_F0vkVLlppvbzHq" cm:name="Heavy" cm:type="ps:feature" cm:class="ps:feature" cm:default="off">
+      <cm:relations cm:id="i4n0QIMEdoSS_q9O1" cm:class="ps:parents">
+        <cm:relation cm:id="iQyRJ87yYKNSF1FAI" cm:type="ps:parent">
+          <cm:target cm:id="iuRNMHpiYKXyrxVWB">./im_pMySc1OPI1VI1l</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iMBVejGKDr0VdsN6m" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="i5sLwIsdFO47wSo0C" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ib30lWBOg-nff22on" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="ilXnBA-tJvmT6DrYU" cm:type="ps:datetime">2020-10-23T14:00:47.918Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i0fgO4-HjUxoCaKgt" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="ioSDn8SIfE7csr0p2" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i_3CPcZgRWffULeVK" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iUe657N2HNSryAj0c" cm:type="ps:datetime">2020-10-23T14:00:47.918Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="i0kH87hsI-YNFgGry" cm:name="VehicleComputer" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="icWequZNssPF79VlB" cm:class="ps:parents">
+        <cm:relation cm:id="iwBQNoLFLuzHS5R3u" cm:type="ps:parent">
+          <cm:target cm:id="in3c21y52iGmw1g3I">./iTeCjk0Eu4MUR1DI_</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="i_sBqccxtud-kd5mk" cm:class="ps:children">
+        <cm:relation cm:id="ivxeGWftHb---OhEv" cm:type="ps:mandatory">
+          <cm:target cm:id="iHA6FVrmmpbvSkgy_">./iYbkxO5R_zWKmdigv</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iziUe1OXTHEIKw9cw" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="igv8axCCAdjnFJkk-" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iJgsdEAX_ETuul4DJ" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="ibtoXCoHhqQXYFzd-" cm:type="ps:datetime">2020-10-23T14:01:25.654Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i8jclmKx_zsA95YAF" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iU2BPdL1MafXJ_V-j" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i3zAsKg8PjG0Xwh7F" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iYHkYTcyxYsq3DUZ3" cm:type="ps:datetime">2020-10-23T19:46:13.379Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iZYNQQTMD65h3A_yg" cm:type="ps:string" cm:fixed="true" cm:name="fptc">
+          <cm:calculate cm:id="i7ZP_H_miGFx5Vtqr" cm:type="ps:string">
+            <cm:script cm:id="iLo_A72CiPZ5r1a-2" cm:language="ps:pvscl" cm:type="ps:string">IF CameraSides AND CameraFrontANDRear THEN
+	IF AutoSteering AND AutoAcceleration THEN
+		&apos;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse-&gt;torque.valueCoarse,angle.valueCoarse,alert.omission;&apos;
+	ELSE 
+		IF NOT(AutoSteering) AND AutoAcceleration THEN
+			&apos;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse-&gt;torque.valueCoarse,alert.omission;&apos;
+		ELSE 
+			IF AutoSteering AND NOT(AutoAcceleration) THEN
+				&apos;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse-&gt;angle.valueCoarse,alert.omission;&apos;
+			ELSE 
+				&apos;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse-&gt;alert.omission;&apos;
+			ENDIF
+		ENDIF
+	ENDIF
+ELSE
+	IF CameraSides AND NOT(CameraFrontANDRear) THEN
+		IF AutoSteering AND NOT(AutoAcceleration) THEN
+			&apos;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse-&gt;angle.valueCoarse,alert.omission;&apos;
+		ELSE
+			IF NOT(AutoSteering) AND NOT(AutoAcceleration) THEN
+				&apos;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse-&gt;alert.omission;&apos;
+			ELSE 
+				&apos;&apos; 
+			ENDIF
+		ENDIF
+	ELSE
+		&apos;&apos;
+	ENDIF
+ENDIF</cm:script>
+          </cm:calculate>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="iYbkxO5R_zWKmdigv" cm:name="CompManufacturer" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="ipwz10kne_Q-HU7Hw" cm:class="ps:parents">
+        <cm:relation cm:id="ixIHvTfyw_zOfodK1" cm:type="ps:parent">
+          <cm:target cm:id="iAr47pq1EcvAMNXYi">./i0kH87hsI-YNFgGry</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="iqplJCmDJLll5tT0p" cm:class="ps:children">
+        <cm:relation cm:id="isZ6P8ymFj-fjZLDG" cm:type="ps:alternative" cm:range="1">
+          <cm:target cm:id="i-IONyiBgE6FFZmlT">./iH4W6tH6Fg-9jDcdT</cm:target>
+          <cm:target cm:id="ih7r3E5wLOWqhzl3-">./iHFFQSc7R2bqgr9D0</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="i4t9GO3mGyuaYNcnO" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iPJKU_UeEMM5ElSlt" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="icRCQB8LRuxJEXmuM" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iu-02a4ar45Xv_F6Q" cm:type="ps:datetime">2020-10-23T14:01:52.972Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iMplrIsnJfJWmRF3K" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="i_a3llaJTZVpUH9CR" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="icnNhGoEvgiL65M5l" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iIImuDhK0ZpJou-JR" cm:type="ps:datetime">2020-10-23T19:19:18.421Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i-m69Xh_xUtvSakPp" cm:type="ps:string" cm:fixed="true" cm:name="failureOccurrence">
+          <cm:calculate cm:id="i3Va1ipWI7LoZBR4O" cm:type="ps:string">
+            <cm:script cm:id="ia-lHeWugUOCLLPTt" cm:language="ps:pvscl" cm:type="ps:string">IF CompManufacturer1 THEN &apos;det(1.0E-6)&apos; ELSE &apos;det(1.0E-8)&apos; ENDIF</cm:script>
+          </cm:calculate>
+        </cm:property>
+        <cm:property cm:id="i6Eyf5kdIp1B3fjaB" cm:type="ps:string" cm:fixed="true" cm:name="failureModeDist">
+          <cm:calculate cm:id="i6rMEKZoYO8Y738c6" cm:type="ps:string">
+            <cm:script cm:id="i_EbMwgWra8_SVib6" cm:language="ps:pvscl" cm:type="ps:string">IF AutoSteering AND AutoAcceleration THEN
+&apos;torque.valueCoarse:1.0,angle.valueCoarse:1.0,alert.omission:1.0&apos;
+ELSE 
+	IF AutoSteering AND NOT(AutoAcceleration) THEN
+		&apos;angle.valueCoarse:1.0,alert.omission:1.0&apos;
+	ELSE
+		IF NOT(AutoSteering) AND AutoAcceleration THEN
+			&apos;torque.valueCoarse:1.0,alert.omission:1.0&apos;
+		ELSE
+			IF NOT(AutoSteering) AND NOT(AutoAcceleration) THEN
+				&apos;alert.omission:1.0&apos;
+			ELSE &apos;&apos; ENDIF
+		ENDIF
+	ENDIF
+ENDIF</cm:script>
+          </cm:calculate>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="iH4W6tH6Fg-9jDcdT" cm:name="CompManufacturer1" cm:type="ps:feature" cm:class="ps:feature">
+      <cm:relations cm:id="iwU5kXtbyyCvSoh-1" cm:class="ps:parents">
+        <cm:relation cm:id="iRxCQNH1LTc6Fs37s" cm:type="ps:parent">
+          <cm:target cm:id="i1CiLjiB1lDUd_jGr">./iYbkxO5R_zWKmdigv</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iumQ9ECsV0_CbikU9" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="ilUM_pvCmLIZcGsr-" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iWFNIBdRm10wtx6hh" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iyAjSAqgf5zn4LhuU" cm:type="ps:datetime">2020-10-23T14:02:15.111Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i5bmEauWj1eJnr1MH" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="isjXgBMJL6rze1p8o" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iwSTvPcB6meVrCuwm" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="icIiV7ERyq5J0K6Hd" cm:type="ps:datetime">2020-10-23T19:06:52.967Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="iHFFQSc7R2bqgr9D0" cm:name="CompManufacturer2" cm:type="ps:feature" cm:class="ps:feature" cm:default="off">
+      <cm:relations cm:id="inYc-PZDvTP2cPfTn" cm:class="ps:parents">
+        <cm:relation cm:id="itcJw2ifXoN3b99Hk" cm:type="ps:parent">
+          <cm:target cm:id="igY4PUmFWgnDyvo3h">./iYbkxO5R_zWKmdigv</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iafOzCfw6QMOfWaGf" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iybYcBPvcoFYYsm6C" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iPPInESzGDXrTd5EE" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="ie9OuHrNoRnqVvvbg" cm:type="ps:datetime">2020-10-23T14:02:29.048Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iGlvc-ZcHNhZzSqjH" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="i8nUfudNxFrD_izz7" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ig1sEdD881zAXKxOS" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iM7j29p_5iGLnvFp2" cm:type="ps:datetime">2020-10-23T19:06:55.459Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="iVV-D1IkSs58Wutvq" cm:name="Camera" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="iGrsXs4Ma-P7M2Ckq" cm:class="ps:parents">
+        <cm:relation cm:id="i_klV7isdTJqx4Kca" cm:type="ps:parent">
+          <cm:target cm:id="ibd_E0KXKJpSIcstO">./iTeCjk0Eu4MUR1DI_</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="iqnwtdE4-ZdUj3Zb8" cm:class="ps:children">
+        <cm:relation cm:id="i2p4zgz8cI_Hxi42p" cm:type="ps:mandatory">
+          <cm:target cm:id="iy8rm_6FsS-ghLFOH">./ibRhBXzAhLYwNcr0V</cm:target>
+          <cm:target cm:id="imxHGJHr09MtiEY89">./i9Dz3XgccwdaNPD81</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iv2DgcHWQXJFqX5yo" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="ihZggwN7M4CXyPQ8p" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i23GkJuq9AZfSvlbW" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iG0EK_EvBZj1cYzYf" cm:type="ps:datetime">2020-10-23T14:02:42.426Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iCE3D3ODZAbnSRaKt" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="i8Qrh30F7I2kZeMlJ" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ivniY_UELssYm3ziI" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="i7OQ09_v-SBrSk59M" cm:type="ps:datetime">2020-10-23T14:03:01.175Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="ibRhBXzAhLYwNcr0V" cm:name="CameraManufacturer" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="iUdGa50puc3N5dAOw" cm:class="ps:parents">
+        <cm:relation cm:id="i5EFpYYVvJn10F08j" cm:type="ps:parent">
+          <cm:target cm:id="iLaiUeAdWxE1NafV-">./iVV-D1IkSs58Wutvq</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="i_SXD7hNCt3atzPAc" cm:class="ps:children">
+        <cm:relation cm:id="iX3HMDWAzWOKqt5iZ" cm:type="ps:alternative" cm:range="1">
+          <cm:target cm:id="iJeIDmJfpNYNOu75b">./iCBK29ni7YlwQYjBj</cm:target>
+          <cm:target cm:id="i4hX3xsHYndLqU0BU">./ir7uHGURTYh3z8uHz</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iWo2wnMbbQmNoJeoo" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iMKYbZZkeZ9C-bqW4" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iJWJaSF1aNDTRGpzl" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iIMYKk2NhAFdhHGY4" cm:type="ps:datetime">2020-10-23T14:02:53.315Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i3GndT7jeCQZkjAq5" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iw46XqutEUKuxkd5H" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iKOexnz_Kgdn1RnBj" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iuXTKSutij89nI_P0" cm:type="ps:datetime">2020-10-23T19:48:08.579Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iQnISbz1qUnjB3pHM" cm:type="ps:string" cm:fixed="true" cm:name="failureOccurrence">
+          <cm:calculate cm:id="iCI9hTbY0Qhmnsp8a" cm:type="ps:string">
+            <cm:script cm:id="ilrhloz0iWdAU5B-2" cm:language="ps:pvscl" cm:type="ps:string">IF CameraManufacturer1 THEN &apos;det(1.0E-6)&apos; ELSE &apos;det(1.0-8)&apos; ENDIF</cm:script>
+          </cm:calculate>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="i9Dz3XgccwdaNPD81" cm:name="CameraSetting" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="i5htieegjRobwr2ae" cm:class="ps:parents">
+        <cm:relation cm:id="i4yh-8JMuEy2XynT6" cm:type="ps:parent">
+          <cm:target cm:id="iepNN0LG2O2-D4urF">./iVV-D1IkSs58Wutvq</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="iIBgqqkccnPJQNoQU" cm:class="ps:children">
+        <cm:relation cm:id="ipt0LKCtkkb6MuRE4" cm:type="ps:optional" cm:range="[0,n]">
+          <cm:target cm:id="iqTYqTAQMjFku0iYV">./iFLCkTkRN3xKiz88P</cm:target>
+          <cm:target cm:id="iMLdszKRfcm0MZUoP">./iLYdKo0UvcZfRwxk-</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="is1D3epDXUys37AgJ" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iPVa8hti-pISxG6p2" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="inYyQE1XzP9En9E9r" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iPcE6YHAsaZSOyp3h" cm:type="ps:datetime">2020-10-23T14:03:01.175Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="icQkuVg3v_ylOknv0" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iaJBGzle3oIb4Qu5u" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iwf2TOXPZsKLnCCLj" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="ivscFRyXAqsby65PP" cm:type="ps:datetime">2020-10-23T14:04:26.996Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="iCBK29ni7YlwQYjBj" cm:name="CameraManufacturer1" cm:type="ps:feature" cm:class="ps:feature">
+      <cm:relations cm:id="in5ibadxX9LrCQUDV" cm:class="ps:parents">
+        <cm:relation cm:id="i1iX67O391kF9wrjS" cm:type="ps:parent">
+          <cm:target cm:id="ikKM2MfQNypF67uHi">./ibRhBXzAhLYwNcr0V</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="i1RtfEuGxxeHaxfK_" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iAVQoIU3lc4TdSZ6q" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i2rIbw7iiv-P7qwXC" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="in-iwbIKa_9Gno4h2" cm:type="ps:datetime">2020-10-23T14:03:38.131Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iiKIadQwjVe1pNJ13" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="i4Gbvnx2IEhwRJGw_" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iq6UAZLBk3_mhoT36" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="i63FVbzTg1hRW513J" cm:type="ps:datetime">2020-10-23T14:03:38.131Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="ir7uHGURTYh3z8uHz" cm:name="CameraManufacturer2" cm:type="ps:feature" cm:class="ps:feature" cm:default="off">
+      <cm:relations cm:id="i6A8RVIw0Pi7JkGXK" cm:class="ps:parents">
+        <cm:relation cm:id="iQpoQSj8KLLSE2tya" cm:type="ps:parent">
+          <cm:target cm:id="i7dv4rkqQpETQ5f8h">./ibRhBXzAhLYwNcr0V</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="isliFcMnoG56NSG5_" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iZqYyjam7XrDpPgJl" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iX546K7DSE3zO0bre" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="inbNreRvQQso_j9iQ" cm:type="ps:datetime">2020-10-23T14:03:48.083Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i_yem0C5in--QrhZU" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iQAh5MMaz4pql45aH" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i4bGlp6pRupZsLlR_" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="ip8HM3gvLZZQIMpvC" cm:type="ps:datetime">2020-10-23T14:03:48.083Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="iFLCkTkRN3xKiz88P" cm:name="CameraFrontANDRear" cm:type="ps:feature" cm:class="ps:feature">
+      <cm:relations cm:id="imglaUXT_jHql5K_j" cm:class="ps:parents">
+        <cm:relation cm:id="iGhtIfqUpCOh0cJU0" cm:type="ps:parent">
+          <cm:target cm:id="it5to9qrdvX9m3R0p">./i9Dz3XgccwdaNPD81</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="id9pLwvR2XL3mUmQ2" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iZy8D8qBAPEXZkKT_" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i5AOJkgEVfqX4nd_A" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="ikel0bWS_KVqlEj6s" cm:type="ps:datetime">2020-10-23T14:04:17.015Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iiJ-TvHdyVucP3IMF" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="izq2Q5g2xgrIauHGz" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iHFpvpyRDN6NIwbI-" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iSxseTYVGStSWpwav" cm:type="ps:datetime">2020-10-23T14:04:17.015Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="iLYdKo0UvcZfRwxk-" cm:name="CameraSides" cm:type="ps:feature" cm:class="ps:feature" cm:default="off">
+      <cm:relations cm:id="iYP3fGnQUKw7V1KmA" cm:class="ps:parents">
+        <cm:relation cm:id="iEuzKU_H39OxDTXCL" cm:type="ps:parent">
+          <cm:target cm:id="iS28NsKWuN-ULQOGh">./i9Dz3XgccwdaNPD81</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iM88ZkZTWGa9qPG8F" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="i5AN3Q2PCW5LUkqDw" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i6Dyg6AMKXMEbn4hd" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="i5DEaFra_Ax2Ktlcm" cm:type="ps:datetime">2020-10-23T14:04:26.996Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iMicej8TleBIoWVfd" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="ia7y_8SvFAHgzxCDZ" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ih5XcOym3XiSLxqqd" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="ibfgN1eFBLo5H1EuI" cm:type="ps:datetime">2020-10-23T14:04:26.996Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+  </cm:elements>
+</cm:consulmodel>

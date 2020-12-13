@@ -1,0 +1,328 @@
+<cm:consulmodel xmlns:cm="http://www.pure-systems.com/consul/model" cm:id="io5usnVlWLQ00h4Rp" cm:version="1.5" cm:type="ps:ccfm">
+  <cm:head>
+    <cm:properties>
+      <cm:property cm:id="iPiT-_B_cLj4xkxu4" cm:type="ps:string" cm:invisible="true" cm:name="ps:name">
+        <cm:constant cm:id="ip7ioHw1sah0gQvpK" cm:type="ps:string">HADVehicleFamilyMappingModel</cm:constant>
+      </cm:property>
+      <cm:property cm:id="iGZPdU3K0WTQgB3Qs" cm:type="ps:string" cm:invisible="true" cm:name="ps:author">
+        <cm:constant cm:id="iuKqcZebrilFmy40i" cm:type="ps:string">Lucas</cm:constant>
+      </cm:property>
+      <cm:property cm:id="isBnAl-ImBfG8hXY8" cm:type="ps:string" cm:invisible="true" cm:name="ps:version">
+        <cm:constant cm:id="iz_gqFudkdH3R1f2_" cm:type="ps:string">1.0</cm:constant>
+      </cm:property>
+      <cm:property cm:id="iWeQENGwcFbX7KLMn" cm:type="ps:datetime" cm:invisible="true" cm:name="ps:created">
+        <cm:constant cm:id="iAgj3i4fWyimljTvN" cm:type="ps:datetime">2020-10-23T14:11:22.626Z</cm:constant>
+      </cm:property>
+      <cm:property cm:id="idSX5lqeK-uA86OUv" cm:type="ps:mimetype" cm:invisible="true" cm:name="ps:DescriptionType">
+        <cm:constant cm:id="iRxq2bUJUXEdLhDXo" cm:type="ps:mimetype">text/html</cm:constant>
+      </cm:property>
+    </cm:properties>
+  </cm:head>
+  <cm:restrictions>
+    <cm:restset cm:id="ieU3pR53JBDH_siky">
+      <cm:restriction cm:id="ibSxMVG_UWnGknufv">
+        <cm:script cm:id="iw9Vs_mjJt3Oi0D8F" cm:language="ps:pvscl" cm:type="ps:boolean">AutoAcceleration</cm:script>
+      </cm:restriction>
+    </cm:restset>
+    <cm:restset cm:id="iqHlUpvDJq_MzHuPt">
+      <cm:restriction cm:id="ibr16BiXMnQTa79K1">
+        <cm:script cm:id="icxN5YeTEizrrXjQq" cm:language="ps:pvscl" cm:type="ps:boolean">AutoSteering</cm:script>
+      </cm:restriction>
+    </cm:restset>
+    <cm:restset cm:id="iInPFocDCyXBXj2Dt">
+      <cm:restriction cm:id="iC44cKm_29bbG8vGl">
+        <cm:script cm:id="i5xZ0BXJADLkRpey0" cm:language="ps:pvscl" cm:type="ps:boolean">CameraFrontANDRear</cm:script>
+      </cm:restriction>
+    </cm:restset>
+    <cm:restset cm:id="igEycCDZWiQLvYu1f">
+      <cm:restriction cm:id="iC3qzj5EMLap62mnv">
+        <cm:script cm:id="ilInMuFsInBxYiNyW" cm:language="ps:pvscl" cm:type="ps:boolean">CameraSides</cm:script>
+      </cm:restriction>
+    </cm:restset>
+  </cm:restrictions>
+  <cm:elements cm:rootid="iQhkdj0LFGLLx3xD2">
+    <cm:element cm:id="iQhkdj0LFGLLx3xD2" cm:name="HADVehicleFamilyMappingModel" cm:type="ps:family" cm:class="ps:family" cm:default="on">
+      <cm:relations cm:id="ibjtFeFIhJV8rP01OspGd1Jdj9fl" cm:class="ps:children">
+        <cm:relation cm:id="ilzfLA4LHbWpYCWSIw93zZTVkZum" cm:type="ps:optional">
+          <cm:target cm:id="i_0i8xlsXQC5uxHEaqwHIWq6Cglb">./iyW-y1SkcoKEizo-g</cm:target>
+          <cm:target cm:id="igVPbn8PiR0GQuhSboQpzpAHvoza">./imcgYLLMhIHNzVTzZ</cm:target>
+          <cm:target cm:id="i-hvs_w815zmI8UzXvJxBMlbeU6a">./ix8-tQncfKr0gatCd</cm:target>
+          <cm:target cm:id="iv-6Uj7gtCwpHMPFowO39WWfPktb">./ir7HYzowsOldOdG2v</cm:target>
+          <cm:target cm:id="ikdu7WvfTEhmgaWOa6iCbcywq8ef">./iKcZBhbtx5epXV4hc</cm:target>
+          <cm:target cm:id="iLECAbjglGLDOkzmiWIgfR30xSFh">./iZV9cSeYn6ycREnPQ</cm:target>
+          <cm:target cm:id="ivNxB0RslEdQR4rgfVkUC7VhXGZc">./iAmPC47S-ILg4QISn</cm:target>
+        </cm:relation>
+        <cm:relation cm:id="io1sbDrPV5q7BW2aaPZPS7DZx3Nl" cm:type="ps:mandatory">
+          <cm:target cm:id="i_fz2JJmHF9TXyeN1RxlMrlMD3Jf">./iV8vkxDjEcWDM8rRJ6Eqyej4ggYo</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iVOk3PFY6C7OQqt4N" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="i7X3huUl2W4RGZ5QX" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iYwebpkSNxPNFLdJ_" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iFgNRrmHL_B7Y3vOv" cm:type="ps:datetime">2020-10-23T14:11:22.626Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="izqme9JRKdNuA4XT2" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="ir3V88zIb_75VykRj" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ivPb1--FwVykGQsDC" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iZw8jSrMpFEsOJzwz" cm:type="ps:datetime">2020-12-10T17:57:00.758Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="iyW-y1SkcoKEizo-g" cm:restriction="ieU3pR53JBDH_siky" cm:type="map:rule" cm:class="ps:component" cm:default="on">
+      <cm:relations cm:id="i3e-v5-EAyEYtJs1Tduo1yxF9qCd" cm:class="ps:parents">
+        <cm:relation cm:id="iqpPl38Jt7B5X9DfA3qEcJSgVTfl" cm:type="ps:parent">
+          <cm:target cm:id="iBla8ekkJtS4RoX3_xIn53Q2eI2h">./iQhkdj0LFGLLx3xD2</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="i8TJt4zag8J1eFMlt" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="i81W3ag3E0rqtiyS1" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iz4tmISBBSo00hB15" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="i6uVyzOCKOixrLruG" cm:type="ps:datetime">2020-10-23T14:14:57.879Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iBg6Kn9RIrs_QGXBM" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="irw1Cc21NZbjG2VNX" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iCNGskPdiJElMzNmR" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="i4IGNz7onGA80jqAQ" cm:type="ps:datetime">2020-10-23T14:27:18.327Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iPojAUjpSDcgvr-FVO964XD-RZRp" cm:type="ps:string" cm:fixed="true" cm:container="ps:list" cm:name="map:elements">
+          <cm:constant cm:id="ieLj-2gRlcYAGuZ_Yxn46Un-IUbc" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_km-g4ME4EeqMCpqAriphVA</cm:constant>
+          <cm:constant cm:id="i8x2xDh10AvClLxnhF2sIxAHKttf" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_KIFnQME4EeqMCpqAriphVA</cm:constant>
+          <cm:constant cm:id="iqByusgn2qIDoDLD9GUU0sAyPZih" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_svaAkME4EeqMCpqAriphVA</cm:constant>
+          <cm:constant cm:id="iVEdZG6wvRTc7J4LoMgpmuj8Iqxl" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_9i9XIMFVEeqMCpqAriphVA</cm:constant>
+          <cm:constant cm:id="iwamdZKQM2Yq71Sr2UhjwbZHhDzd" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_PO9pYMFXEeqMCpqAriphVA</cm:constant>
+          <cm:constant cm:id="i0yUrlt62wW1buGtSuXXm32Wysqe" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_QYuGwMFXEeqMCpqAriphVA</cm:constant>
+          <cm:constant cm:id="i6kF97VLA0JLzg22NmzJMzNiWqib" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_9i0NMMFVEeqMCpqAriphVA</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="iB8nNGuMq0qxfCUnl" cm:mimetype="text/plain" cm:encoding="utf-8">AutoAcceleration</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="iV8vkxDjEcWDM8rRJ6Eqyej4ggYo" cm:type="map:ccfm" cm:class="ps:component" cm:default="on">
+      <cm:relations cm:id="iBg20DK5sKGAsAg200hI5znlNR8g" cm:class="ps:parents">
+        <cm:relation cm:id="i1ZnCej2QcVdtUlFwbUnProO4mKo" cm:type="ps:parent">
+          <cm:target cm:id="iiF_iKLmKlbDh75jYa3uaX9zNido">./iQhkdj0LFGLLx3xD2</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iGBTAk918uQ6iqra8" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iknlkdXzxHLd8k1no" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iBqWN0L3RZj75uS8N" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="i0rh4bX6clKwULrQP" cm:type="ps:datetime">2020-10-23T14:17:39.093Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ioPHkG4viR3ip250K" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="icJI3cYMNfEFZNc1a" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iTOLDeigDa6t8gunO" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="ik-TuEmPo-epiMOyU" cm:type="ps:datetime">2020-10-23T14:17:39.093Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="i0ITYrnJ_z7OH4e55" cm:mimetype="text/plain" cm:encoding="utf-8">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="imcgYLLMhIHNzVTzZ" cm:restriction="iqHlUpvDJq_MzHuPt" cm:type="map:rule" cm:class="ps:component" cm:default="on">
+      <cm:relations cm:id="iz64vdRn8rznjNJmwK0YJVTFK9Oh" cm:class="ps:parents">
+        <cm:relation cm:id="iwXplvQPjG-uDDj1NL46zbJDmHDj" cm:type="ps:parent">
+          <cm:target cm:id="i0kvJ7deb-VkGAvthQ6DwxxPW1zc">./iQhkdj0LFGLLx3xD2</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="ixqBy67M2nzgLeG8O" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iINy8fV7wpSqZTeT4" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="izEihw4jvNcztdWH2" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="inRS0ISxsQ4UdkHxc" cm:type="ps:datetime">2020-10-23T14:19:45.478Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iKo2Sv8vQ3egKU-UK" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="ilmmVTTT6JBVVjkfa" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ioOoAyPrNvIRbe2As" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iwsbcGXyM2Y0iEVVc" cm:type="ps:datetime">2020-10-23T14:29:25.651Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i_yeyhskUQfkMH6ZQr4cbK1VaqHm" cm:type="ps:string" cm:fixed="true" cm:container="ps:list" cm:name="map:elements">
+          <cm:constant cm:id="izSsmeB-znZH4-cRPJIXkkzs6YCc" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_Qqu04ME4EeqMCpqAriphVA</cm:constant>
+          <cm:constant cm:id="ihHv47eVM8T7JjmORL0Zvs3CWAfn" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_s4MwMME4EeqMCpqAriphVA</cm:constant>
+          <cm:constant cm:id="itZJrTNr_RxiORr7b5p-dmJ3LrRk" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_nReYQME4EeqMCpqAriphVA</cm:constant>
+          <cm:constant cm:id="iL64Q_Rq2XE-g3OrLZXdNILbs93m" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_S0u2MMFXEeqMCpqAriphVA</cm:constant>
+          <cm:constant cm:id="iVYvgR4NcNjzeGmbZCrzvbx4tOun" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_RwCfAMFXEeqMCpqAriphVA</cm:constant>
+          <cm:constant cm:id="i7eMoQ8Ta2RqRHFTKC8g8jrCJrlk" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_ZrrVUMFWEeqMCpqAriphVA</cm:constant>
+          <cm:constant cm:id="ikiG4IDHw2AdiYwxD3kVh3biZo6c" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_Zr0fQMFWEeqMCpqAriphVA</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="iQoRXACVZCzcNUEU8" cm:mimetype="text/plain" cm:encoding="utf-8">AutoSteering</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="ix8-tQncfKr0gatCd" cm:restriction="iInPFocDCyXBXj2Dt" cm:type="map:rule" cm:class="ps:component" cm:default="on">
+      <cm:relations cm:id="igSIZcddjGT3XqudKPOybllfEyra" cm:class="ps:parents">
+        <cm:relation cm:id="irujW-RHsazSyXYILB4kkhcGNX5g" cm:type="ps:parent">
+          <cm:target cm:id="idcJZ3tAsyR-zCGHjKgGjP-W-bgd">./iQhkdj0LFGLLx3xD2</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="i2limRxGR60EKru9q" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="ihW84Z0Yetxl2X9Kp" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i10DkbT7CfVGht9LR" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="ixpmXlnG6r0afOs-S" cm:type="ps:datetime">2020-10-23T14:20:46.200Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i56XAYGSU7My1OrAh" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="irZEL3plNyodGM4eM" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iPbd_Ln8JvOi0hpv8" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="ib4F6hOmtd5-CXwIj" cm:type="ps:datetime">2020-10-23T14:22:38.291Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ia6zNU0LxlDaFo-kgCSTphZIf7Sk" cm:type="ps:string" cm:fixed="true" cm:container="ps:list" cm:name="map:elements">
+          <cm:constant cm:id="iUK-kZD-6RuKBH_FknzJpC3r6Cdm" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_HwhbgMFPEeqMCpqAriphVA</cm:constant>
+          <cm:constant cm:id="iC9bGnyLlSU7lHAaUH2DWf0deXJg" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_QIU3IMFTEeqMCpqAriphVA</cm:constant>
+          <cm:constant cm:id="i2V21qQ_I-dGlSafMrxFk7ferscd" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_LtnmYMFTEeqMCpqAriphVA</cm:constant>
+          <cm:constant cm:id="iGs2xSL-QqJiiWM8svJFy-czrN4f" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_Jo8VsMFPEeqMCpqAriphVA</cm:constant>
+          <cm:constant cm:id="iFDIpg02_EiBSG5D2_to9BXGTBGh" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_-IzZsMFWEeqMCpqAriphVA</cm:constant>
+          <cm:constant cm:id="iK45LMxU_nu_gFXY-2OWm08UG1sg" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_8eZGUMFWEeqMCpqAriphVA</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="iiFh4ACFP00vQbLDJ" cm:mimetype="text/plain" cm:encoding="utf-8">CameraFrontANDRear</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="ir7HYzowsOldOdG2v" cm:restriction="igEycCDZWiQLvYu1f" cm:type="map:rule" cm:class="ps:component" cm:default="on">
+      <cm:relations cm:id="im49G_XQQjyvWjsmrfFbWube8zmh" cm:class="ps:parents">
+        <cm:relation cm:id="ifEDRaSdqIhpwRfT0TublbQBIhke" cm:type="ps:parent">
+          <cm:target cm:id="i8f-6pOYQSbH8r_Jb5qrJOY8Z3ia">./iQhkdj0LFGLLx3xD2</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iQKQpMesi983xjw-J" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="idA1Wvufun17uUTRE" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iSPi2PdhrympzfQ5y" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iSvfZcqacJuz1s9L0" cm:type="ps:datetime">2020-10-23T14:20:56.231Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ibSjJqqUEorW-Neky" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iKw-XBhs-9yhUkQbZ" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="im7zQM_d9EE1jfKmH" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="ioF5ofvpvETXg_pkz" cm:type="ps:datetime">2020-10-23T14:23:25.225Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i7SpjUraurftHy7D6JmBTpm8Fjhd" cm:type="ps:string" cm:fixed="true" cm:container="ps:list" cm:name="map:elements">
+          <cm:constant cm:id="ikBmJ5q1C8pV2_FhmGZmCrY9bZSo" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_6UYs4MFWEeqMCpqAriphVA</cm:constant>
+          <cm:constant cm:id="inims5mO2pFMGtZhQH_xTQMC_k3p" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_DRGtEMFTEeqMCpqAriphVA</cm:constant>
+          <cm:constant cm:id="i4hDX2yIpUVQHkDzhWOMgAjYFqwm" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_-0cRUMFOEeqMCpqAriphVA</cm:constant>
+          <cm:constant cm:id="i6pud846KvJ-2KSQQEFJ4h7wgcFg" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_Df0bUMFPEeqMCpqAriphVA</cm:constant>
+          <cm:constant cm:id="iWcgVjwCRHZvJxl-BL9keYtmX49e" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_1SdrIMFWEeqMCpqAriphVA</cm:constant>
+          <cm:constant cm:id="iMTpi0CNOwbd6PRE09yzUCCR-Mke" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_szURYMFSEeqMCpqAriphVA</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="inmjy78z_id9_E6rD" cm:mimetype="text/plain" cm:encoding="utf-8">CameraSides</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="iKcZBhbtx5epXV4hc" cm:type="map:calculation" cm:class="ps:component" cm:default="on">
+      <cm:relations cm:id="iKLjwijc5TGr72HfcVRhDdo1_RYa" cm:class="ps:parents">
+        <cm:relation cm:id="iMTP0_PFNGz_xko5e0UMQzvWWSym" cm:type="ps:parent">
+          <cm:target cm:id="iqtxe72bwGQvYpn0qKYOL-XX3Wfa">./iQhkdj0LFGLLx3xD2</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="ij6flDyyX-r7KGZoK" cm:type="ps:string" cm:fixed="true" cm:name="expression">
+          <cm:calculate cm:id="iE7rLN2KyTIjiEP-u" cm:type="ps:string">
+            <cm:script cm:id="icuxKkB6B6lIp2qje" cm:language="ps:pvscl" cm:type="ps:string">CompManufacturer-&gt;failureOccurrence</cm:script>
+          </cm:calculate>
+        </cm:property>
+        <cm:property cm:id="iwxi7VrYmQWN5yC6-" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iVL7mUKgqr0Eon2g2" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i7r5TALKaZCfykhXm" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iKuaNANgr_cLqDCHD" cm:type="ps:datetime">2020-10-23T19:50:01.304Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="izB19Pw19qTzcqJC-" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iOzFuh8NeDvatcgMt" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iTxPdV6RUS_K4W_P8" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="i9VkgzEHUVgv3uPcW" cm:type="ps:datetime">2020-10-23T19:50:01.404Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iCGLD28xoslHG485MRTmECzL48uk" cm:type="ps:string" cm:fixed="true" cm:container="ps:list" cm:name="map:elements">
+          <cm:constant cm:id="iZ4X2vfo6--rQjS9S1MGvpSwhlae" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_7E-SIMtjEeqtVpQRM8-PpQ
+http://CHESS#//StateBasedComponents/SimpleStochasticBehavior/failureOccurrence</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="ia-rfJiPLmgS3gcCQ" cm:mimetype="text/plain" cm:encoding="utf-8">CompManufacturer-&gt;failureOccurrence</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="iZV9cSeYn6ycREnPQ" cm:type="map:calculation" cm:class="ps:component" cm:default="on">
+      <cm:relations cm:id="ihMySSOHMld_1aLxSoM_SvAasdwj" cm:class="ps:parents">
+        <cm:relation cm:id="iyT0Jc2FQluUGGrqDp_5f4D8nqve" cm:type="ps:parent">
+          <cm:target cm:id="iEVHkwakYr-WUSmucwGuMSnNNRld">./iQhkdj0LFGLLx3xD2</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iJl60RxjgtZ1E7Ly4" cm:type="ps:string" cm:fixed="true" cm:name="expression">
+          <cm:calculate cm:id="i642IE2lE27pCL8d4" cm:type="ps:string">
+            <cm:script cm:id="iDl1GcCGTu8cfJh0n" cm:language="ps:pvscl" cm:type="ps:string">CameraManufacturer-&gt;failureOccurrence</cm:script>
+          </cm:calculate>
+        </cm:property>
+        <cm:property cm:id="i5a5_zXbdqWaCILzB" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iUJnTVYTci1asjjMs" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i3F5N5pwk_Y3XBLoe" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iiojIS8ZclgxD5BUj" cm:type="ps:datetime">2020-10-23T19:51:03.681Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iLN9P9cOACxCcBDZP" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iBqoFqhwQbgigCx8d" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iO9WN6JM0yybvcIUV" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iLIdvw-HkQoIJ77qW" cm:type="ps:datetime">2020-10-23T19:51:03.733Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i4P5MSdPmApTtpX9b62UFup3gAsk" cm:type="ps:string" cm:fixed="true" cm:container="ps:list" cm:name="map:elements">
+          <cm:constant cm:id="iJ83l1NqGkNoFPa48gbqmBI4Rnoi" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_HgJMAMupEeqtVpQRM8-PpQ
+http://CHESS#//StateBasedComponents/SimpleStochasticBehavior/failureOccurrence</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="inIiMV1tbP3v0KJT6" cm:mimetype="text/plain" cm:encoding="utf-8">CameraManufacturer-&gt;failureOccurrence</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="iAmPC47S-ILg4QISn" cm:type="map:calculation" cm:class="ps:component" cm:default="on">
+      <cm:relations cm:id="i2D_1RWyxupOon3R2iP5WezMBByh" cm:class="ps:parents">
+        <cm:relation cm:id="ieFhDmCJryybuIox95yub4m4ztjc" cm:type="ps:parent">
+          <cm:target cm:id="iqOBsP6C5XiZnN6zLGadk7Qi4uFk">./iQhkdj0LFGLLx3xD2</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="ioSrxy0whzX65UTaE" cm:type="ps:string" cm:fixed="true" cm:name="expression">
+          <cm:calculate cm:id="ixCCDSw05Y4mvmxVE" cm:type="ps:string">
+            <cm:script cm:id="icCIwN56IxvILlWzA" cm:language="ps:pvscl" cm:type="ps:string">VehicleComputer-&gt;fptc</cm:script>
+          </cm:calculate>
+        </cm:property>
+        <cm:property cm:id="i9InlbPZN35rn2P9X" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iscjQiKACyVjaHckB" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iXytQZgWcV0LRyLSo" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="i9QaNa55HUvkE4kvB" cm:type="ps:datetime">2020-10-23T19:51:53.870Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i71wnCEBmdiiU220j" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iBcFIfQvSrcUV-7QH" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ieeOkj7UN7JUfPHQb" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iYiNsXCVDd4XBij7T" cm:type="ps:datetime">2020-10-23T19:51:53.918Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ihDo5E6N8slXp-NdAQOnXqzbChvj" cm:type="ps:string" cm:fixed="true" cm:container="ps:list" cm:name="map:elements">
+          <cm:constant cm:id="iYdh4sQz3YK85dfKQJVoY_4l3b2k" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_jFXfcMqUEeqtVpQRM8-PpQ
+http://CHESS#//FailurePropagation/FLABehavior/fptc</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="itQwX6TdSOtMu6Std" cm:mimetype="text/plain" cm:encoding="utf-8">VehicleComputer-&gt;fptc</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+  </cm:elements>
+</cm:consulmodel>

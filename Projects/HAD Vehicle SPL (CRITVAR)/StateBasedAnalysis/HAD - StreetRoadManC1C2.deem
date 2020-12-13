@@ -1,0 +1,489 @@
+<NDFile-'1.2'>
+
+NET:"HAD Vehicle_instSpec",2000,2000;
+COLORS:White,Black,Black,Black,Black,Black;
+
+VARIABLE:"Time","Real";
+
+STUDY:"DefaultStudy",1,"{8650.0}",0;
+
+PLACE:"HAD Vehicle__leftCamera_doreset",1500,1500,0,0;
+PLACE:"HAD Vehicle__rightCamera_doreset",1500,1500,0,0;
+PLACE:"HAD Vehicle__vehicleComputer_doreset",1500,1500,0,0;
+PLACE:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_ift",1500,1500,0,0;
+PLACE:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_ift_tmp",1500,1500,0,0;
+PLACE:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_ift_transient",1500,1500,0,0;
+PLACE:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_ift",1500,1500,0,0;
+PLACE:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_ift_tmp",1500,1500,0,0;
+PLACE:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_ift_transient",1500,1500,0,0;
+PLACE:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_ift",1500,1500,0,0;
+PLACE:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_ift_tmp",1500,1500,0,0;
+PLACE:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_ift_transient",1500,1500,0,0;
+PLACE:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_e_video",1500,1500,0,0;
+PLACE:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_e_video_detected",1500,1500,0,0;
+PLACE:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_e_video",1500,1500,0,0;
+PLACE:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_e_video_detected",1500,1500,0,0;
+PLACE:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_e_torque",1500,1500,0,0;
+PLACE:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_e_torque_detected",1500,1500,0,0;
+PLACE:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_e_alert",1500,1500,0,0;
+PLACE:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_e_alert_detected",1500,1500,0,0;
+PLACE:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_video__valueCoarse",1500,1500,0,0;
+PLACE:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_video__valueCoarse",1500,1500,0,0;
+PLACE:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_torque__alert__omission",1500,1500,0,0;
+PLACE:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_alert__alert__omission",1500,1500,0,0;
+PLACE:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_fge_1_tmp",1500,1500,0,0;
+PLACE:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_fge_1_blocker",1500,1500,0,0;
+PLACE:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_fge_1_tmp",1500,1500,0,0;
+PLACE:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_fge_1_blocker",1500,1500,0,0;
+PLACE:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_1_tmp",1500,1500,0,0;
+PLACE:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_1_blocker",1500,1500,0,0;
+PLACE:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_2_tmp",1500,1500,0,0;
+PLACE:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_2_blocker",1500,1500,0,0;
+PLACE:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_epf_1_tmp",1500,1500,0,0;
+PLACE:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_epf_1_blocker",1500,1500,0,0;
+PLACE:"HAD Vehicle__leftCamera_e_video_sel_HAD Vehicle__leftCamera_epf_1",1500,1500,0,0;
+PLACE:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_epf_1_tmp",1500,1500,0,0;
+PLACE:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_epf_1_blocker",1500,1500,0,0;
+PLACE:"HAD Vehicle__rightCamera_e_video_sel_HAD Vehicle__rightCamera_epf_1",1500,1500,0,0;
+PLACE:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_1_tmp",1500,1500,0,0;
+PLACE:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_1_blocker",1500,1500,0,0;
+PLACE:"HAD Vehicle__vehicleComputer_e_torque_sel_HAD Vehicle__vehicleComputer_epf_1",1500,1500,0,0;
+PLACE:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_2_tmp",1500,1500,0,0;
+PLACE:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_2_blocker",1500,1500,0,0;
+PLACE:"HAD Vehicle__vehicleComputer_e_alert_sel_HAD Vehicle__vehicleComputer_epf_2",1500,1500,0,0;
+PLACE:"SBA_memory_pl",1500,1500,0,0;
+
+TRANS:"HAD Vehicle__leftCamera_reset",1500,1500,V,Immediate,6,1,'TRUE', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__rightCamera_reset",1500,1500,V,Immediate,6,1,'TRUE', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__vehicleComputer_reset",1500,1500,V,Immediate,6,1,'((TRUE)AND(((TRUE)AND(MARK(HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_video__valueCoarse)=0.0))OR(MARK(HAD Vehicle__leftCamera_doreset)>0.0)))AND(((TRUE)AND(MARK(HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_video__valueCoarse)=0.0))OR(MARK(HAD Vehicle__rightCamera_doreset)>0.0))', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__leftCamera_ift_FO",1500,1500,V,Timed,1,0,'MARK(HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_ift)=0.0', '1.0E-8',
+(
+  1.000000e+00
+);
+TRANS:"HAD Vehicle__leftCamera_ift_TD",1500,1500,V,Immediate,4,1,'', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_ift_caseperm",1500,1500,V,Immediate,7,1,'', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_ift_casetrans",1500,1500,V,Immediate,7,1,'', '0.0',
+ (
+0.0
+  );
+TRANS:"HAD Vehicle__rightCamera_ift_FO",1500,1500,V,Timed,1,0,'MARK(HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_ift)=0.0', '1.0E-8',
+(
+  1.000000e+00
+);
+TRANS:"HAD Vehicle__rightCamera_ift_TD",1500,1500,V,Immediate,4,1,'', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_ift_caseperm",1500,1500,V,Immediate,7,1,'', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_ift_casetrans",1500,1500,V,Immediate,7,1,'', '0.0',
+ (
+0.0
+  );
+TRANS:"HAD Vehicle__vehicleComputer_ift_FO",1500,1500,V,Timed,1,0,'MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_ift)=0.0', '1.0E-6',
+(
+  1.000000e+00
+);
+TRANS:"HAD Vehicle__vehicleComputer_ift_TD",1500,1500,V,Immediate,4,1,'', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_ift_caseperm",1500,1500,V,Immediate,7,1,'', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_ift_casetrans",1500,1500,V,Immediate,7,1,'', '0.0',
+ (
+0.0
+  );
+TRANS:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_fge_1",1500,1500,V,Immediate,5,1,'((MARK(HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_ift)>0.0)AND((MARK(HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_fge_1_tmp)=0.0)AND(MARK(HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_video__valueCoarse)=0.0)))AND(MARK(HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_e_video)=0.0)', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_fge_1_caseprop",1500,1500,V,Immediate,7,1,'', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_fge_1_caseskip",1500,1500,V,Immediate,7,1,'FALSE', '0.0',
+ (
+0.0
+  );
+TRANS:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_fge_1",1500,1500,V,Immediate,5,1,'((MARK(HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_ift)>0.0)AND((MARK(HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_fge_1_tmp)=0.0)AND(MARK(HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_video__valueCoarse)=0.0)))AND(MARK(HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_e_video)=0.0)', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_fge_1_caseprop",1500,1500,V,Immediate,7,1,'', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_fge_1_caseskip",1500,1500,V,Immediate,7,1,'FALSE', '0.0',
+ (
+0.0
+  );
+TRANS:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_1",1500,1500,V,Immediate,5,1,'((MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_ift)>0.0)AND((MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_1_tmp)=0.0)AND((MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_torque__alert__omission)=0.0)AND(MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_alert__alert__omission)=0.0))))AND((MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_e_alert)=0.0)OR(MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_e_torque)=0.0))', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_1_caseprop",1500,1500,V,Immediate,7,1,'', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_1_caseskip",1500,1500,V,Immediate,7,1,'FALSE', '0.0',
+ (
+0.0
+  );
+TRANS:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_2",1500,1500,V,Immediate,5,1,'(((MARK(HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_video__valueCoarse)>0.0)OR(MARK(HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_video__valueCoarse)>0.0))AND((MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_2_tmp)=0.0)AND((MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_torque__alert__omission)=0.0)AND(MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_alert__alert__omission)=0.0))))AND((MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_e_alert)=0.0)OR(MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_e_torque)=0.0))', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_2_caseprop",1500,1500,V,Immediate,7,1,'', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_2_caseskip",1500,1500,V,Immediate,7,1,'FALSE', '0.0',
+ (
+0.0
+  );
+TRANS:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_epf_1",1500,1500,V,Immediate,5,1,'((MARK(HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_e_video)>0.0)AND((MARK(HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_epf_1_tmp)=0.0)AND(MARK(HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_video__valueCoarse)=0.0)))AND(MARK(HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_video__valueCoarse)=0.0)', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_epf_1_caseprop",1500,1500,V,Immediate,7,1,'', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_epf_1_caseskip",1500,1500,V,Immediate,7,1,'', '0.0',
+ (
+0.0
+  );
+TRANS:"HAD Vehicle__leftCamera_e_video_choice_HAD Vehicle__leftCamera_epf_1",1500,1500,V,Immediate,7,1,'((MARK(HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_e_video)>0.0)AND((MARK(HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_epf_1_tmp)=0.0)AND(MARK(HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_video__valueCoarse)=0.0)))AND(MARK(HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_video__valueCoarse)=0.0)', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_epf_1",1500,1500,V,Immediate,5,1,'((MARK(HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_e_video)>0.0)AND((MARK(HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_epf_1_tmp)=0.0)AND(MARK(HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_video__valueCoarse)=0.0)))AND(MARK(HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_video__valueCoarse)=0.0)', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_epf_1_caseprop",1500,1500,V,Immediate,7,1,'', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_epf_1_caseskip",1500,1500,V,Immediate,7,1,'', '0.0',
+ (
+0.0
+  );
+TRANS:"HAD Vehicle__rightCamera_e_video_choice_HAD Vehicle__rightCamera_epf_1",1500,1500,V,Immediate,7,1,'((MARK(HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_e_video)>0.0)AND((MARK(HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_epf_1_tmp)=0.0)AND(MARK(HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_video__valueCoarse)=0.0)))AND(MARK(HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_video__valueCoarse)=0.0)', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_1",1500,1500,V,Immediate,5,1,'((MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_e_torque)>0.0)AND((MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_1_tmp)=0.0)AND((MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_torque__alert__omission)=0.0)AND(MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_alert__alert__omission)=0.0))))AND(MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_torque__alert__omission)=0.0)', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_1_caseprop",1500,1500,V,Immediate,7,1,'', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_1_caseskip",1500,1500,V,Immediate,7,1,'', '0.0',
+ (
+0.0
+  );
+TRANS:"HAD Vehicle__vehicleComputer_e_torque_choice_HAD Vehicle__vehicleComputer_epf_1",1500,1500,V,Immediate,7,1,'((MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_e_torque)>0.0)AND((MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_1_tmp)=0.0)AND((MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_torque__alert__omission)=0.0)AND(MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_alert__alert__omission)=0.0))))AND(MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_torque__alert__omission)=0.0)', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_2",1500,1500,V,Immediate,5,1,'((MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_e_alert)>0.0)AND((MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_2_tmp)=0.0)AND((MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_torque__alert__omission)=0.0)AND(MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_alert__alert__omission)=0.0))))AND(MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_alert__alert__omission)=0.0)', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_2_caseprop",1500,1500,V,Immediate,7,1,'', '1.0',
+ (
+1.0
+  );
+TRANS:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_2_caseskip",1500,1500,V,Immediate,7,1,'', '0.0',
+ (
+0.0
+  );
+TRANS:"HAD Vehicle__vehicleComputer_e_alert_choice_HAD Vehicle__vehicleComputer_epf_2",1500,1500,V,Immediate,7,1,'((MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_e_alert)>0.0)AND((MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_2_tmp)=0.0)AND((MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_torque__alert__omission)=0.0)AND(MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_alert__alert__omission)=0.0))))AND(MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_alert__alert__omission)=0.0)', '1.0',
+ (
+1.0
+  );
+TRANS:"SBA_memory_tr",1500,1500,V,Immediate,8,1,'(MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_alert__alert__omission)>0.0)AND(MARK(SBA_memory_pl)=0.0)', '1.0',
+ (
+1.0
+  );
+
+IARC:"HAD Vehicle__leftCamera_doreset","HAD Vehicle__leftCamera_reset",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__rightCamera_doreset","HAD Vehicle__rightCamera_reset",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_doreset","HAD Vehicle__vehicleComputer_reset",1,0,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_ift_tmp","HAD Vehicle__leftCamera_ift_FO",1,1,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_ift_transient","HAD Vehicle__leftCamera_ift_TD",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_ift","HAD Vehicle__leftCamera_ift_TD",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_ift_tmp","HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_ift_caseperm",1,0,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_ift","HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_ift_caseperm",1,1,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_ift_tmp","HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_ift_casetrans",1,0,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_ift","HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_ift_casetrans",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_ift_transient","HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_ift_casetrans",1,1,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_ift","HAD Vehicle__leftCamera_reset",1,0,'MARK(HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_ift)',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_ift_transient","HAD Vehicle__leftCamera_reset",1,0,'MARK(HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_ift_transient)',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_ift_tmp","HAD Vehicle__leftCamera_reset",1,0,'MARK(HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_ift_tmp)',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_ift_tmp","HAD Vehicle__rightCamera_ift_FO",1,1,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_ift_transient","HAD Vehicle__rightCamera_ift_TD",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_ift","HAD Vehicle__rightCamera_ift_TD",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_ift_tmp","HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_ift_caseperm",1,0,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_ift","HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_ift_caseperm",1,1,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_ift_tmp","HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_ift_casetrans",1,0,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_ift","HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_ift_casetrans",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_ift_transient","HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_ift_casetrans",1,1,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_ift","HAD Vehicle__rightCamera_reset",1,0,'MARK(HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_ift)',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_ift_transient","HAD Vehicle__rightCamera_reset",1,0,'MARK(HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_ift_transient)',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_ift_tmp","HAD Vehicle__rightCamera_reset",1,0,'MARK(HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_ift_tmp)',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_ift_tmp","HAD Vehicle__vehicleComputer_ift_FO",1,1,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_ift_transient","HAD Vehicle__vehicleComputer_ift_TD",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_ift","HAD Vehicle__vehicleComputer_ift_TD",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_ift_tmp","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_ift_caseperm",1,0,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_ift","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_ift_caseperm",1,1,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_ift_tmp","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_ift_casetrans",1,0,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_ift","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_ift_casetrans",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_ift_transient","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_ift_casetrans",1,1,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_ift","HAD Vehicle__vehicleComputer_reset",1,0,'MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_ift)',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_ift_transient","HAD Vehicle__vehicleComputer_reset",1,0,'MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_ift_transient)',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_ift_tmp","HAD Vehicle__vehicleComputer_reset",1,0,'MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_ift_tmp)',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_e_video","HAD Vehicle__leftCamera_reset",1,0,'MARK(HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_e_video)',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_e_video_detected","HAD Vehicle__leftCamera_reset",1,0,'MARK(HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_e_video_detected)',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_e_video","HAD Vehicle__rightCamera_reset",1,0,'MARK(HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_e_video)',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_e_video_detected","HAD Vehicle__rightCamera_reset",1,0,'MARK(HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_e_video_detected)',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_e_torque","HAD Vehicle__vehicleComputer_reset",1,0,'MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_e_torque)',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_e_torque_detected","HAD Vehicle__vehicleComputer_reset",1,0,'MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_e_torque_detected)',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_e_alert","HAD Vehicle__vehicleComputer_reset",1,0,'MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_e_alert)',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_e_alert_detected","HAD Vehicle__vehicleComputer_reset",1,0,'MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_e_alert_detected)',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_video__valueCoarse","HAD Vehicle__leftCamera_reset",1,0,'MARK(HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_video__valueCoarse)',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_video__valueCoarse","HAD Vehicle__rightCamera_reset",1,0,'MARK(HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_video__valueCoarse)',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_torque__alert__omission","HAD Vehicle__vehicleComputer_reset",1,0,'MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_torque__alert__omission)',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_alert__alert__omission","HAD Vehicle__vehicleComputer_reset",1,0,'MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_alert__alert__omission)',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_fge_1_tmp","HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_fge_1",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_fge_1_blocker","HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_fge_1",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_fge_1_blocker","HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_fge_1",1,2,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_fge_1_tmp","HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_fge_1_caseprop",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_fge_1_tmp","HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_fge_1_caseskip",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_fge_1_tmp","HAD Vehicle__leftCamera_reset",1,0,'MARK(HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_fge_1_tmp)',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_fge_1_blocker","HAD Vehicle__leftCamera_reset",1,0,'MARK(HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_fge_1_blocker)',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_e_video","HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_fge_1_caseprop",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_fge_1_tmp","HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_fge_1",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_fge_1_blocker","HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_fge_1",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_fge_1_blocker","HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_fge_1",1,2,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_fge_1_tmp","HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_fge_1_caseprop",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_fge_1_tmp","HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_fge_1_caseskip",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_fge_1_tmp","HAD Vehicle__rightCamera_reset",1,0,'MARK(HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_fge_1_tmp)',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_fge_1_blocker","HAD Vehicle__rightCamera_reset",1,0,'MARK(HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_fge_1_blocker)',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_e_video","HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_fge_1_caseprop",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_1_tmp","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_1",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_1_blocker","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_1",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_1_blocker","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_1",1,2,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_1_tmp","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_1_caseprop",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_1_tmp","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_1_caseskip",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_1_tmp","HAD Vehicle__vehicleComputer_reset",1,0,'MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_1_tmp)',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_1_blocker","HAD Vehicle__vehicleComputer_reset",1,0,'MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_1_blocker)',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_e_alert","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_1_caseprop",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_e_torque","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_1_caseprop",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_2_tmp","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_2",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_2_blocker","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_2",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_2_blocker","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_2",1,2,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_2_tmp","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_2_caseprop",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_2_tmp","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_2_caseskip",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_2_tmp","HAD Vehicle__vehicleComputer_reset",1,0,'MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_2_tmp)',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_2_blocker","HAD Vehicle__vehicleComputer_reset",1,0,'MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_2_blocker)',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_e_alert","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_2_caseprop",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_e_torque","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_fge_2_caseprop",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_epf_1_tmp","HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_epf_1",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_epf_1_blocker","HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_epf_1",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_epf_1_blocker","HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_epf_1",1,2,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_epf_1_tmp","HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_epf_1_caseprop",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_epf_1_tmp","HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_epf_1_caseskip",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_epf_1_tmp","HAD Vehicle__leftCamera_reset",1,0,'MARK(HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_epf_1_tmp)',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_epf_1_blocker","HAD Vehicle__leftCamera_reset",1,0,'MARK(HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_epf_1_blocker)',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_video__valueCoarse","HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_epf_1_caseprop",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__leftCamera_e_video_sel_HAD Vehicle__leftCamera_epf_1","HAD Vehicle__leftCamera_e_video_choice_HAD Vehicle__leftCamera_epf_1",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__leftCamera_e_video_sel_HAD Vehicle__leftCamera_epf_1","HAD Vehicle__leftCamera_e_video_choice_HAD Vehicle__leftCamera_epf_1",1,2,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__leftCamera_e_video_sel_HAD Vehicle__leftCamera_epf_1","HAD Vehicle__leftCamera_HAD Vehicle__leftCamera_epf_1",1,0,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_epf_1_tmp","HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_epf_1",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_epf_1_blocker","HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_epf_1",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_epf_1_blocker","HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_epf_1",1,2,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_epf_1_tmp","HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_epf_1_caseprop",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_epf_1_tmp","HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_epf_1_caseskip",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_epf_1_tmp","HAD Vehicle__rightCamera_reset",1,0,'MARK(HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_epf_1_tmp)',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_epf_1_blocker","HAD Vehicle__rightCamera_reset",1,0,'MARK(HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_epf_1_blocker)',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_video__valueCoarse","HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_epf_1_caseprop",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__rightCamera_e_video_sel_HAD Vehicle__rightCamera_epf_1","HAD Vehicle__rightCamera_e_video_choice_HAD Vehicle__rightCamera_epf_1",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__rightCamera_e_video_sel_HAD Vehicle__rightCamera_epf_1","HAD Vehicle__rightCamera_e_video_choice_HAD Vehicle__rightCamera_epf_1",1,2,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__rightCamera_e_video_sel_HAD Vehicle__rightCamera_epf_1","HAD Vehicle__rightCamera_HAD Vehicle__rightCamera_epf_1",1,0,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_1_tmp","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_1",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_1_blocker","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_1",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_1_blocker","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_1",1,2,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_1_tmp","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_1_caseprop",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_1_tmp","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_1_caseskip",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_1_tmp","HAD Vehicle__vehicleComputer_reset",1,0,'MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_1_tmp)',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_1_blocker","HAD Vehicle__vehicleComputer_reset",1,0,'MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_1_blocker)',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_torque__alert__omission","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_1_caseprop",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__vehicleComputer_e_torque_sel_HAD Vehicle__vehicleComputer_epf_1","HAD Vehicle__vehicleComputer_e_torque_choice_HAD Vehicle__vehicleComputer_epf_1",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__vehicleComputer_e_torque_sel_HAD Vehicle__vehicleComputer_epf_1","HAD Vehicle__vehicleComputer_e_torque_choice_HAD Vehicle__vehicleComputer_epf_1",1,2,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_e_torque_sel_HAD Vehicle__vehicleComputer_epf_1","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_1",1,0,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_2_tmp","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_2",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_2_blocker","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_2",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_2_blocker","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_2",1,2,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_2_tmp","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_2_caseprop",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_2_tmp","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_2_caseskip",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_2_tmp","HAD Vehicle__vehicleComputer_reset",1,0,'MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_2_tmp)',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_2_blocker","HAD Vehicle__vehicleComputer_reset",1,0,'MARK(HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_2_blocker)',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_alert__alert__omission","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_2_caseprop",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__vehicleComputer_e_alert_sel_HAD Vehicle__vehicleComputer_epf_2","HAD Vehicle__vehicleComputer_e_alert_choice_HAD Vehicle__vehicleComputer_epf_2",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"HAD Vehicle__vehicleComputer_e_alert_sel_HAD Vehicle__vehicleComputer_epf_2","HAD Vehicle__vehicleComputer_e_alert_choice_HAD Vehicle__vehicleComputer_epf_2",1,2,'',
+ (1500,1500,1500,1500),1;
+IARC:"HAD Vehicle__vehicleComputer_e_alert_sel_HAD Vehicle__vehicleComputer_epf_2","HAD Vehicle__vehicleComputer_HAD Vehicle__vehicleComputer_epf_2",1,0,'',
+ (1500,1500,1500,1500),1;
+OARC:"SBA_memory_pl","SBA_memory_tr",1,1,'',
+ (1500,1500,1500,1500),1;
+
+RES_FUNC:"SBA",'IF(MARK(SBA_memory_pl)=0.0)THEN(1.0)ELSE(0.0)',0;
+
