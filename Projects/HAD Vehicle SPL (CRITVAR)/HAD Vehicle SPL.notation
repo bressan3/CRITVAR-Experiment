@@ -568,6 +568,28 @@
       <element xsi:nil="true"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8ryOy9WyEeqWr8ZxQ-SxKQ" x="200"/>
     </children>
+    <children xmi:type="notation:Shape" xmi:id="_Mv_2cDyDEeuMlOOcIpnZYA" type="Comment_Shape" fontHeight="12" bold="true">
+      <children xmi:type="notation:DecorationNode" xmi:id="_Mv_2cjyDEeuMlOOcIpnZYA" type="Comment_BodyLabel"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_MwV0tjyDEeuMlOOcIpnZYA" type="StereotypeCompartment">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Of5t0DyDEeuMlOOcIpnZYA" source="PapyrusCSSForceValue">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Of5t0TyDEeuMlOOcIpnZYA" key="visible" value="true"/>
+        </eAnnotations>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_MwV0tzyDEeuMlOOcIpnZYA"/>
+        <styles xmi:type="notation:StringValueStyle" xmi:id="_MwV0uDyDEeuMlOOcIpnZYA" name="stereotype" stringValue="150CHESS::ElementVariationPoint"/>
+        <element xmi:type="uml:Stereotype" href="150BVR.profile.uml#_No0fELyCEeqCzZ2IJEhEtw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MwV0uTyDEeuMlOOcIpnZYA"/>
+      </children>
+      <element xmi:type="uml:Comment" href="HAD%20Vehicle%20SPL.uml#_CHJocDyDEeuMlOOcIpnZYA"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Mv_2cTyDEeuMlOOcIpnZYA" x="293" y="437" width="272" height="100"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_MwK1mTyDEeuMlOOcIpnZYA" type="StereotypeComment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_MwK1mjyDEeuMlOOcIpnZYA"/>
+      <styles xmi:type="notation:EObjectValueStyle" xmi:id="_MwK1nDyDEeuMlOOcIpnZYA" name="BASE_ELEMENT">
+        <eObjectValue xmi:type="uml:Comment" href="HAD%20Vehicle%20SPL.uml#_CHJocDyDEeuMlOOcIpnZYA"/>
+      </styles>
+      <element xsi:nil="true"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MwK1mzyDEeuMlOOcIpnZYA" x="200"/>
+    </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_6hcpkcE3EeqMCpqAriphVA"/>
     <styles xmi:type="style:PapyrusViewStyle" xmi:id="_6hcpksE3EeqMCpqAriphVA">
       <owner xmi:type="uml:Package" href="HAD%20Vehicle%20SPL.uml#_oTUsQME3EeqMCpqAriphVA"/>
@@ -882,6 +904,16 @@
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_khZ5CdWzEeqWr8ZxQ-SxKQ" points="[600, 154, -643984, -643984]$[600, 75, -643984, -643984]$[427, 75, -643984, -643984]$[427, 72, -643984, -643984]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_r3CpwNWzEeqWr8ZxQ-SxKQ" id="(0.034892697236374726,0.0)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Jm-ogCHTEeuRsv8lr3LKJA" id="(0.49615384615384617,0.9375)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_MwK1nTyDEeuMlOOcIpnZYA" type="StereotypeCommentLink" source="_Mv_2cDyDEeuMlOOcIpnZYA" target="_MwK1mTyDEeuMlOOcIpnZYA">
+      <styles xmi:type="notation:FontStyle" xmi:id="_MwK1njyDEeuMlOOcIpnZYA"/>
+      <styles xmi:type="notation:EObjectValueStyle" xmi:id="_MwK1ojyDEeuMlOOcIpnZYA" name="BASE_ELEMENT">
+        <eObjectValue xmi:type="uml:Comment" href="HAD%20Vehicle%20SPL.uml#_CHJocDyDEeuMlOOcIpnZYA"/>
+      </styles>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_MwK1nzyDEeuMlOOcIpnZYA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_MwK1oDyDEeuMlOOcIpnZYA"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_MwK1oTyDEeuMlOOcIpnZYA"/>
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_ck7-QMFSEeqMCpqAriphVA" type="InternalBlock" name="HAD Vehicle Internal Block Diagram" measurementUnit="Pixel">

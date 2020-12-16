@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Sistema xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://if.dsi.unifi.it/Modeling/DIM" Name="HAD Vehicle_instSpec">
+  <components Name="HAD Vehicle.leftCamera">
+    <FailureModes Name="HAD Vehicle.leftCamera_video.valueCoarse"/>
+    <Errors Name="HAD Vehicle.leftCamera_e_video"/>
+    <Faults xsi:type="InternalFault" Name="HAD Vehicle.leftCamera_ift" PermanentProbability="1.0">
+      <Occurrence xsi:type="Deterministic" Value="1.0E-8"/>
+      <TransientDuration xsi:type="Deterministic"/>
+    </Faults>
+    <FaultsGeneratesErrors Source="HAD Vehicle.leftCamera_ift" Destination="HAD Vehicle.leftCamera_e_video" PropagationProbability="1.0" PropagationLogicStringFormat="HAD Vehicle.leftCamera_ift" Name="HAD Vehicle.leftCamera_fge_1">
+      <ActivationDelay xsi:type="Deterministic"/>
+      <PropagationLogic xsi:type="FaultsExpressionFaultNode" faultsGenerateErrors="//@components.0/@FaultsGeneratesErrors.0" Fault="HAD Vehicle.leftCamera_ift"/>
+    </FaultsGeneratesErrors>
+    <ErrorsGeneratesFailures Name="HAD Vehicle.leftCamera_epf_1" PropagationLogicStringFormat="HAD Vehicle.leftCamera_e_video" Source="HAD Vehicle.leftCamera_e_video" Destination="HAD Vehicle.leftCamera_video.valueCoarse">
+      <PropagationLogic xsi:type="ErrorsExpressionErrorNode" errorPropagation="//@components.0/@ErrorsGeneratesFailures.0" Error="HAD Vehicle.leftCamera_e_video"/>
+      <PropagationDelay xsi:type="Deterministic"/>
+    </ErrorsGeneratesFailures>
+  </components>
+  <components Name="HAD Vehicle.rightCamera">
+    <FailureModes Name="HAD Vehicle.rightCamera_video.valueCoarse"/>
+    <Errors Name="HAD Vehicle.rightCamera_e_video"/>
+    <Faults xsi:type="InternalFault" Name="HAD Vehicle.rightCamera_ift" PermanentProbability="1.0">
+      <Occurrence xsi:type="Deterministic" Value="1.0E-8"/>
+      <TransientDuration xsi:type="Deterministic"/>
+    </Faults>
+    <FaultsGeneratesErrors Source="HAD Vehicle.rightCamera_ift" Destination="HAD Vehicle.rightCamera_e_video" PropagationProbability="1.0" PropagationLogicStringFormat="HAD Vehicle.rightCamera_ift" Name="HAD Vehicle.rightCamera_fge_1">
+      <ActivationDelay xsi:type="Deterministic"/>
+      <PropagationLogic xsi:type="FaultsExpressionFaultNode" faultsGenerateErrors="//@components.1/@FaultsGeneratesErrors.0" Fault="HAD Vehicle.rightCamera_ift"/>
+    </FaultsGeneratesErrors>
+    <ErrorsGeneratesFailures Name="HAD Vehicle.rightCamera_epf_1" PropagationLogicStringFormat="HAD Vehicle.rightCamera_e_video" Source="HAD Vehicle.rightCamera_e_video" Destination="HAD Vehicle.rightCamera_video.valueCoarse">
+      <PropagationLogic xsi:type="ErrorsExpressionErrorNode" errorPropagation="//@components.1/@ErrorsGeneratesFailures.0" Error="HAD Vehicle.rightCamera_e_video"/>
+      <PropagationDelay xsi:type="Deterministic"/>
+    </ErrorsGeneratesFailures>
+  </components>
+  <components Name="HAD Vehicle.vehicleComputer">
+    <FailureModes Name="HAD Vehicle.vehicleComputer_torque.alert.omission"/>
+    <FailureModes Name="HAD Vehicle.vehicleComputer_alert.alert.omission"/>
+    <Errors Name="HAD Vehicle.vehicleComputer_e_torque"/>
+    <Errors Name="HAD Vehicle.vehicleComputer_e_alert"/>
+    <Faults xsi:type="InternalFault" Name="HAD Vehicle.vehicleComputer_ift" PermanentProbability="1.0">
+      <Occurrence xsi:type="Deterministic" Value="1.0E-6"/>
+      <TransientDuration xsi:type="Deterministic"/>
+    </Faults>
+    <Faults xsi:type="ExternalFault" Name="HAD Vehicle.vehicleComputer_xft_cameraLeftIn.valueCoarse" Source="HAD Vehicle.leftCamera_video.valueCoarse"/>
+    <Faults xsi:type="ExternalFault" Name="HAD Vehicle.vehicleComputer_xft_cameraRightIn.valueCoarse" Source="HAD Vehicle.rightCamera_video.valueCoarse"/>
+    <FaultsGeneratesErrors Source="HAD Vehicle.vehicleComputer_ift" Destination="HAD Vehicle.vehicleComputer_e_torque HAD Vehicle.vehicleComputer_e_alert" PropagationProbability="1.0" PropagationLogicStringFormat="HAD Vehicle.vehicleComputer_ift" Name="HAD Vehicle.vehicleComputer_fge_1">
+      <ActivationDelay xsi:type="Deterministic"/>
+      <PropagationLogic xsi:type="FaultsExpressionFaultNode" faultsGenerateErrors="//@components.2/@FaultsGeneratesErrors.0" Fault="HAD Vehicle.vehicleComputer_ift"/>
+    </FaultsGeneratesErrors>
+    <FaultsGeneratesErrors Source="HAD Vehicle.vehicleComputer_xft_cameraLeftIn.valueCoarse HAD Vehicle.vehicleComputer_xft_cameraRightIn.valueCoarse" Destination="HAD Vehicle.vehicleComputer_e_torque HAD Vehicle.vehicleComputer_e_alert" PropagationProbability="1.0" PropagationLogicStringFormat="(HAD Vehicle.vehicleComputer_xft_cameraLeftIn.valueCoarse OR HAD Vehicle.vehicleComputer_xft_cameraRightIn.valueCoarse)" Name="HAD Vehicle.vehicleComputer_fge_2">
+      <ActivationDelay xsi:type="Deterministic"/>
+      <PropagationLogic xsi:type="FaultsExpressionOrNode" faultsGenerateErrors="//@components.2/@FaultsGeneratesErrors.1">
+        <FaultsExpression1 xsi:type="FaultsExpressionFaultNode" faultsGenerateErrors="//@components.2/@FaultsGeneratesErrors.1" Fault="HAD Vehicle.vehicleComputer_xft_cameraLeftIn.valueCoarse"/>
+        <FaultsExpression2 xsi:type="FaultsExpressionFaultNode" faultsGenerateErrors="//@components.2/@FaultsGeneratesErrors.1" Fault="HAD Vehicle.vehicleComputer_xft_cameraRightIn.valueCoarse"/>
+      </PropagationLogic>
+    </FaultsGeneratesErrors>
+    <ErrorsGeneratesFailures Name="HAD Vehicle.vehicleComputer_epf_1" PropagationLogicStringFormat="HAD Vehicle.vehicleComputer_e_torque" Source="HAD Vehicle.vehicleComputer_e_torque" Destination="HAD Vehicle.vehicleComputer_torque.alert.omission">
+      <PropagationLogic xsi:type="ErrorsExpressionErrorNode" errorPropagation="//@components.2/@ErrorsGeneratesFailures.0" Error="HAD Vehicle.vehicleComputer_e_torque"/>
+      <PropagationDelay xsi:type="Deterministic"/>
+    </ErrorsGeneratesFailures>
+    <ErrorsGeneratesFailures Name="HAD Vehicle.vehicleComputer_epf_2" PropagationLogicStringFormat="HAD Vehicle.vehicleComputer_e_alert" Source="HAD Vehicle.vehicleComputer_e_alert" Destination="HAD Vehicle.vehicleComputer_alert.alert.omission">
+      <PropagationLogic xsi:type="ErrorsExpressionErrorNode" errorPropagation="//@components.2/@ErrorsGeneratesFailures.1" Error="HAD Vehicle.vehicleComputer_e_alert"/>
+      <PropagationDelay xsi:type="Deterministic"/>
+    </ErrorsGeneratesFailures>
+  </components>
+  <measures xsi:type="Reliability" Name="SBA" target="HAD Vehicle.vehicleComputer_alert.alert.omission">
+    <evaluations xsi:type="InstantOfTime" timePoint="8650.0"/>
+  </measures>
+</Sistema>

@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ptnet="http:///ptnet.ecore">
+  <ptnet:PetriNetDoc>
+    <nets id="HAD Vehicle_instSpec" type="GSPN">
+      <pages id="HAD Vehicle_instSpec_page">
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.leftCamera_doreset" OutArcs="HAD Vehicle.leftCamera_arcreset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.leftCamera_reset" InArcs="HAD Vehicle.leftCamera_arcreset HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_to_HAD Vehicle.leftCamera_reset HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_transient_to_HAD Vehicle.leftCamera_reset HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_tmp_to_HAD Vehicle.leftCamera_reset HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_e_video_to_HAD Vehicle.leftCamera_reset HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_e_video_detected_to_HAD Vehicle.leftCamera_reset HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_video.valueCoarse_to_HAD Vehicle.leftCamera_reset HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_tmp_to_HAD Vehicle.leftCamera_reset HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_blocker_to_HAD Vehicle.leftCamera_reset HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_tmp_to_HAD Vehicle.leftCamera_reset HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_blocker_to_HAD Vehicle.leftCamera_reset" Priority="6">
+          <Guard xsi:type="ptnet:OpTrue"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_arcreset" source="HAD Vehicle.leftCamera_doreset" target="HAD Vehicle.leftCamera_reset"/>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.rightCamera_doreset" OutArcs="HAD Vehicle.rightCamera_arcreset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.rightCamera_reset" InArcs="HAD Vehicle.rightCamera_arcreset HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_to_HAD Vehicle.rightCamera_reset HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_transient_to_HAD Vehicle.rightCamera_reset HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_tmp_to_HAD Vehicle.rightCamera_reset HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_e_video_to_HAD Vehicle.rightCamera_reset HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_e_video_detected_to_HAD Vehicle.rightCamera_reset HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_video.valueCoarse_to_HAD Vehicle.rightCamera_reset HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_tmp_to_HAD Vehicle.rightCamera_reset HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_blocker_to_HAD Vehicle.rightCamera_reset HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_tmp_to_HAD Vehicle.rightCamera_reset HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_blocker_to_HAD Vehicle.rightCamera_reset" Priority="6">
+          <Guard xsi:type="ptnet:OpTrue"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_arcreset" source="HAD Vehicle.rightCamera_doreset" target="HAD Vehicle.rightCamera_reset"/>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.vehicleComputer_doreset" OutArcs="HAD Vehicle.vehicleComputer_arcreset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.vehicleComputer_reset" InArcs="HAD Vehicle.vehicleComputer_arcreset HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_to_HAD Vehicle.vehicleComputer_reset HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_transient_to_HAD Vehicle.vehicleComputer_reset HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_tmp_to_HAD Vehicle.vehicleComputer_reset HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_torque_to_HAD Vehicle.vehicleComputer_reset HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_torque_detected_to_HAD Vehicle.vehicleComputer_reset HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_alert_to_HAD Vehicle.vehicleComputer_reset HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_alert_detected_to_HAD Vehicle.vehicleComputer_reset HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_torque.alert.omission_to_HAD Vehicle.vehicleComputer_reset HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_alert.alert.omission_to_HAD Vehicle.vehicleComputer_reset HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_tmp_to_HAD Vehicle.vehicleComputer_reset HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_blocker_to_HAD Vehicle.vehicleComputer_reset HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_tmp_to_HAD Vehicle.vehicleComputer_reset HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_blocker_to_HAD Vehicle.vehicleComputer_reset HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_tmp_to_HAD Vehicle.vehicleComputer_reset HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_blocker_to_HAD Vehicle.vehicleComputer_reset HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_tmp_to_HAD Vehicle.vehicleComputer_reset HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_blocker_to_HAD Vehicle.vehicleComputer_reset" Priority="6">
+          <Guard xsi:type="ptnet:OpAnd">
+            <expression1 xsi:type="ptnet:OpAnd">
+              <expression1 xsi:type="ptnet:OpTrue"/>
+              <expression2 xsi:type="ptnet:OpOr">
+                <expression1 xsi:type="ptnet:OpAnd">
+                  <expression1 xsi:type="ptnet:OpTrue"/>
+                  <expression2 xsi:type="ptnet:OpEqual">
+                    <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_video.valueCoarse"/>
+                    <expression2 xsi:type="ptnet:ValueExpression"/>
+                  </expression2>
+                </expression1>
+                <expression2 xsi:type="ptnet:OpGreater">
+                  <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.leftCamera_doreset"/>
+                  <expression2 xsi:type="ptnet:ValueExpression"/>
+                </expression2>
+              </expression2>
+            </expression1>
+            <expression2 xsi:type="ptnet:OpOr">
+              <expression1 xsi:type="ptnet:OpAnd">
+                <expression1 xsi:type="ptnet:OpTrue"/>
+                <expression2 xsi:type="ptnet:OpEqual">
+                  <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_video.valueCoarse"/>
+                  <expression2 xsi:type="ptnet:ValueExpression"/>
+                </expression2>
+              </expression1>
+              <expression2 xsi:type="ptnet:OpGreater">
+                <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.rightCamera_doreset"/>
+                <expression2 xsi:type="ptnet:ValueExpression"/>
+              </expression2>
+            </expression2>
+          </Guard>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_arcreset" source="HAD Vehicle.vehicleComputer_doreset" target="HAD Vehicle.vehicleComputer_reset"/>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift" InArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_permcase_to_faulty HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_transcase_to_faulty" OutArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_removetrans_faulty HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_to_HAD Vehicle.leftCamera_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_tmp" InArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_totmp" OutArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_tmp_to_permcase HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_tmp_to_transcase HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_tmp_to_HAD Vehicle.leftCamera_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNTimedTransition" id="HAD Vehicle.leftCamera_ift_FO" OutArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_totmp">
+          <Guard xsi:type="ptnet:OpEqual">
+            <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift"/>
+            <expression2 xsi:type="ptnet:ValueExpression"/>
+          </Guard>
+          <Distribution xsi:type="ptnet:Deterministic" Value="1.0E-8"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.leftCamera_ift_TD" InArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_removetrans_trans HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_removetrans_faulty" Priority="4"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_totmp" source="HAD Vehicle.leftCamera_ift_FO" target="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_tmp"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_removetrans_trans" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_transient" target="HAD Vehicle.leftCamera_ift_TD"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_removetrans_faulty" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift" target="HAD Vehicle.leftCamera_ift_TD"/>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_transient" InArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_transcase_to_transient" OutArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_removetrans_trans HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_transient_to_HAD Vehicle.leftCamera_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_caseperm" InArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_tmp_to_permcase" OutArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_permcase_to_faulty" Priority="7"/>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_casetrans" InArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_tmp_to_transcase" OutArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_transcase_to_faulty HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_transcase_to_transient" Priority="7" Weight="0.0"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_tmp_to_permcase" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_tmp" target="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_caseperm"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_permcase_to_faulty" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_caseperm" target="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_tmp_to_transcase" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_tmp" target="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_casetrans"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_transcase_to_faulty" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_casetrans" target="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_transcase_to_transient" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_casetrans" target="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_transient"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_to_HAD Vehicle.leftCamera_reset" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift" target="HAD Vehicle.leftCamera_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_transient_to_HAD Vehicle.leftCamera_reset" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_transient" target="HAD Vehicle.leftCamera_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_transient"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_tmp_to_HAD Vehicle.leftCamera_reset" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_tmp" target="HAD Vehicle.leftCamera_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift_tmp"/>
+        </objects>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift" InArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_permcase_to_faulty HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_transcase_to_faulty" OutArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_removetrans_faulty HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_to_HAD Vehicle.rightCamera_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_tmp" InArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_totmp" OutArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_tmp_to_permcase HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_tmp_to_transcase HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_tmp_to_HAD Vehicle.rightCamera_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNTimedTransition" id="HAD Vehicle.rightCamera_ift_FO" OutArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_totmp">
+          <Guard xsi:type="ptnet:OpEqual">
+            <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift"/>
+            <expression2 xsi:type="ptnet:ValueExpression"/>
+          </Guard>
+          <Distribution xsi:type="ptnet:Deterministic" Value="1.0E-8"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.rightCamera_ift_TD" InArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_removetrans_trans HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_removetrans_faulty" Priority="4"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_totmp" source="HAD Vehicle.rightCamera_ift_FO" target="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_tmp"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_removetrans_trans" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_transient" target="HAD Vehicle.rightCamera_ift_TD"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_removetrans_faulty" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift" target="HAD Vehicle.rightCamera_ift_TD"/>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_transient" InArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_transcase_to_transient" OutArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_removetrans_trans HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_transient_to_HAD Vehicle.rightCamera_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_caseperm" InArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_tmp_to_permcase" OutArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_permcase_to_faulty" Priority="7"/>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_casetrans" InArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_tmp_to_transcase" OutArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_transcase_to_faulty HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_transcase_to_transient" Priority="7" Weight="0.0"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_tmp_to_permcase" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_tmp" target="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_caseperm"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_permcase_to_faulty" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_caseperm" target="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_tmp_to_transcase" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_tmp" target="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_casetrans"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_transcase_to_faulty" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_casetrans" target="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_transcase_to_transient" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_casetrans" target="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_transient"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_to_HAD Vehicle.rightCamera_reset" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift" target="HAD Vehicle.rightCamera_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_transient_to_HAD Vehicle.rightCamera_reset" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_transient" target="HAD Vehicle.rightCamera_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_transient"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_tmp_to_HAD Vehicle.rightCamera_reset" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_tmp" target="HAD Vehicle.rightCamera_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift_tmp"/>
+        </objects>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_permcase_to_faulty HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_transcase_to_faulty" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_removetrans_faulty HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_to_HAD Vehicle.vehicleComputer_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_tmp" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_totmp" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_tmp_to_permcase HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_tmp_to_transcase HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_tmp_to_HAD Vehicle.vehicleComputer_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNTimedTransition" id="HAD Vehicle.vehicleComputer_ift_FO" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_totmp">
+          <Guard xsi:type="ptnet:OpEqual">
+            <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift"/>
+            <expression2 xsi:type="ptnet:ValueExpression"/>
+          </Guard>
+          <Distribution xsi:type="ptnet:Deterministic" Value="1.0E-6"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.vehicleComputer_ift_TD" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_removetrans_trans HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_removetrans_faulty" Priority="4"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_totmp" source="HAD Vehicle.vehicleComputer_ift_FO" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_tmp"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_removetrans_trans" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_transient" target="HAD Vehicle.vehicleComputer_ift_TD"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_removetrans_faulty" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift" target="HAD Vehicle.vehicleComputer_ift_TD"/>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_transient" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_transcase_to_transient" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_removetrans_trans HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_transient_to_HAD Vehicle.vehicleComputer_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_caseperm" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_tmp_to_permcase" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_permcase_to_faulty" Priority="7"/>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_casetrans" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_tmp_to_transcase" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_transcase_to_faulty HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_transcase_to_transient" Priority="7" Weight="0.0"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_tmp_to_permcase" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_tmp" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_caseperm"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_permcase_to_faulty" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_caseperm" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_tmp_to_transcase" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_tmp" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_casetrans"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_transcase_to_faulty" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_casetrans" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_transcase_to_transient" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_casetrans" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_transient"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_to_HAD Vehicle.vehicleComputer_reset" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift" target="HAD Vehicle.vehicleComputer_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_transient_to_HAD Vehicle.vehicleComputer_reset" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_transient" target="HAD Vehicle.vehicleComputer_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_transient"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_tmp_to_HAD Vehicle.vehicleComputer_reset" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_tmp" target="HAD Vehicle.vehicleComputer_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift_tmp"/>
+        </objects>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_e_video" InArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_caseprop_to_HAD Vehicle.leftCamera_e_video" OutArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_e_video_to_HAD Vehicle.leftCamera_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_e_video_detected" OutArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_e_video_detected_to_HAD Vehicle.leftCamera_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_e_video_to_HAD Vehicle.leftCamera_reset" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_e_video" target="HAD Vehicle.leftCamera_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_e_video"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_e_video_detected_to_HAD Vehicle.leftCamera_reset" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_e_video_detected" target="HAD Vehicle.leftCamera_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_e_video_detected"/>
+        </objects>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_e_video" InArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_caseprop_to_HAD Vehicle.rightCamera_e_video" OutArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_e_video_to_HAD Vehicle.rightCamera_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_e_video_detected" OutArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_e_video_detected_to_HAD Vehicle.rightCamera_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_e_video_to_HAD Vehicle.rightCamera_reset" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_e_video" target="HAD Vehicle.rightCamera_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_e_video"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_e_video_detected_to_HAD Vehicle.rightCamera_reset" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_e_video_detected" target="HAD Vehicle.rightCamera_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_e_video_detected"/>
+        </objects>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_torque" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_caseprop_to_HAD Vehicle.vehicleComputer_e_torque HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_caseprop_to_HAD Vehicle.vehicleComputer_e_torque" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_torque_to_HAD Vehicle.vehicleComputer_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_torque_detected" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_torque_detected_to_HAD Vehicle.vehicleComputer_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_torque_to_HAD Vehicle.vehicleComputer_reset" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_torque" target="HAD Vehicle.vehicleComputer_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_torque"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_torque_detected_to_HAD Vehicle.vehicleComputer_reset" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_torque_detected" target="HAD Vehicle.vehicleComputer_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_torque_detected"/>
+        </objects>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_alert" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_caseprop_to_HAD Vehicle.vehicleComputer_e_alert HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_caseprop_to_HAD Vehicle.vehicleComputer_e_alert" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_alert_to_HAD Vehicle.vehicleComputer_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_alert_detected" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_alert_detected_to_HAD Vehicle.vehicleComputer_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_alert_to_HAD Vehicle.vehicleComputer_reset" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_alert" target="HAD Vehicle.vehicleComputer_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_alert"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_alert_detected_to_HAD Vehicle.vehicleComputer_reset" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_alert_detected" target="HAD Vehicle.vehicleComputer_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_alert_detected"/>
+        </objects>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_video.valueCoarse" InArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_caseprop_to_HAD Vehicle.leftCamera_video.valueCoarse" OutArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_video.valueCoarse_to_HAD Vehicle.leftCamera_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_video.valueCoarse_to_HAD Vehicle.leftCamera_reset" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_video.valueCoarse" target="HAD Vehicle.leftCamera_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_video.valueCoarse"/>
+        </objects>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_video.valueCoarse" InArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_caseprop_to_HAD Vehicle.rightCamera_video.valueCoarse" OutArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_video.valueCoarse_to_HAD Vehicle.rightCamera_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_video.valueCoarse_to_HAD Vehicle.rightCamera_reset" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_video.valueCoarse" target="HAD Vehicle.rightCamera_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_video.valueCoarse"/>
+        </objects>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_torque.alert.omission" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_caseprop_to_HAD Vehicle.vehicleComputer_torque.alert.omission" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_torque.alert.omission_to_HAD Vehicle.vehicleComputer_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_torque.alert.omission_to_HAD Vehicle.vehicleComputer_reset" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_torque.alert.omission" target="HAD Vehicle.vehicleComputer_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_torque.alert.omission"/>
+        </objects>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_alert.alert.omission" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_caseprop_to_HAD Vehicle.vehicleComputer_alert.alert.omission" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_alert.alert.omission_to_HAD Vehicle.vehicleComputer_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_alert.alert.omission_to_HAD Vehicle.vehicleComputer_reset" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_alert.alert.omission" target="HAD Vehicle.vehicleComputer_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_alert.alert.omission"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1" InArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_toblocker_inhibit" OutArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_totmp HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_toblocker" Priority="5">
+          <Guard xsi:type="ptnet:OpAnd">
+            <expression1 xsi:type="ptnet:OpAnd">
+              <expression1 xsi:type="ptnet:OpGreater">
+                <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_ift"/>
+                <expression2 xsi:type="ptnet:ValueExpression"/>
+              </expression1>
+              <expression2 xsi:type="ptnet:OpAnd">
+                <expression1 xsi:type="ptnet:OpEqual">
+                  <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_tmp"/>
+                  <expression2 xsi:type="ptnet:ValueExpression"/>
+                </expression1>
+                <expression2 xsi:type="ptnet:OpEqual">
+                  <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_video.valueCoarse"/>
+                  <expression2 xsi:type="ptnet:ValueExpression"/>
+                </expression2>
+              </expression2>
+            </expression1>
+            <expression2 xsi:type="ptnet:OpEqual">
+              <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_e_video"/>
+              <expression2 xsi:type="ptnet:ValueExpression"/>
+            </expression2>
+          </Guard>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_totmp" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1" target="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_tmp"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_toblocker" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1" target="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_blocker"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_toblocker_inhibit" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_blocker" target="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1" type="inhibitor"/>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_tmp" InArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_totmp" OutArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_toprop HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_toskip HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_tmp_to_HAD Vehicle.leftCamera_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_caseprop" InArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_toprop" OutArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_caseprop_to_HAD Vehicle.leftCamera_e_video" Priority="7"/>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_caseskip" InArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_toskip" Priority="7" Weight="0.0">
+          <Guard xsi:type="ptnet:OpFalse"/>
+        </objects>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_blocker" InArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_toblocker" OutArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_toblocker_inhibit HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_blocker_to_HAD Vehicle.leftCamera_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_toprop" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_tmp" target="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_caseprop"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_toskip" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_tmp" target="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_caseskip"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_tmp_to_HAD Vehicle.leftCamera_reset" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_tmp" target="HAD Vehicle.leftCamera_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_tmp"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_blocker_to_HAD Vehicle.leftCamera_reset" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_blocker" target="HAD Vehicle.leftCamera_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_blocker"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_caseprop_to_HAD Vehicle.leftCamera_e_video" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_fge_1_caseprop" target="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_e_video"/>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1" InArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_toblocker_inhibit" OutArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_totmp HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_toblocker" Priority="5">
+          <Guard xsi:type="ptnet:OpAnd">
+            <expression1 xsi:type="ptnet:OpAnd">
+              <expression1 xsi:type="ptnet:OpGreater">
+                <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_ift"/>
+                <expression2 xsi:type="ptnet:ValueExpression"/>
+              </expression1>
+              <expression2 xsi:type="ptnet:OpAnd">
+                <expression1 xsi:type="ptnet:OpEqual">
+                  <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_tmp"/>
+                  <expression2 xsi:type="ptnet:ValueExpression"/>
+                </expression1>
+                <expression2 xsi:type="ptnet:OpEqual">
+                  <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_video.valueCoarse"/>
+                  <expression2 xsi:type="ptnet:ValueExpression"/>
+                </expression2>
+              </expression2>
+            </expression1>
+            <expression2 xsi:type="ptnet:OpEqual">
+              <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_e_video"/>
+              <expression2 xsi:type="ptnet:ValueExpression"/>
+            </expression2>
+          </Guard>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_totmp" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1" target="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_tmp"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_toblocker" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1" target="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_blocker"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_toblocker_inhibit" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_blocker" target="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1" type="inhibitor"/>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_tmp" InArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_totmp" OutArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_toprop HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_toskip HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_tmp_to_HAD Vehicle.rightCamera_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_caseprop" InArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_toprop" OutArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_caseprop_to_HAD Vehicle.rightCamera_e_video" Priority="7"/>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_caseskip" InArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_toskip" Priority="7" Weight="0.0">
+          <Guard xsi:type="ptnet:OpFalse"/>
+        </objects>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_blocker" InArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_toblocker" OutArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_toblocker_inhibit HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_blocker_to_HAD Vehicle.rightCamera_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_toprop" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_tmp" target="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_caseprop"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_toskip" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_tmp" target="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_caseskip"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_tmp_to_HAD Vehicle.rightCamera_reset" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_tmp" target="HAD Vehicle.rightCamera_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_tmp"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_blocker_to_HAD Vehicle.rightCamera_reset" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_blocker" target="HAD Vehicle.rightCamera_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_blocker"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_caseprop_to_HAD Vehicle.rightCamera_e_video" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_fge_1_caseprop" target="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_e_video"/>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_toblocker_inhibit" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_totmp HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_toblocker" Priority="5">
+          <Guard xsi:type="ptnet:OpAnd">
+            <expression1 xsi:type="ptnet:OpAnd">
+              <expression1 xsi:type="ptnet:OpGreater">
+                <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_ift"/>
+                <expression2 xsi:type="ptnet:ValueExpression"/>
+              </expression1>
+              <expression2 xsi:type="ptnet:OpAnd">
+                <expression1 xsi:type="ptnet:OpEqual">
+                  <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_tmp"/>
+                  <expression2 xsi:type="ptnet:ValueExpression"/>
+                </expression1>
+                <expression2 xsi:type="ptnet:OpAnd">
+                  <expression1 xsi:type="ptnet:OpEqual">
+                    <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_torque.alert.omission"/>
+                    <expression2 xsi:type="ptnet:ValueExpression"/>
+                  </expression1>
+                  <expression2 xsi:type="ptnet:OpEqual">
+                    <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_alert.alert.omission"/>
+                    <expression2 xsi:type="ptnet:ValueExpression"/>
+                  </expression2>
+                </expression2>
+              </expression2>
+            </expression1>
+            <expression2 xsi:type="ptnet:OpOr">
+              <expression1 xsi:type="ptnet:OpEqual">
+                <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_alert"/>
+                <expression2 xsi:type="ptnet:ValueExpression"/>
+              </expression1>
+              <expression2 xsi:type="ptnet:OpEqual">
+                <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_torque"/>
+                <expression2 xsi:type="ptnet:ValueExpression"/>
+              </expression2>
+            </expression2>
+          </Guard>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_totmp" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_tmp"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_toblocker" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_blocker"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_toblocker_inhibit" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_blocker" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1" type="inhibitor"/>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_tmp" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_totmp" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_toprop HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_toskip HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_tmp_to_HAD Vehicle.vehicleComputer_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_caseprop" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_toprop" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_caseprop_to_HAD Vehicle.vehicleComputer_e_alert HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_caseprop_to_HAD Vehicle.vehicleComputer_e_torque" Priority="7"/>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_caseskip" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_toskip" Priority="7" Weight="0.0">
+          <Guard xsi:type="ptnet:OpFalse"/>
+        </objects>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_blocker" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_toblocker" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_toblocker_inhibit HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_blocker_to_HAD Vehicle.vehicleComputer_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_toprop" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_tmp" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_caseprop"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_toskip" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_tmp" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_caseskip"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_tmp_to_HAD Vehicle.vehicleComputer_reset" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_tmp" target="HAD Vehicle.vehicleComputer_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_tmp"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_blocker_to_HAD Vehicle.vehicleComputer_reset" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_blocker" target="HAD Vehicle.vehicleComputer_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_blocker"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_caseprop_to_HAD Vehicle.vehicleComputer_e_alert" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_caseprop" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_alert"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_caseprop_to_HAD Vehicle.vehicleComputer_e_torque" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_1_caseprop" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_torque"/>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_toblocker_inhibit" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_totmp HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_toblocker" Priority="5">
+          <Guard xsi:type="ptnet:OpAnd">
+            <expression1 xsi:type="ptnet:OpAnd">
+              <expression1 xsi:type="ptnet:OpOr">
+                <expression1 xsi:type="ptnet:OpGreater">
+                  <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_video.valueCoarse"/>
+                  <expression2 xsi:type="ptnet:ValueExpression"/>
+                </expression1>
+                <expression2 xsi:type="ptnet:OpGreater">
+                  <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_video.valueCoarse"/>
+                  <expression2 xsi:type="ptnet:ValueExpression"/>
+                </expression2>
+              </expression1>
+              <expression2 xsi:type="ptnet:OpAnd">
+                <expression1 xsi:type="ptnet:OpEqual">
+                  <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_tmp"/>
+                  <expression2 xsi:type="ptnet:ValueExpression"/>
+                </expression1>
+                <expression2 xsi:type="ptnet:OpAnd">
+                  <expression1 xsi:type="ptnet:OpEqual">
+                    <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_torque.alert.omission"/>
+                    <expression2 xsi:type="ptnet:ValueExpression"/>
+                  </expression1>
+                  <expression2 xsi:type="ptnet:OpEqual">
+                    <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_alert.alert.omission"/>
+                    <expression2 xsi:type="ptnet:ValueExpression"/>
+                  </expression2>
+                </expression2>
+              </expression2>
+            </expression1>
+            <expression2 xsi:type="ptnet:OpOr">
+              <expression1 xsi:type="ptnet:OpEqual">
+                <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_alert"/>
+                <expression2 xsi:type="ptnet:ValueExpression"/>
+              </expression1>
+              <expression2 xsi:type="ptnet:OpEqual">
+                <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_torque"/>
+                <expression2 xsi:type="ptnet:ValueExpression"/>
+              </expression2>
+            </expression2>
+          </Guard>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_totmp" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_tmp"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_toblocker" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_blocker"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_toblocker_inhibit" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_blocker" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2" type="inhibitor"/>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_tmp" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_totmp" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_toprop HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_toskip HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_tmp_to_HAD Vehicle.vehicleComputer_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_caseprop" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_toprop" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_caseprop_to_HAD Vehicle.vehicleComputer_e_alert HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_caseprop_to_HAD Vehicle.vehicleComputer_e_torque" Priority="7"/>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_caseskip" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_toskip" Priority="7" Weight="0.0">
+          <Guard xsi:type="ptnet:OpFalse"/>
+        </objects>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_blocker" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_toblocker" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_toblocker_inhibit HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_blocker_to_HAD Vehicle.vehicleComputer_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_toprop" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_tmp" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_caseprop"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_toskip" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_tmp" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_caseskip"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_tmp_to_HAD Vehicle.vehicleComputer_reset" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_tmp" target="HAD Vehicle.vehicleComputer_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_tmp"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_blocker_to_HAD Vehicle.vehicleComputer_reset" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_blocker" target="HAD Vehicle.vehicleComputer_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_blocker"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_caseprop_to_HAD Vehicle.vehicleComputer_e_alert" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_caseprop" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_alert"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_caseprop_to_HAD Vehicle.vehicleComputer_e_torque" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_fge_2_caseprop" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_torque"/>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1" InArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_toblocker_inhibit HAD Vehicle.leftCamera_e_video_sel_HAD Vehicle.leftCamera_epf_1_to_HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1" OutArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_totmp HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_toblocker" Priority="5">
+          <Guard xsi:type="ptnet:OpAnd">
+            <expression1 xsi:type="ptnet:OpAnd">
+              <expression1 xsi:type="ptnet:OpGreater">
+                <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_e_video"/>
+                <expression2 xsi:type="ptnet:ValueExpression"/>
+              </expression1>
+              <expression2 xsi:type="ptnet:OpAnd">
+                <expression1 xsi:type="ptnet:OpEqual">
+                  <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_tmp"/>
+                  <expression2 xsi:type="ptnet:ValueExpression"/>
+                </expression1>
+                <expression2 xsi:type="ptnet:OpEqual">
+                  <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_video.valueCoarse"/>
+                  <expression2 xsi:type="ptnet:ValueExpression"/>
+                </expression2>
+              </expression2>
+            </expression1>
+            <expression2 xsi:type="ptnet:OpEqual">
+              <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_video.valueCoarse"/>
+              <expression2 xsi:type="ptnet:ValueExpression"/>
+            </expression2>
+          </Guard>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_totmp" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1" target="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_tmp"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_toblocker" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1" target="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_blocker"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_toblocker_inhibit" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_blocker" target="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1" type="inhibitor"/>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_tmp" InArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_totmp" OutArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_toprop HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_toskip HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_tmp_to_HAD Vehicle.leftCamera_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_caseprop" InArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_toprop" OutArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_caseprop_to_HAD Vehicle.leftCamera_video.valueCoarse" Priority="7"/>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_caseskip" InArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_toskip" Priority="7" Weight="0.0"/>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_blocker" InArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_toblocker" OutArcs="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_toblocker_inhibit HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_blocker_to_HAD Vehicle.leftCamera_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_toprop" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_tmp" target="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_caseprop"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_toskip" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_tmp" target="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_caseskip"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_tmp_to_HAD Vehicle.leftCamera_reset" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_tmp" target="HAD Vehicle.leftCamera_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_tmp"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_blocker_to_HAD Vehicle.leftCamera_reset" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_blocker" target="HAD Vehicle.leftCamera_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_blocker"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_caseprop_to_HAD Vehicle.leftCamera_video.valueCoarse" source="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_caseprop" target="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_video.valueCoarse"/>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.leftCamera_e_video_sel_HAD Vehicle.leftCamera_epf_1" InArcs="HAD Vehicle.leftCamera_e_video_choice_HAD Vehicle.leftCamera_epf_1_to_sel" OutArcs="HAD Vehicle.leftCamera_e_video_choice_HAD Vehicle.leftCamera_epf_1_to_sel_inh HAD Vehicle.leftCamera_e_video_sel_HAD Vehicle.leftCamera_epf_1_to_HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.leftCamera_e_video_choice_HAD Vehicle.leftCamera_epf_1" InArcs="HAD Vehicle.leftCamera_e_video_choice_HAD Vehicle.leftCamera_epf_1_to_sel_inh" OutArcs="HAD Vehicle.leftCamera_e_video_choice_HAD Vehicle.leftCamera_epf_1_to_sel" Priority="7">
+          <Guard xsi:type="ptnet:OpAnd">
+            <expression1 xsi:type="ptnet:OpAnd">
+              <expression1 xsi:type="ptnet:OpGreater">
+                <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_e_video"/>
+                <expression2 xsi:type="ptnet:ValueExpression"/>
+              </expression1>
+              <expression2 xsi:type="ptnet:OpAnd">
+                <expression1 xsi:type="ptnet:OpEqual">
+                  <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1_tmp"/>
+                  <expression2 xsi:type="ptnet:ValueExpression"/>
+                </expression1>
+                <expression2 xsi:type="ptnet:OpEqual">
+                  <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_video.valueCoarse"/>
+                  <expression2 xsi:type="ptnet:ValueExpression"/>
+                </expression2>
+              </expression2>
+            </expression1>
+            <expression2 xsi:type="ptnet:OpEqual">
+              <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_video.valueCoarse"/>
+              <expression2 xsi:type="ptnet:ValueExpression"/>
+            </expression2>
+          </Guard>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_e_video_choice_HAD Vehicle.leftCamera_epf_1_to_sel" source="HAD Vehicle.leftCamera_e_video_choice_HAD Vehicle.leftCamera_epf_1" target="HAD Vehicle.leftCamera_e_video_sel_HAD Vehicle.leftCamera_epf_1"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_e_video_choice_HAD Vehicle.leftCamera_epf_1_to_sel_inh" source="HAD Vehicle.leftCamera_e_video_sel_HAD Vehicle.leftCamera_epf_1" target="HAD Vehicle.leftCamera_e_video_choice_HAD Vehicle.leftCamera_epf_1" type="inhibitor"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.leftCamera_e_video_sel_HAD Vehicle.leftCamera_epf_1_to_HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1" source="HAD Vehicle.leftCamera_e_video_sel_HAD Vehicle.leftCamera_epf_1" target="HAD Vehicle.leftCamera_HAD Vehicle.leftCamera_epf_1"/>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1" InArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_toblocker_inhibit HAD Vehicle.rightCamera_e_video_sel_HAD Vehicle.rightCamera_epf_1_to_HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1" OutArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_totmp HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_toblocker" Priority="5">
+          <Guard xsi:type="ptnet:OpAnd">
+            <expression1 xsi:type="ptnet:OpAnd">
+              <expression1 xsi:type="ptnet:OpGreater">
+                <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_e_video"/>
+                <expression2 xsi:type="ptnet:ValueExpression"/>
+              </expression1>
+              <expression2 xsi:type="ptnet:OpAnd">
+                <expression1 xsi:type="ptnet:OpEqual">
+                  <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_tmp"/>
+                  <expression2 xsi:type="ptnet:ValueExpression"/>
+                </expression1>
+                <expression2 xsi:type="ptnet:OpEqual">
+                  <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_video.valueCoarse"/>
+                  <expression2 xsi:type="ptnet:ValueExpression"/>
+                </expression2>
+              </expression2>
+            </expression1>
+            <expression2 xsi:type="ptnet:OpEqual">
+              <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_video.valueCoarse"/>
+              <expression2 xsi:type="ptnet:ValueExpression"/>
+            </expression2>
+          </Guard>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_totmp" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1" target="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_tmp"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_toblocker" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1" target="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_blocker"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_toblocker_inhibit" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_blocker" target="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1" type="inhibitor"/>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_tmp" InArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_totmp" OutArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_toprop HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_toskip HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_tmp_to_HAD Vehicle.rightCamera_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_caseprop" InArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_toprop" OutArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_caseprop_to_HAD Vehicle.rightCamera_video.valueCoarse" Priority="7"/>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_caseskip" InArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_toskip" Priority="7" Weight="0.0"/>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_blocker" InArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_toblocker" OutArcs="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_toblocker_inhibit HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_blocker_to_HAD Vehicle.rightCamera_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_toprop" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_tmp" target="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_caseprop"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_toskip" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_tmp" target="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_caseskip"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_tmp_to_HAD Vehicle.rightCamera_reset" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_tmp" target="HAD Vehicle.rightCamera_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_tmp"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_blocker_to_HAD Vehicle.rightCamera_reset" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_blocker" target="HAD Vehicle.rightCamera_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_blocker"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_caseprop_to_HAD Vehicle.rightCamera_video.valueCoarse" source="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_caseprop" target="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_video.valueCoarse"/>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.rightCamera_e_video_sel_HAD Vehicle.rightCamera_epf_1" InArcs="HAD Vehicle.rightCamera_e_video_choice_HAD Vehicle.rightCamera_epf_1_to_sel" OutArcs="HAD Vehicle.rightCamera_e_video_choice_HAD Vehicle.rightCamera_epf_1_to_sel_inh HAD Vehicle.rightCamera_e_video_sel_HAD Vehicle.rightCamera_epf_1_to_HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.rightCamera_e_video_choice_HAD Vehicle.rightCamera_epf_1" InArcs="HAD Vehicle.rightCamera_e_video_choice_HAD Vehicle.rightCamera_epf_1_to_sel_inh" OutArcs="HAD Vehicle.rightCamera_e_video_choice_HAD Vehicle.rightCamera_epf_1_to_sel" Priority="7">
+          <Guard xsi:type="ptnet:OpAnd">
+            <expression1 xsi:type="ptnet:OpAnd">
+              <expression1 xsi:type="ptnet:OpGreater">
+                <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_e_video"/>
+                <expression2 xsi:type="ptnet:ValueExpression"/>
+              </expression1>
+              <expression2 xsi:type="ptnet:OpAnd">
+                <expression1 xsi:type="ptnet:OpEqual">
+                  <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1_tmp"/>
+                  <expression2 xsi:type="ptnet:ValueExpression"/>
+                </expression1>
+                <expression2 xsi:type="ptnet:OpEqual">
+                  <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_video.valueCoarse"/>
+                  <expression2 xsi:type="ptnet:ValueExpression"/>
+                </expression2>
+              </expression2>
+            </expression1>
+            <expression2 xsi:type="ptnet:OpEqual">
+              <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_video.valueCoarse"/>
+              <expression2 xsi:type="ptnet:ValueExpression"/>
+            </expression2>
+          </Guard>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_e_video_choice_HAD Vehicle.rightCamera_epf_1_to_sel" source="HAD Vehicle.rightCamera_e_video_choice_HAD Vehicle.rightCamera_epf_1" target="HAD Vehicle.rightCamera_e_video_sel_HAD Vehicle.rightCamera_epf_1"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_e_video_choice_HAD Vehicle.rightCamera_epf_1_to_sel_inh" source="HAD Vehicle.rightCamera_e_video_sel_HAD Vehicle.rightCamera_epf_1" target="HAD Vehicle.rightCamera_e_video_choice_HAD Vehicle.rightCamera_epf_1" type="inhibitor"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.rightCamera_e_video_sel_HAD Vehicle.rightCamera_epf_1_to_HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1" source="HAD Vehicle.rightCamera_e_video_sel_HAD Vehicle.rightCamera_epf_1" target="HAD Vehicle.rightCamera_HAD Vehicle.rightCamera_epf_1"/>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_toblocker_inhibit HAD Vehicle.vehicleComputer_e_torque_sel_HAD Vehicle.vehicleComputer_epf_1_to_HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_totmp HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_toblocker" Priority="5">
+          <Guard xsi:type="ptnet:OpAnd">
+            <expression1 xsi:type="ptnet:OpAnd">
+              <expression1 xsi:type="ptnet:OpGreater">
+                <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_torque"/>
+                <expression2 xsi:type="ptnet:ValueExpression"/>
+              </expression1>
+              <expression2 xsi:type="ptnet:OpAnd">
+                <expression1 xsi:type="ptnet:OpEqual">
+                  <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_tmp"/>
+                  <expression2 xsi:type="ptnet:ValueExpression"/>
+                </expression1>
+                <expression2 xsi:type="ptnet:OpAnd">
+                  <expression1 xsi:type="ptnet:OpEqual">
+                    <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_torque.alert.omission"/>
+                    <expression2 xsi:type="ptnet:ValueExpression"/>
+                  </expression1>
+                  <expression2 xsi:type="ptnet:OpEqual">
+                    <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_alert.alert.omission"/>
+                    <expression2 xsi:type="ptnet:ValueExpression"/>
+                  </expression2>
+                </expression2>
+              </expression2>
+            </expression1>
+            <expression2 xsi:type="ptnet:OpEqual">
+              <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_torque.alert.omission"/>
+              <expression2 xsi:type="ptnet:ValueExpression"/>
+            </expression2>
+          </Guard>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_totmp" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_tmp"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_toblocker" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_blocker"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_toblocker_inhibit" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_blocker" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1" type="inhibitor"/>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_tmp" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_totmp" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_toprop HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_toskip HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_tmp_to_HAD Vehicle.vehicleComputer_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_caseprop" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_toprop" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_caseprop_to_HAD Vehicle.vehicleComputer_torque.alert.omission" Priority="7"/>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_caseskip" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_toskip" Priority="7" Weight="0.0"/>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_blocker" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_toblocker" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_toblocker_inhibit HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_blocker_to_HAD Vehicle.vehicleComputer_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_toprop" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_tmp" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_caseprop"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_toskip" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_tmp" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_caseskip"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_tmp_to_HAD Vehicle.vehicleComputer_reset" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_tmp" target="HAD Vehicle.vehicleComputer_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_tmp"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_blocker_to_HAD Vehicle.vehicleComputer_reset" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_blocker" target="HAD Vehicle.vehicleComputer_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_blocker"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_caseprop_to_HAD Vehicle.vehicleComputer_torque.alert.omission" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_caseprop" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_torque.alert.omission"/>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.vehicleComputer_e_torque_sel_HAD Vehicle.vehicleComputer_epf_1" InArcs="HAD Vehicle.vehicleComputer_e_torque_choice_HAD Vehicle.vehicleComputer_epf_1_to_sel" OutArcs="HAD Vehicle.vehicleComputer_e_torque_choice_HAD Vehicle.vehicleComputer_epf_1_to_sel_inh HAD Vehicle.vehicleComputer_e_torque_sel_HAD Vehicle.vehicleComputer_epf_1_to_HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.vehicleComputer_e_torque_choice_HAD Vehicle.vehicleComputer_epf_1" InArcs="HAD Vehicle.vehicleComputer_e_torque_choice_HAD Vehicle.vehicleComputer_epf_1_to_sel_inh" OutArcs="HAD Vehicle.vehicleComputer_e_torque_choice_HAD Vehicle.vehicleComputer_epf_1_to_sel" Priority="7">
+          <Guard xsi:type="ptnet:OpAnd">
+            <expression1 xsi:type="ptnet:OpAnd">
+              <expression1 xsi:type="ptnet:OpGreater">
+                <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_torque"/>
+                <expression2 xsi:type="ptnet:ValueExpression"/>
+              </expression1>
+              <expression2 xsi:type="ptnet:OpAnd">
+                <expression1 xsi:type="ptnet:OpEqual">
+                  <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1_tmp"/>
+                  <expression2 xsi:type="ptnet:ValueExpression"/>
+                </expression1>
+                <expression2 xsi:type="ptnet:OpAnd">
+                  <expression1 xsi:type="ptnet:OpEqual">
+                    <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_torque.alert.omission"/>
+                    <expression2 xsi:type="ptnet:ValueExpression"/>
+                  </expression1>
+                  <expression2 xsi:type="ptnet:OpEqual">
+                    <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_alert.alert.omission"/>
+                    <expression2 xsi:type="ptnet:ValueExpression"/>
+                  </expression2>
+                </expression2>
+              </expression2>
+            </expression1>
+            <expression2 xsi:type="ptnet:OpEqual">
+              <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_torque.alert.omission"/>
+              <expression2 xsi:type="ptnet:ValueExpression"/>
+            </expression2>
+          </Guard>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_e_torque_choice_HAD Vehicle.vehicleComputer_epf_1_to_sel" source="HAD Vehicle.vehicleComputer_e_torque_choice_HAD Vehicle.vehicleComputer_epf_1" target="HAD Vehicle.vehicleComputer_e_torque_sel_HAD Vehicle.vehicleComputer_epf_1"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_e_torque_choice_HAD Vehicle.vehicleComputer_epf_1_to_sel_inh" source="HAD Vehicle.vehicleComputer_e_torque_sel_HAD Vehicle.vehicleComputer_epf_1" target="HAD Vehicle.vehicleComputer_e_torque_choice_HAD Vehicle.vehicleComputer_epf_1" type="inhibitor"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_e_torque_sel_HAD Vehicle.vehicleComputer_epf_1_to_HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1" source="HAD Vehicle.vehicleComputer_e_torque_sel_HAD Vehicle.vehicleComputer_epf_1" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_1"/>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_toblocker_inhibit HAD Vehicle.vehicleComputer_e_alert_sel_HAD Vehicle.vehicleComputer_epf_2_to_HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_totmp HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_toblocker" Priority="5">
+          <Guard xsi:type="ptnet:OpAnd">
+            <expression1 xsi:type="ptnet:OpAnd">
+              <expression1 xsi:type="ptnet:OpGreater">
+                <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_alert"/>
+                <expression2 xsi:type="ptnet:ValueExpression"/>
+              </expression1>
+              <expression2 xsi:type="ptnet:OpAnd">
+                <expression1 xsi:type="ptnet:OpEqual">
+                  <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_tmp"/>
+                  <expression2 xsi:type="ptnet:ValueExpression"/>
+                </expression1>
+                <expression2 xsi:type="ptnet:OpAnd">
+                  <expression1 xsi:type="ptnet:OpEqual">
+                    <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_torque.alert.omission"/>
+                    <expression2 xsi:type="ptnet:ValueExpression"/>
+                  </expression1>
+                  <expression2 xsi:type="ptnet:OpEqual">
+                    <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_alert.alert.omission"/>
+                    <expression2 xsi:type="ptnet:ValueExpression"/>
+                  </expression2>
+                </expression2>
+              </expression2>
+            </expression1>
+            <expression2 xsi:type="ptnet:OpEqual">
+              <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_alert.alert.omission"/>
+              <expression2 xsi:type="ptnet:ValueExpression"/>
+            </expression2>
+          </Guard>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_totmp" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_tmp"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_toblocker" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_blocker"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_toblocker_inhibit" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_blocker" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2" type="inhibitor"/>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_tmp" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_totmp" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_toprop HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_toskip HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_tmp_to_HAD Vehicle.vehicleComputer_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_caseprop" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_toprop" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_caseprop_to_HAD Vehicle.vehicleComputer_alert.alert.omission" Priority="7"/>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_caseskip" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_toskip" Priority="7" Weight="0.0"/>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_blocker" InArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_toblocker" OutArcs="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_toblocker_inhibit HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_blocker_to_HAD Vehicle.vehicleComputer_reset">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_toprop" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_tmp" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_caseprop"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_toskip" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_tmp" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_caseskip"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_tmp_to_HAD Vehicle.vehicleComputer_reset" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_tmp" target="HAD Vehicle.vehicleComputer_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_tmp"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_blocker_to_HAD Vehicle.vehicleComputer_reset" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_blocker" target="HAD Vehicle.vehicleComputer_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_blocker"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_caseprop_to_HAD Vehicle.vehicleComputer_alert.alert.omission" source="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_caseprop" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_alert.alert.omission"/>
+        <objects xsi:type="ptnet:Place" id="HAD Vehicle.vehicleComputer_e_alert_sel_HAD Vehicle.vehicleComputer_epf_2" InArcs="HAD Vehicle.vehicleComputer_e_alert_choice_HAD Vehicle.vehicleComputer_epf_2_to_sel" OutArcs="HAD Vehicle.vehicleComputer_e_alert_choice_HAD Vehicle.vehicleComputer_epf_2_to_sel_inh HAD Vehicle.vehicleComputer_e_alert_sel_HAD Vehicle.vehicleComputer_epf_2_to_HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="HAD Vehicle.vehicleComputer_e_alert_choice_HAD Vehicle.vehicleComputer_epf_2" InArcs="HAD Vehicle.vehicleComputer_e_alert_choice_HAD Vehicle.vehicleComputer_epf_2_to_sel_inh" OutArcs="HAD Vehicle.vehicleComputer_e_alert_choice_HAD Vehicle.vehicleComputer_epf_2_to_sel" Priority="7">
+          <Guard xsi:type="ptnet:OpAnd">
+            <expression1 xsi:type="ptnet:OpAnd">
+              <expression1 xsi:type="ptnet:OpGreater">
+                <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_e_alert"/>
+                <expression2 xsi:type="ptnet:ValueExpression"/>
+              </expression1>
+              <expression2 xsi:type="ptnet:OpAnd">
+                <expression1 xsi:type="ptnet:OpEqual">
+                  <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2_tmp"/>
+                  <expression2 xsi:type="ptnet:ValueExpression"/>
+                </expression1>
+                <expression2 xsi:type="ptnet:OpAnd">
+                  <expression1 xsi:type="ptnet:OpEqual">
+                    <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_torque.alert.omission"/>
+                    <expression2 xsi:type="ptnet:ValueExpression"/>
+                  </expression1>
+                  <expression2 xsi:type="ptnet:OpEqual">
+                    <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_alert.alert.omission"/>
+                    <expression2 xsi:type="ptnet:ValueExpression"/>
+                  </expression2>
+                </expression2>
+              </expression2>
+            </expression1>
+            <expression2 xsi:type="ptnet:OpEqual">
+              <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_alert.alert.omission"/>
+              <expression2 xsi:type="ptnet:ValueExpression"/>
+            </expression2>
+          </Guard>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_e_alert_choice_HAD Vehicle.vehicleComputer_epf_2_to_sel" source="HAD Vehicle.vehicleComputer_e_alert_choice_HAD Vehicle.vehicleComputer_epf_2" target="HAD Vehicle.vehicleComputer_e_alert_sel_HAD Vehicle.vehicleComputer_epf_2"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_e_alert_choice_HAD Vehicle.vehicleComputer_epf_2_to_sel_inh" source="HAD Vehicle.vehicleComputer_e_alert_sel_HAD Vehicle.vehicleComputer_epf_2" target="HAD Vehicle.vehicleComputer_e_alert_choice_HAD Vehicle.vehicleComputer_epf_2" type="inhibitor"/>
+        <objects xsi:type="ptnet:GSPNArc" id="HAD Vehicle.vehicleComputer_e_alert_sel_HAD Vehicle.vehicleComputer_epf_2_to_HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2" source="HAD Vehicle.vehicleComputer_e_alert_sel_HAD Vehicle.vehicleComputer_epf_2" target="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_epf_2"/>
+        <objects xsi:type="ptnet:Place" id="SBA_memory_pl" InArcs="SBA_memory_arc">
+          <initialMarking text="0"/>
+        </objects>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="SBA_memory_tr" OutArcs="SBA_memory_arc" Priority="8">
+          <Guard xsi:type="ptnet:OpAnd">
+            <expression1 xsi:type="ptnet:OpGreater">
+              <expression1 xsi:type="ptnet:MarkingExpression" place="HAD Vehicle.vehicleComputer_HAD Vehicle.vehicleComputer_alert.alert.omission"/>
+              <expression2 xsi:type="ptnet:ValueExpression"/>
+            </expression1>
+            <expression2 xsi:type="ptnet:OpEqual">
+              <expression1 xsi:type="ptnet:MarkingExpression" place="SBA_memory_pl"/>
+              <expression2 xsi:type="ptnet:ValueExpression"/>
+            </expression2>
+          </Guard>
+        </objects>
+        <objects xsi:type="ptnet:GSPNArc" id="SBA_memory_arc" source="SBA_memory_tr" target="SBA_memory_pl"/>
+      </pages>
+    </nets>
+  </ptnet:PetriNetDoc>
+  <ptnet:Variable name="Time"/>
+  <ptnet:EvaluationList>
+    <studies name="DefaultStudy">
+      <vars variable="Time">
+        <values>8650.0</values>
+      </vars>
+    </studies>
+    <measures name="SBA">
+      <rewardFunction xsi:type="ptnet:IfThenElse">
+        <condition xsi:type="ptnet:OpEqual">
+          <expression1 xsi:type="ptnet:MarkingExpression" place="SBA_memory_pl"/>
+          <expression2 xsi:type="ptnet:ValueExpression"/>
+        </condition>
+        <ifTrue xsi:type="ptnet:ValueExpression" value="1.0"/>
+        <ifFalse xsi:type="ptnet:ValueExpression"/>
+      </rewardFunction>
+      <evaluationType xsi:type="ptnet:InstantOfTime">
+        <instant xsi:type="ptnet:VariableExpression" variable="Time"/>
+      </evaluationType>
+    </measures>
+  </ptnet:EvaluationList>
+  <ptnet:OpTrue/>
+  <ptnet:OpTrue/>
+  <ptnet:OpTrue/>
+</xmi:XMI>

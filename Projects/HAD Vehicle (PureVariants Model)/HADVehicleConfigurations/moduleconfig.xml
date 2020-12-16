@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<moduleconfigs name="Default"/>
+<moduleconfigs name="Default">
+  <moduleconfig ignoreerrors="true" name="Default">
+    <input use="false">$(PROJECT)\input</input>
+    <output clear="ask" create="ask" recover="true" use="false">$(PROJECT)\output\$(VARIANT)</output>
+    <mode type="overwrite"/>
+    <module exclude="" id="com.ps.consul.eclipse.ui.mapping.ecore.clienttransformation.module" include="/variant" name="EMF Feature Mapping Module" tname="EMF Feature Mapping Module"/>
+  </moduleconfig>
+</moduleconfigs>

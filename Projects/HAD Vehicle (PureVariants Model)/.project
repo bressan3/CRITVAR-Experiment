@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>HAD Vehicle (PureVariants Model)</name>
+	<comment></comment>
+	<projects>
+		<project>HAD Vehicle (PureVariants)</project>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+		<nature>com.ps.consul.eclipse.core.ConsulNature</nature>
+	</natures>
+</projectDescription>

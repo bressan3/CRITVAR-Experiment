@@ -1,0 +1,89 @@
+*** Transformation "Default" of "Manual" started at Dec 16 11:30:37
+
+Transformation Module States:
+-----------------------------
+
+Initialize Module "EMF Feature Mapping Module" [EMF Feature Mapping Module]
+	Status : OK
+Run Module "EMF Feature Mapping Module" [EMF Feature Mapping Module]
+	Status : OK
+Cleanup Module "EMF Feature Mapping Module" [EMF Feature Mapping Module]
+	Status : OK
+
+*** Transformation "Default" of "Manual" finished at Dec 16 11:30:45
+
+Transformation Module Logs:
+---------------------------
+
+*** Module "EMF Feature Mapping Module" [EMF Feature Mapping Module] ***
+Dec 16, 2020 11:30:37 AM: Starting transformation on resource set:
+  platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml
+Enabled Propagation Rules:
+  None
+Dec 16, 2020 11:30:38 AM: Removing elements:
+  Removing mapped element: '<Association> Association11'                                                                                                                             URI: platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_Zr0fQMFWEeqMCpqAriphVA
+      Propagated element already deleted: 'org.eclipse.papyrus'                                      propagated by: Children                                                         URI: #//%org.eclipse.papyrus%
+      Propagated element already deleted: '<Property> had vehicle : HAD Vehicle'                     propagated by: Children                                                         URI: #//
+      Propagated element already deleted: 'nature -> SysML_Nature'                                   propagated by: Children                                                         URI: #//%org.eclipse.papyrus%/@details.0
+  Removing mapped element: '<Connector> Connector9'                                                                                                                                  URI: platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_PO9pYMFXEeqMCpqAriphVA
+      Propagated element already deleted: '<Connector End>'                                          propagated by: Children                                                         URI: #//@end.0
+      Propagated element already deleted: '<Connector End>'                                          propagated by: Children                                                         URI: #//@end.1
+  Removing mapped element: '<<FlowPort>> <Port> lateralMovement'                                                                                                                     URI: platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_Qqu04ME4EeqMCpqAriphVA
+  Removing mapped element: '<<FlowPort>> <Port> logitudinalMovement'                                                                                                                 URI: platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_KIFnQME4EeqMCpqAriphVA
+  Removing mapped element: '<<FlowPort>> <Port> torque'                                                                                                                              URI: platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_svaAkME4EeqMCpqAriphVA
+  Removing mapped element: '<<Block, FLABehavior>> <Class> Steering'                                                                                                                 URI: platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_nReYQME4EeqMCpqAriphVA
+      Propagated element already deleted: '<Port> angle'                                             propagated by: Children                                                         URI: #//angle
+      Propagated element already deleted: '<Port> lateralMovement'                                   propagated by: Children                                                         URI: #//lateralMovement
+  Removing mapped element: '<<FlowPort>> <Port> angle'                                                                                                                               URI: platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_s4MwMME4EeqMCpqAriphVA
+  Removing mapped element: '<Connector> Connector12'                                                                                                                                 URI: platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_S0u2MMFXEeqMCpqAriphVA
+      Propagated element already deleted: '<Connector End>'                                          propagated by: Children                                                         URI: #//@end.0
+      Propagated element already deleted: '<Connector End>'                                          propagated by: Children                                                         URI: #//@end.1
+  Removing mapped element: '<Connector> Connector10'                                                                                                                                 URI: platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_QYuGwMFXEeqMCpqAriphVA
+      Propagated element already deleted: '<Connector End>'                                          propagated by: Children                                                         URI: #//@end.1
+      Propagated element already deleted: '<Connector End>'                                          propagated by: Children                                                         URI: #//@end.0
+  Removing mapped element: '<Association> Association10'                                                                                                                             URI: platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_9i9XIMFVEeqMCpqAriphVA
+      Propagated element already deleted: '<Property> had vehicle : HAD Vehicle'                     propagated by: Children                                                         URI: #//had%20vehicle
+      Propagated element already deleted: 'org.eclipse.papyrus'                                      propagated by: Children                                                         URI: #//%org.eclipse.papyrus%
+      Propagated element already deleted: 'nature -> SysML_Nature'                                   propagated by: Children                                                         URI: #//%org.eclipse.papyrus%/@details.0
+  Removing mapped element: '<<Block, FLABehavior>> <Class> Powertrain'                                                                                                               URI: platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_km-g4ME4EeqMCpqAriphVA
+      Propagated element already deleted: '<Port> logitudinalMovement'                               propagated by: Children                                                         URI: #//logitudinalMovement
+      Propagated element already deleted: '<Port> torque'                                            propagated by: Children                                                         URI: #//torque
+  Removing mapped element: '<Connector> Connector11'                                                                                                                                 URI: platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_RwCfAMFXEeqMCpqAriphVA
+      Propagated element already deleted: '<Connector End>'                                          propagated by: Children                                                         URI: #//@end.1
+      Propagated element already deleted: '<Connector End>'                                          propagated by: Children                                                         URI: #//@end.0
+Dec 16, 2020 11:30:45 AM: Processing calculations:
+  Setting attribute 'fptc : NFP_String' of element 'FLA Behavior # BeginVP CameraSides AND CameraFrontANDRear:
+	# BeginVP AutoSteering AND AutoAcceleration:
+		cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse->torque.valueCoarse,angle.valueCoarse,alert.omission;
+	# EndVP
+	# BeginVP NOT AutoSteering AND AutoAcceleration:
+		cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse->torque.valueCoarse,alert.omission;
+	# EndVP
+	# BeginVP AutoSteering AND NOT AutoAcceleration:
+		cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse->angle.valueCoarse,alert.omission;
+	# EndVP
+	# BeginVP NOT AutoSteering AND NOT AutoAcceleration:
+		cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse->alert.omission;
+	# EndVP
+# EndVP
+
+# BeginVP CameraSides AND NOT CameraFrontANDRear:
+	# BeginVP AutoSteering AND NOT AutoAcceleration:
+		cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse->angle.valueCoarse,alert.omission;
+	# EndVP
+	# BeginVP NOT AutoSteering AND NOT AutoAcceleration:
+		cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse->alert.omission;
+	# EndVP
+# EndVP' to value 'cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse->alert.omission;'
+  Setting attribute 'failureOccurrence : NFP_Real' of element 'Simple Stochastic Behavior # BeginVP CameraManufacturer1:
+	det(1.0e-6)
+# EndVP
+# BeginVP CameraManufacturer2:
+	det(1.0e-8)
+# EndVP' to value 'det(1.0E-6)'
+  Setting attribute 'failureOccurrence : NFP_Real' of element 'Simple Stochastic Behavior ' to value 'det(1.0E-6)'
+Dec 16, 2020 11:30:45 AM: Saving 'file:/C:/Users/Lucas/Documents/Mario2/HAD%20Vehicle%20(PureVariants%20Model)/output/Manual/HAD%20Vehicle%20SPL.uml
+  Running postprocessor 'com.ps.consul.eclipse.ui.mapping.ecore.transform.DiagramPostProcessor'
+
+
+

@@ -149,7 +149,7 @@
     <ownedTargets name="Manual"/>
     <note name="comment" kind="comment" expr=""/>
   </variabilityModel>
-  <resolutionModels xsi:type="bvr:PosResolution" name="RoadAutoSteeringAccelC1C1" resolvedVSpec="//@variabilityModel" resolvedChoice="//@variabilityModel">
+  <resolutionModels xsi:type="bvr:PosResolution" name="AutoAccelerationAutoSteering" resolvedVSpec="//@variabilityModel" resolvedChoice="//@variabilityModel">
     <members xsi:type="bvr:PosResolution" name="OperationContext" resolvedVSpec="//@variabilityModel/@member.0" resolvedChoice="//@variabilityModel/@member.0">
       <members xsi:type="bvr:NegResolution" name="Street" resolvedVSpec="//@variabilityModel/@member.0/@member.0" resolvedChoice="//@variabilityModel/@member.0/@member.0"/>
       <members xsi:type="bvr:PosResolution" name="Road" resolvedVSpec="//@variabilityModel/@member.0/@member.1" resolvedChoice="//@variabilityModel/@member.0/@member.1"/>
@@ -179,7 +179,7 @@
       </members>
     </members>
   </resolutionModels>
-  <resolutionModels xsi:type="bvr:PosResolution" name="StreetRoadAutoAccelC2C2" resolvedVSpec="//@variabilityModel" resolvedChoice="//@variabilityModel">
+  <resolutionModels xsi:type="bvr:PosResolution" name="AutoAcceleration" resolvedVSpec="//@variabilityModel" resolvedChoice="//@variabilityModel">
     <members xsi:type="bvr:PosResolution" name="OperationContext" resolvedVSpec="//@variabilityModel/@member.0" resolvedChoice="//@variabilityModel/@member.0">
       <members xsi:type="bvr:PosResolution" name="Street" resolvedVSpec="//@variabilityModel/@member.0/@member.0" resolvedChoice="//@variabilityModel/@member.0/@member.0"/>
       <members xsi:type="bvr:PosResolution" name="Road" resolvedVSpec="//@variabilityModel/@member.0/@member.1" resolvedChoice="//@variabilityModel/@member.0/@member.1"/>
@@ -209,7 +209,7 @@
       </members>
     </members>
   </resolutionModels>
-  <resolutionModels xsi:type="bvr:PosResolution" name="StreetRoadManC1C2" resolvedVSpec="//@variabilityModel" resolvedChoice="//@variabilityModel">
+  <resolutionModels xsi:type="bvr:PosResolution" name="Manual" resolvedVSpec="//@variabilityModel" resolvedChoice="//@variabilityModel">
     <members xsi:type="bvr:PosResolution" name="OperationContext" resolvedVSpec="//@variabilityModel/@member.0" resolvedChoice="//@variabilityModel/@member.0">
       <members xsi:type="bvr:PosResolution" name="Street" resolvedVSpec="//@variabilityModel/@member.0/@member.0" resolvedChoice="//@variabilityModel/@member.0/@member.0"/>
       <members xsi:type="bvr:PosResolution" name="Road" resolvedVSpec="//@variabilityModel/@member.0/@member.1" resolvedChoice="//@variabilityModel/@member.0/@member.1"/>

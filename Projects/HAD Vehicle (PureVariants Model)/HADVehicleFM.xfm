@@ -359,40 +359,7 @@
           <cm:constant cm:id="iU2BPdL1MafXJ_V-j" cm:type="ps:string">Lucas</cm:constant>
         </cm:property>
         <cm:property cm:id="i3zAsKg8PjG0Xwh7F" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
-          <cm:constant cm:id="iYHkYTcyxYsq3DUZ3" cm:type="ps:datetime">2020-10-23T19:46:13.379Z</cm:constant>
-        </cm:property>
-        <cm:property cm:id="iZYNQQTMD65h3A_yg" cm:type="ps:string" cm:fixed="true" cm:name="fptc">
-          <cm:calculate cm:id="i7ZP_H_miGFx5Vtqr" cm:type="ps:string">
-            <cm:script cm:id="iLo_A72CiPZ5r1a-2" cm:language="ps:pvscl" cm:type="ps:string">IF CameraSides AND CameraFrontANDRear THEN
-	IF AutoSteering AND AutoAcceleration THEN
-		&apos;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse-&gt;torque.valueCoarse,angle.valueCoarse,alert.omission;&apos;
-	ELSE 
-		IF NOT(AutoSteering) AND AutoAcceleration THEN
-			&apos;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse-&gt;torque.valueCoarse,alert.omission;&apos;
-		ELSE 
-			IF AutoSteering AND NOT(AutoAcceleration) THEN
-				&apos;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse-&gt;angle.valueCoarse,alert.omission;&apos;
-			ELSE 
-				&apos;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse-&gt;alert.omission;&apos;
-			ENDIF
-		ENDIF
-	ENDIF
-ELSE
-	IF CameraSides AND NOT(CameraFrontANDRear) THEN
-		IF AutoSteering AND NOT(AutoAcceleration) THEN
-			&apos;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse-&gt;angle.valueCoarse,alert.omission;&apos;
-		ELSE
-			IF NOT(AutoSteering) AND NOT(AutoAcceleration) THEN
-				&apos;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse-&gt;alert.omission;&apos;
-			ELSE 
-				&apos;&apos; 
-			ENDIF
-		ENDIF
-	ELSE
-		&apos;&apos;
-	ENDIF
-ENDIF</cm:script>
-          </cm:calculate>
+          <cm:constant cm:id="iYHkYTcyxYsq3DUZ3" cm:type="ps:datetime">2020-12-15T23:14:21.986Z</cm:constant>
         </cm:property>
       </cm:properties>
     </cm:element>
@@ -419,31 +386,7 @@ ENDIF</cm:script>
           <cm:constant cm:id="i_a3llaJTZVpUH9CR" cm:type="ps:string">Lucas</cm:constant>
         </cm:property>
         <cm:property cm:id="icnNhGoEvgiL65M5l" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
-          <cm:constant cm:id="iIImuDhK0ZpJou-JR" cm:type="ps:datetime">2020-10-23T19:19:18.421Z</cm:constant>
-        </cm:property>
-        <cm:property cm:id="i-m69Xh_xUtvSakPp" cm:type="ps:string" cm:fixed="true" cm:name="failureOccurrence">
-          <cm:calculate cm:id="i3Va1ipWI7LoZBR4O" cm:type="ps:string">
-            <cm:script cm:id="ia-lHeWugUOCLLPTt" cm:language="ps:pvscl" cm:type="ps:string">IF CompManufacturer1 THEN &apos;det(1.0E-6)&apos; ELSE &apos;det(1.0E-8)&apos; ENDIF</cm:script>
-          </cm:calculate>
-        </cm:property>
-        <cm:property cm:id="i6Eyf5kdIp1B3fjaB" cm:type="ps:string" cm:fixed="true" cm:name="failureModeDist">
-          <cm:calculate cm:id="i6rMEKZoYO8Y738c6" cm:type="ps:string">
-            <cm:script cm:id="i_EbMwgWra8_SVib6" cm:language="ps:pvscl" cm:type="ps:string">IF AutoSteering AND AutoAcceleration THEN
-&apos;torque.valueCoarse:1.0,angle.valueCoarse:1.0,alert.omission:1.0&apos;
-ELSE 
-	IF AutoSteering AND NOT(AutoAcceleration) THEN
-		&apos;angle.valueCoarse:1.0,alert.omission:1.0&apos;
-	ELSE
-		IF NOT(AutoSteering) AND AutoAcceleration THEN
-			&apos;torque.valueCoarse:1.0,alert.omission:1.0&apos;
-		ELSE
-			IF NOT(AutoSteering) AND NOT(AutoAcceleration) THEN
-				&apos;alert.omission:1.0&apos;
-			ELSE &apos;&apos; ENDIF
-		ENDIF
-	ENDIF
-ENDIF</cm:script>
-          </cm:calculate>
+          <cm:constant cm:id="iIImuDhK0ZpJou-JR" cm:type="ps:datetime">2020-12-15T23:15:06.543Z</cm:constant>
         </cm:property>
       </cm:properties>
     </cm:element>
@@ -539,12 +482,7 @@ ENDIF</cm:script>
           <cm:constant cm:id="iw46XqutEUKuxkd5H" cm:type="ps:string">Lucas</cm:constant>
         </cm:property>
         <cm:property cm:id="iKOexnz_Kgdn1RnBj" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
-          <cm:constant cm:id="iuXTKSutij89nI_P0" cm:type="ps:datetime">2020-10-23T19:48:08.579Z</cm:constant>
-        </cm:property>
-        <cm:property cm:id="iQnISbz1qUnjB3pHM" cm:type="ps:string" cm:fixed="true" cm:name="failureOccurrence">
-          <cm:calculate cm:id="iCI9hTbY0Qhmnsp8a" cm:type="ps:string">
-            <cm:script cm:id="ilrhloz0iWdAU5B-2" cm:language="ps:pvscl" cm:type="ps:string">IF CameraManufacturer1 THEN &apos;det(1.0E-6)&apos; ELSE &apos;det(1.0-8)&apos; ENDIF</cm:script>
-          </cm:calculate>
+          <cm:constant cm:id="iuXTKSutij89nI_P0" cm:type="ps:datetime">2020-12-15T23:11:36.467Z</cm:constant>
         </cm:property>
       </cm:properties>
     </cm:element>

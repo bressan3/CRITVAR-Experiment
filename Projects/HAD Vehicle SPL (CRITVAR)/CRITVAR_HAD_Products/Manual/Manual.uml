@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks" xmlns:CHESSContract="http:///CHESSContract.ecore" xmlns:CHESSViews="http://CHESS/Core/Views" xmlns:Core="http://CHESS/Core" xmlns:CoreElements="http://www.eclipse.org/papyrus/CoreElements/1" xmlns:FailurePropagation="http://CHESS/Dependability/FailurePropagation" xmlns:ModelElements="http://www.eclipse.org/papyrus/0.7.0/SysML/ModelElements" xmlns:PortAndFlows="http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows" xmlns:Requirements="http://www.eclipse.org/papyrus/0.7.0/SysML/Requirements" xmlns:StateBasedComponents="http://CHESS/Dependability/StateBased/StateBasedComponents" xmlns:ThreatsPropagation="http://CHESS/Dependability/ThreatsPropagation" xmlns:_150CHESS="http:///schemas/_150CHESS/_2PhroCHSEeuRsv8lr3LKJA/12" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks http://www.eclipse.org/papyrus/0.7.0/SysML#//blocks http://CHESS/Core/Views http://CHESS#//Core/CHESSViews http://CHESS/Core http://CHESS#//Core http://www.eclipse.org/papyrus/CoreElements/1 http://www.eclipse.org/papyrus/MARTE/1#//CoreElements http://CHESS/Dependability/FailurePropagation http://CHESS#//FailurePropagation http://www.eclipse.org/papyrus/0.7.0/SysML/ModelElements http://www.eclipse.org/papyrus/0.7.0/SysML#//modelelements http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows http://www.eclipse.org/papyrus/0.7.0/SysML#//portandflows http://www.eclipse.org/papyrus/0.7.0/SysML/Requirements http://www.eclipse.org/papyrus/0.7.0/SysML#//requirements http://CHESS/Dependability/StateBased/StateBasedComponents http://CHESS#//StateBasedComponents http://CHESS/Dependability/ThreatsPropagation http://CHESS#//ThreatsPropagation http:///schemas/_150CHESS/_2PhroCHSEeuRsv8lr3LKJA/12 150BVR.profile.uml#_2Pq1kCHSEeuRsv8lr3LKJA">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks" xmlns:CHESSContract="http:///CHESSContract.ecore" xmlns:CHESSViews="http://CHESS/Core/Views" xmlns:Core="http://CHESS/Core" xmlns:CoreElements="http://www.eclipse.org/papyrus/CoreElements/1" xmlns:FailurePropagation="http://CHESS/Dependability/FailurePropagation" xmlns:GRM="http://www.eclipse.org/papyrus/GRM/1" xmlns:PortAndFlows="http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows" xmlns:StateBasedAnalysis="http://CHESS/Dependability/StateBased/StateBasedAnalysis" xmlns:StateBasedComponents="http://CHESS/Dependability/StateBased/StateBasedComponents" xmlns:ThreatsPropagation="http://CHESS/Dependability/ThreatsPropagation" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks http://www.eclipse.org/papyrus/0.7.0/SysML#//blocks http://CHESS/Core/Views http://CHESS#//Core/CHESSViews http://CHESS/Core http://CHESS#//Core http://www.eclipse.org/papyrus/CoreElements/1 http://www.eclipse.org/papyrus/MARTE/1#//CoreElements http://CHESS/Dependability/FailurePropagation http://CHESS#//FailurePropagation http://www.eclipse.org/papyrus/GRM/1 http://www.eclipse.org/papyrus/MARTE/1#//GRM http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows http://www.eclipse.org/papyrus/0.7.0/SysML#//portandflows http://CHESS/Dependability/StateBased/StateBasedAnalysis http://CHESS#//StateBasedAnalysis http://CHESS/Dependability/StateBased/StateBasedComponents http://CHESS#//StateBasedComponents http://CHESS/Dependability/ThreatsPropagation http://CHESS#//ThreatsPropagation">
   <uml:Model xmi:id="_n3UFsME3EeqMCpqAriphVA" name="model">
     <packagedElement xmi:type="uml:Package" xmi:id="_oS4AUME3EeqMCpqAriphVA" name="modelRequirementView">
-      <packagedElement xmi:type="uml:Class" xmi:id="_opZ_MNM5Eeqq7erY4k6RtA" name="NoSteering"/>
       <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_oU9rAME3EeqMCpqAriphVA">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oU9rAcE3EeqMCpqAriphVA" source="http://www.eclipse.org/uml2/2.0.0/UML">
           <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//requirements"/>
@@ -17,28 +16,79 @@
       </profileApplication>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_oTUsQME3EeqMCpqAriphVA" name="modelSystemView">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_q2DpUMRZEeqJ1pGV39Dmsg" annotatedElement="_LtnmYMFTEeqMCpqAriphVA _QIU3IMFTEeqMCpqAriphVA _HwhbgMFPEeqMCpqAriphVA _Jo8VsMFPEeqMCpqAriphVA">
-        <body>CameraFrontANDRearVP</body>
-      </ownedComment>
-      <ownedComment xmi:type="uml:Comment" xmi:id="_35wFkMteEeqtVpQRM8-PpQ" annotatedElement="_km-g4ME4EeqMCpqAriphVA _9i0NMMFVEeqMCpqAriphVA _KIFnQME4EeqMCpqAriphVA">
-        <body>AutoAcceleration</body>
-      </ownedComment>
-      <ownedComment xmi:type="uml:Comment" xmi:id="_szeG8MtZEeqtVpQRM8-PpQ" annotatedElement="_ZrrVUMFWEeqMCpqAriphVA _nReYQME4EeqMCpqAriphVA _s4MwMME4EeqMCpqAriphVA _Qqu04ME4EeqMCpqAriphVA">
-        <body>AutoSteering</body>
-      </ownedComment>
-      <ownedComment xmi:type="uml:Comment" xmi:id="_CHJocDyDEeuMlOOcIpnZYA" annotatedElement="_szURYMFSEeqMCpqAriphVA _DRGtEMFTEeqMCpqAriphVA _-0cRUMFOEeqMCpqAriphVA _Df0bUMFPEeqMCpqAriphVA">
-        <body>CameraSidesVP</body>
-      </ownedComment>
+      <packagedElement xmi:type="uml:Package" xmi:id="_w8wdoMuzEeqkwq4Zl0MMdw" name="HAD Vehicle_instSpec">
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_EDdowcu0Eeqkwq4Zl0MMdw" name="HAD Vehicle" classifier="_-7ZsYME3EeqMCpqAriphVA">
+          <slot xmi:type="uml:Slot" xmi:id="_EDwjssu0Eeqkwq4Zl0MMdw" definingFeature="_szURYMFSEeqMCpqAriphVA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_EDwjs8u0Eeqkwq4Zl0MMdw" name="leftCamera" instance="_EDmyscu0Eeqkwq4Zl0MMdw"/>
+          </slot>
+          <slot xmi:type="uml:Slot" xmi:id="_EEDeoMu0Eeqkwq4Zl0MMdw" definingFeature="_DRGtEMFTEeqMCpqAriphVA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_EEDeocu0Eeqkwq4Zl0MMdw" name="rightCamera" instance="_EDwjtMu0Eeqkwq4Zl0MMdw"/>
+          </slot>
+          <slot xmi:type="uml:Slot" xmi:id="_EEXAocu0Eeqkwq4Zl0MMdw" definingFeature="_trwf0MFTEeqMCpqAriphVA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_EEXAosu0Eeqkwq4Zl0MMdw" name="vehicleComputer" instance="_EEDeosu0Eeqkwq4Zl0MMdw"/>
+          </slot>
+          <slot xmi:type="uml:Slot" xmi:id="_EEXAo8u0Eeqkwq4Zl0MMdw" definingFeature="_JY5LEMthEeqtVpQRM8-PpQ"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_EDmyscu0Eeqkwq4Zl0MMdw" name="HAD Vehicle.leftCamera" classifier="_WW8w0ME4EeqMCpqAriphVA">
+          <slot xmi:type="uml:Slot" xmi:id="_EDwjsMu0Eeqkwq4Zl0MMdw" definingFeature="_7-dGMMFPEeqMCpqAriphVA"/>
+          <slot xmi:type="uml:Slot" xmi:id="_EDwjscu0Eeqkwq4Zl0MMdw" definingFeature="_A4wdAMFQEeqMCpqAriphVA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_EDwjtMu0Eeqkwq4Zl0MMdw" name="HAD Vehicle.rightCamera" classifier="_WW8w0ME4EeqMCpqAriphVA">
+          <slot xmi:type="uml:Slot" xmi:id="_ED6Uscu0Eeqkwq4Zl0MMdw" definingFeature="_7-dGMMFPEeqMCpqAriphVA"/>
+          <slot xmi:type="uml:Slot" xmi:id="_ED6Ussu0Eeqkwq4Zl0MMdw" definingFeature="_A4wdAMFQEeqMCpqAriphVA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_EEDeosu0Eeqkwq4Zl0MMdw" name="HAD Vehicle.vehicleComputer" classifier="_bVQd4ME4EeqMCpqAriphVA">
+          <slot xmi:type="uml:Slot" xmi:id="_EENPoMu0Eeqkwq4Zl0MMdw" definingFeature="_svaAkME4EeqMCpqAriphVA"/>
+          <slot xmi:type="uml:Slot" xmi:id="_EENPocu0Eeqkwq4Zl0MMdw" definingFeature="_5UXXgMtgEeqtVpQRM8-PpQ"/>
+          <slot xmi:type="uml:Slot" xmi:id="_EENPosu0Eeqkwq4Zl0MMdw" definingFeature="_-0cRUMFOEeqMCpqAriphVA"/>
+          <slot xmi:type="uml:Slot" xmi:id="_EEXAoMu0Eeqkwq4Zl0MMdw" definingFeature="_Df0bUMFPEeqMCpqAriphVA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_EEXApMu0Eeqkwq4Zl0MMdw" name="HAD Vehicle.Connector1">
+          <slot xmi:type="uml:Slot" xmi:id="_EEgKkMu0Eeqkwq4Zl0MMdw" definingFeature="_7-dGMMFPEeqMCpqAriphVA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_EEgKksu0Eeqkwq4Zl0MMdw" name="partWithPort" instance="_EDmyscu0Eeqkwq4Zl0MMdw"/>
+          </slot>
+          <slot xmi:type="uml:Slot" xmi:id="_EEgKkcu0Eeqkwq4Zl0MMdw" definingFeature="_-0cRUMFOEeqMCpqAriphVA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_EEgKk8u0Eeqkwq4Zl0MMdw" name="partWithPort" instance="_EEDeosu0Eeqkwq4Zl0MMdw"/>
+          </slot>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_EEgKlMu0Eeqkwq4Zl0MMdw" name="HAD Vehicle.Connector2">
+          <slot xmi:type="uml:Slot" xmi:id="_EEgKlsu0Eeqkwq4Zl0MMdw" definingFeature="_7-dGMMFPEeqMCpqAriphVA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_EEgKmMu0Eeqkwq4Zl0MMdw" name="partWithPort" instance="_EDwjtMu0Eeqkwq4Zl0MMdw"/>
+          </slot>
+          <slot xmi:type="uml:Slot" xmi:id="_EEgKl8u0Eeqkwq4Zl0MMdw" definingFeature="_Df0bUMFPEeqMCpqAriphVA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_EEgKmcu0Eeqkwq4Zl0MMdw" name="partWithPort" instance="_EEDeosu0Eeqkwq4Zl0MMdw"/>
+          </slot>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_EEgKmsu0Eeqkwq4Zl0MMdw" name="HAD Vehicle.Connector13">
+          <slot xmi:type="uml:Slot" xmi:id="_EEp7kcu0Eeqkwq4Zl0MMdw" definingFeature="_5UXXgMtgEeqtVpQRM8-PpQ">
+            <value xmi:type="uml:InstanceValue" xmi:id="_EEp7k8u0Eeqkwq4Zl0MMdw" name="partWithPort" instance="_EEDeosu0Eeqkwq4Zl0MMdw"/>
+          </slot>
+          <slot xmi:type="uml:Slot" xmi:id="_EEp7ksu0Eeqkwq4Zl0MMdw" definingFeature="_JY5LEMthEeqtVpQRM8-PpQ">
+            <value xmi:type="uml:InstanceValue" xmi:id="_EEp7lMu0Eeqkwq4Zl0MMdw" name="partWithPort" instance="_EDdowcu0Eeqkwq4Zl0MMdw"/>
+          </slot>
+        </packagedElement>
+      </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_-7ZsYME3EeqMCpqAriphVA" name="HAD Vehicle">
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_KIFnQME4EeqMCpqAriphVA" name="logitudinalMovement" aggregation="composite"/>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_Qqu04ME4EeqMCpqAriphVA" name="lateralMovement" aggregation="composite"/>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_ZJOzgMuyEeqkwq4Zl0MMdw" annotatedElement="_A4wdAMFQEeqMCpqAriphVA"/>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_fF-ewMuyEeqkwq4Zl0MMdw" annotatedElement="_A4wdAMFQEeqMCpqAriphVA"/>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_oR74AMuyEeqkwq4Zl0MMdw" annotatedElement="_JY5LEMthEeqtVpQRM8-PpQ">
+          <body>FLA: alert</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_oTIK0cuyEeqkwq4Zl0MMdw" annotatedElement="_7-dGMMFPEeqMCpqAriphVA">
+          <body>FLA: leftCamera.video</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_oVgwcMuyEeqkwq4Zl0MMdw" annotatedElement="_svaAkME4EeqMCpqAriphVA">
+          <body>FLA: vehicleComputer.torque</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_oVqhccuyEeqkwq4Zl0MMdw" annotatedElement="_5UXXgMtgEeqtVpQRM8-PpQ">
+          <body>FLA: vehicleComputer.alert</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_oVzrYMuyEeqkwq4Zl0MMdw" annotatedElement="_7-dGMMFPEeqMCpqAriphVA">
+          <body>FLA: rightCamera.video</body>
+        </ownedComment>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_szURYMFSEeqMCpqAriphVA" name="leftCamera" type="_WW8w0ME4EeqMCpqAriphVA" aggregation="composite" association="_szwWQMFSEeqMCpqAriphVA"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_DRGtEMFTEeqMCpqAriphVA" name="rightCamera" type="_WW8w0ME4EeqMCpqAriphVA" aggregation="composite" association="_DRGtEcFTEeqMCpqAriphVA"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_LtnmYMFTEeqMCpqAriphVA" name="frontCamera" type="_WW8w0ME4EeqMCpqAriphVA" aggregation="composite" association="_LtxXYMFTEeqMCpqAriphVA"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_QIU3IMFTEeqMCpqAriphVA" name="rearCamera" type="_WW8w0ME4EeqMCpqAriphVA" aggregation="composite" association="_QIU3IcFTEeqMCpqAriphVA"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_trwf0MFTEeqMCpqAriphVA" name="vehicleComputer" type="_bVQd4ME4EeqMCpqAriphVA" aggregation="composite" association="_tr6Q0MFTEeqMCpqAriphVA"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_9i0NMMFVEeqMCpqAriphVA" name="powertrain" type="_km-g4ME4EeqMCpqAriphVA" aggregation="composite" association="_9i9XIMFVEeqMCpqAriphVA"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_ZrrVUMFWEeqMCpqAriphVA" name="steering" type="_nReYQME4EeqMCpqAriphVA" aggregation="composite" association="_Zr0fQMFWEeqMCpqAriphVA"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_JY5LEMthEeqtVpQRM8-PpQ" name="alert" aggregation="composite"/>
         <ownedConnector xmi:type="uml:Connector" xmi:id="_1SdrIMFWEeqMCpqAriphVA" name="Connector1">
           <end xmi:type="uml:ConnectorEnd" xmi:id="_1SdrIcFWEeqMCpqAriphVA" partWithPort="_szURYMFSEeqMCpqAriphVA" role="_7-dGMMFPEeqMCpqAriphVA"/>
@@ -47,30 +97,6 @@
         <ownedConnector xmi:type="uml:Connector" xmi:id="_6UYs4MFWEeqMCpqAriphVA" name="Connector2">
           <end xmi:type="uml:ConnectorEnd" xmi:id="_6UYs4cFWEeqMCpqAriphVA" partWithPort="_DRGtEMFTEeqMCpqAriphVA" role="_7-dGMMFPEeqMCpqAriphVA"/>
           <end xmi:type="uml:ConnectorEnd" xmi:id="_6UYs4sFWEeqMCpqAriphVA" partWithPort="_trwf0MFTEeqMCpqAriphVA" role="_Df0bUMFPEeqMCpqAriphVA"/>
-        </ownedConnector>
-        <ownedConnector xmi:type="uml:Connector" xmi:id="_8eZGUMFWEeqMCpqAriphVA" name="Connector3">
-          <end xmi:type="uml:ConnectorEnd" xmi:id="_8eZGUcFWEeqMCpqAriphVA" partWithPort="_LtnmYMFTEeqMCpqAriphVA" role="_7-dGMMFPEeqMCpqAriphVA"/>
-          <end xmi:type="uml:ConnectorEnd" xmi:id="_8eZGUsFWEeqMCpqAriphVA" partWithPort="_trwf0MFTEeqMCpqAriphVA" role="_Jo8VsMFPEeqMCpqAriphVA"/>
-        </ownedConnector>
-        <ownedConnector xmi:type="uml:Connector" xmi:id="_-IzZsMFWEeqMCpqAriphVA" name="Connector4">
-          <end xmi:type="uml:ConnectorEnd" xmi:id="_-IzZscFWEeqMCpqAriphVA" partWithPort="_QIU3IMFTEeqMCpqAriphVA" role="_7-dGMMFPEeqMCpqAriphVA"/>
-          <end xmi:type="uml:ConnectorEnd" xmi:id="_-IzZssFWEeqMCpqAriphVA" partWithPort="_trwf0MFTEeqMCpqAriphVA" role="_HwhbgMFPEeqMCpqAriphVA"/>
-        </ownedConnector>
-        <ownedConnector xmi:type="uml:Connector" xmi:id="_PO9pYMFXEeqMCpqAriphVA" name="Connector9">
-          <end xmi:type="uml:ConnectorEnd" xmi:id="_PO9pYcFXEeqMCpqAriphVA" partWithPort="_trwf0MFTEeqMCpqAriphVA" role="_svaAkME4EeqMCpqAriphVA"/>
-          <end xmi:type="uml:ConnectorEnd" xmi:id="_PO9pYsFXEeqMCpqAriphVA" partWithPort="_9i0NMMFVEeqMCpqAriphVA" role="_4ilm0MFQEeqMCpqAriphVA"/>
-        </ownedConnector>
-        <ownedConnector xmi:type="uml:Connector" xmi:id="_QYuGwMFXEeqMCpqAriphVA" name="Connector10">
-          <end xmi:type="uml:ConnectorEnd" xmi:id="_QYuGwcFXEeqMCpqAriphVA" partWithPort="_9i0NMMFVEeqMCpqAriphVA" role="_qzD7wMFQEeqMCpqAriphVA"/>
-          <end xmi:type="uml:ConnectorEnd" xmi:id="_QYuGwsFXEeqMCpqAriphVA" role="_KIFnQME4EeqMCpqAriphVA"/>
-        </ownedConnector>
-        <ownedConnector xmi:type="uml:Connector" xmi:id="_RwCfAMFXEeqMCpqAriphVA" name="Connector11">
-          <end xmi:type="uml:ConnectorEnd" xmi:id="_RwCfAcFXEeqMCpqAriphVA" partWithPort="_trwf0MFTEeqMCpqAriphVA" role="_s4MwMME4EeqMCpqAriphVA"/>
-          <end xmi:type="uml:ConnectorEnd" xmi:id="_RwCfAsFXEeqMCpqAriphVA" partWithPort="_ZrrVUMFWEeqMCpqAriphVA" role="_5pOewMFQEeqMCpqAriphVA"/>
-        </ownedConnector>
-        <ownedConnector xmi:type="uml:Connector" xmi:id="_S0u2MMFXEeqMCpqAriphVA" name="Connector12">
-          <end xmi:type="uml:ConnectorEnd" xmi:id="_S0u2McFXEeqMCpqAriphVA" partWithPort="_ZrrVUMFWEeqMCpqAriphVA" role="_rkFJAMFQEeqMCpqAriphVA"/>
-          <end xmi:type="uml:ConnectorEnd" xmi:id="_S0u2MsFXEeqMCpqAriphVA" role="_Qqu04ME4EeqMCpqAriphVA"/>
         </ownedConnector>
         <ownedConnector xmi:type="uml:Connector" xmi:id="_N45LgMthEeqtVpQRM8-PpQ" name="Connector13">
           <end xmi:type="uml:ConnectorEnd" xmi:id="_N5N7oMthEeqtVpQRM8-PpQ" partWithPort="_trwf0MFTEeqMCpqAriphVA" role="_5UXXgMtgEeqtVpQRM8-PpQ"/>
@@ -92,12 +118,9 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_bVQd4ME4EeqMCpqAriphVA" name="VehicleComputer" classifierBehavior="_rQJ28MqREeqtVpQRM8-PpQ">
         <ownedAttribute xmi:type="uml:Port" xmi:id="_svaAkME4EeqMCpqAriphVA" name="torque" aggregation="composite"/>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_s4MwMME4EeqMCpqAriphVA" name="angle" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_5UXXgMtgEeqtVpQRM8-PpQ" name="alert" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_-0cRUMFOEeqMCpqAriphVA" name="cameraLeftIn" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_Df0bUMFPEeqMCpqAriphVA" name="cameraRightIn" aggregation="composite"/>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_HwhbgMFPEeqMCpqAriphVA" name="cameraBackIn" aggregation="composite"/>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_Jo8VsMFPEeqMCpqAriphVA" name="cameraForwardIn" aggregation="composite"/>
         <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_rQJ28MqREeqtVpQRM8-PpQ" name="VehicleComputerErrorModel">
           <region xmi:type="uml:Region" xmi:id="_s1p1IMqREeqtVpQRM8-PpQ" name="Region1">
             <transition xmi:type="uml:Transition" xmi:id="_4Ph3cMqREeqtVpQRM8-PpQ" source="_wkHq8MqREeqtVpQRM8-PpQ" target="_1OWlcMqREeqtVpQRM8-PpQ"/>
@@ -113,14 +136,6 @@
           </region>
         </ownedBehavior>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_km-g4ME4EeqMCpqAriphVA" name="Powertrain">
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_qzD7wMFQEeqMCpqAriphVA" name="logitudinalMovement" aggregation="composite"/>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_4ilm0MFQEeqMCpqAriphVA" name="torque" aggregation="composite"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_nReYQME4EeqMCpqAriphVA" name="Steering">
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_rkFJAMFQEeqMCpqAriphVA" name="lateralMovement" aggregation="composite"/>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_5pOewMFQEeqMCpqAriphVA" name="angle" aggregation="composite"/>
-      </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_szwWQMFSEeqMCpqAriphVA" name="Association1" memberEnd="_szURYMFSEeqMCpqAriphVA _szwWQ8FSEeqMCpqAriphVA">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_szwWQcFSEeqMCpqAriphVA" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_szwWQsFSEeqMCpqAriphVA" key="nature" value="SysML_Nature"/>
@@ -133,35 +148,11 @@
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_DRGtFMFTEeqMCpqAriphVA" name="had vehicle" type="_-7ZsYME3EeqMCpqAriphVA" association="_DRGtEcFTEeqMCpqAriphVA"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_LtxXYMFTEeqMCpqAriphVA" name="Association3" memberEnd="_LtnmYMFTEeqMCpqAriphVA _LtxXY8FTEeqMCpqAriphVA">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LtxXYcFTEeqMCpqAriphVA" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LtxXYsFTEeqMCpqAriphVA" key="nature" value="SysML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_LtxXY8FTEeqMCpqAriphVA" name="had vehicle" type="_-7ZsYME3EeqMCpqAriphVA" association="_LtxXYMFTEeqMCpqAriphVA"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_QIU3IcFTEeqMCpqAriphVA" name="Association4" memberEnd="_QIU3IMFTEeqMCpqAriphVA _QIU3JMFTEeqMCpqAriphVA">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QIU3IsFTEeqMCpqAriphVA" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QIU3I8FTEeqMCpqAriphVA" key="nature" value="SysML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_QIU3JMFTEeqMCpqAriphVA" name="had vehicle" type="_-7ZsYME3EeqMCpqAriphVA" association="_QIU3IcFTEeqMCpqAriphVA"/>
-      </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_tr6Q0MFTEeqMCpqAriphVA" name="Association5" memberEnd="_trwf0MFTEeqMCpqAriphVA _tr6Q08FTEeqMCpqAriphVA">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_tr6Q0cFTEeqMCpqAriphVA" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tr6Q0sFTEeqMCpqAriphVA" key="nature" value="SysML_Nature"/>
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_tr6Q08FTEeqMCpqAriphVA" name="had vehicle" type="_-7ZsYME3EeqMCpqAriphVA" association="_tr6Q0MFTEeqMCpqAriphVA"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_9i9XIMFVEeqMCpqAriphVA" name="Association10" memberEnd="_9i0NMMFVEeqMCpqAriphVA _9i9XI8FVEeqMCpqAriphVA">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9i9XIcFVEeqMCpqAriphVA" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9i9XIsFVEeqMCpqAriphVA" key="nature" value="SysML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_9i9XI8FVEeqMCpqAriphVA" name="had vehicle" type="_-7ZsYME3EeqMCpqAriphVA" association="_9i9XIMFVEeqMCpqAriphVA"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_Zr0fQMFWEeqMCpqAriphVA" name="Association11" memberEnd="_ZrrVUMFWEeqMCpqAriphVA _Zr0fQ8FWEeqMCpqAriphVA">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Zr0fQcFWEeqMCpqAriphVA" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Zr0fQsFWEeqMCpqAriphVA" key="nature" value="SysML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_Zr0fQ8FWEeqMCpqAriphVA" name="had vehicle" type="_-7ZsYME3EeqMCpqAriphVA" association="_Zr0fQMFWEeqMCpqAriphVA"/>
       </packagedElement>
       <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_oTUsQsE3EeqMCpqAriphVA">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oTUsQ8E3EeqMCpqAriphVA" source="http://www.eclipse.org/uml2/2.0.0/UML">
@@ -282,19 +273,6 @@
           <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//usecases"/>
         </eAnnotations>
         <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML_PROFILES/SysML.profile.uml#_neZmMLX8EduFmqQsrNB9lw"/>
-      </profileApplication>
-      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_70XdwCjkEeu8aMCbmnntEw">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BZ3GpCjlEeu8aMCbmnntEw" source="PapyrusVersion">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BZ3GpSjlEeu8aMCbmnntEw" key="Version" value="0.0.13"/>
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BZ3GpijlEeu8aMCbmnntEw" key="Comment" value=""/>
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BZ3GpyjlEeu8aMCbmnntEw" key="Copyright" value=""/>
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BZ3GqCjlEeu8aMCbmnntEw" key="Date" value="2020-11-08"/>
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BZ3GqSjlEeu8aMCbmnntEw" key="Author" value=""/>
-        </eAnnotations>
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_70XdwSjkEeu8aMCbmnntEw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <references xmi:type="ecore:EPackage" href="150BVR.profile.uml#_2Pq1kCHSEeuRsv8lr3LKJA"/>
-        </eAnnotations>
-        <appliedProfile xmi:type="uml:Profile" href="150BVR.profile.uml#_Lz_EYLyCEeqCzZ2IJEhEtw"/>
       </profileApplication>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_oTedQsE3EeqMCpqAriphVA" name="modelComponentView">
@@ -534,6 +512,7 @@
         <packagedElement xmi:type="uml:Package" xmi:id="_BAgZoMuqEeqtVpQRM8-PpQ" name="FLA">
           <packagedElement xmi:type="uml:Class" xmi:id="_CmSrsMuqEeqtVpQRM8-PpQ" name="FLA"/>
         </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_P9rYAMu0Eeqkwq4Zl0MMdw" name="SBA"/>
         <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_oUETIME3EeqMCpqAriphVA">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oUETIcE3EeqMCpqAriphVA" source="http://www.eclipse.org/uml2/2.0.0/UML">
             <references xmi:type="ecore:EPackage" href="http://CHESS#//StateBasedAnalysis"/>
@@ -787,15 +766,15 @@
       <appliedProfile xmi:type="uml:Profile" href="pathmap://CHESSContract/CHESSContract.profile.uml#_Hmdm0NDVEeG5E52m3d5H1g"/>
     </profileApplication>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_lzkm4MRZEeqJ1pGV39Dmsg">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6YlywCHSEeuRsv8lr3LKJA" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6YlywSHSEeuRsv8lr3LKJA" key="Version" value="0.0.13"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6YlywiHSEeuRsv8lr3LKJA" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6YlywyHSEeuRsv8lr3LKJA" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6YlyxCHSEeuRsv8lr3LKJA" key="Date" value="2020-11-08"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6YlyxSHSEeuRsv8lr3LKJA" key="Author" value=""/>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gizRcctXEeqtVpQRM8-PpQ" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gizRcstXEeqtVpQRM8-PpQ" key="Version" value="0.0.11"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gizRc8tXEeqtVpQRM8-PpQ" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gizRdMtXEeqtVpQRM8-PpQ" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gizRdctXEeqtVpQRM8-PpQ" key="Date" value="2020-07-21"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gizRdstXEeqtVpQRM8-PpQ" key="Author" value=""/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_lzkm4cRZEeqJ1pGV39Dmsg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="150BVR.profile.uml#_2Pq1kCHSEeuRsv8lr3LKJA"/>
+        <references xmi:type="ecore:EPackage" href="150BVR.profile.uml#_Zno2IctXEeqtVpQRM8-PpQ"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="150BVR.profile.uml#_Lz_EYLyCEeqCzZ2IJEhEtw"/>
     </profileApplication>
@@ -813,33 +792,19 @@
   <CHESSViews:PSMView xmi:id="_oUOEIME3EeqMCpqAriphVA" base_Package="_oUETJ8E3EeqMCpqAriphVA"/>
   <Blocks:Block xmi:id="_-846IME3EeqMCpqAriphVA" base_Class="_-7ZsYME3EeqMCpqAriphVA"/>
   <CHESSContract:System xmi:id="__TPkoME3EeqMCpqAriphVA" base_Class="_-7ZsYME3EeqMCpqAriphVA"/>
-  <PortAndFlows:FlowPort xmi:id="_KJk1AME4EeqMCpqAriphVA" base_Port="_KIFnQME4EeqMCpqAriphVA" direction="out"/>
-  <PortAndFlows:FlowPort xmi:id="_Qqu04cE4EeqMCpqAriphVA" base_Port="_Qqu04ME4EeqMCpqAriphVA" direction="out"/>
   <Blocks:Block xmi:id="_WW8w0cE4EeqMCpqAriphVA" base_Class="_WW8w0ME4EeqMCpqAriphVA"/>
   <Blocks:Block xmi:id="_bVQd4cE4EeqMCpqAriphVA" base_Class="_bVQd4ME4EeqMCpqAriphVA"/>
-  <Blocks:Block xmi:id="_km-g4cE4EeqMCpqAriphVA" base_Class="_km-g4ME4EeqMCpqAriphVA"/>
-  <Blocks:Block xmi:id="_nReYQcE4EeqMCpqAriphVA" base_Class="_nReYQME4EeqMCpqAriphVA"/>
   <PortAndFlows:FlowPort xmi:id="_s4MwMcE4EeqMCpqAriphVA" base_Port="_svaAkME4EeqMCpqAriphVA" direction="out"/>
-  <PortAndFlows:FlowPort xmi:id="_s4WhMME4EeqMCpqAriphVA" base_Port="_s4MwMME4EeqMCpqAriphVA" direction="out"/>
   <PortAndFlows:FlowPort xmi:id="_-0cRUcFOEeqMCpqAriphVA" base_Port="_-0cRUMFOEeqMCpqAriphVA" direction="in"/>
   <PortAndFlows:FlowPort xmi:id="_Df0bUcFPEeqMCpqAriphVA" base_Port="_Df0bUMFPEeqMCpqAriphVA" direction="in"/>
-  <PortAndFlows:FlowPort xmi:id="_HwrMgMFPEeqMCpqAriphVA" base_Port="_HwhbgMFPEeqMCpqAriphVA" direction="in"/>
-  <PortAndFlows:FlowPort xmi:id="_JpGGsMFPEeqMCpqAriphVA" base_Port="_Jo8VsMFPEeqMCpqAriphVA" direction="in"/>
   <PortAndFlows:FlowPort xmi:id="_7-dGMcFPEeqMCpqAriphVA" base_Port="_7-dGMMFPEeqMCpqAriphVA" direction="out"/>
   <PortAndFlows:FlowPort xmi:id="_A4wdAcFQEeqMCpqAriphVA" base_Port="_A4wdAMFQEeqMCpqAriphVA" direction="in"/>
-  <PortAndFlows:FlowPort xmi:id="_qzNFsMFQEeqMCpqAriphVA" base_Port="_qzD7wMFQEeqMCpqAriphVA" direction="out"/>
-  <PortAndFlows:FlowPort xmi:id="_rkO6AMFQEeqMCpqAriphVA" base_Port="_rkFJAMFQEeqMCpqAriphVA" direction="out"/>
-  <PortAndFlows:FlowPort xmi:id="_4ivX0MFQEeqMCpqAriphVA" base_Port="_4ilm0MFQEeqMCpqAriphVA" direction="in"/>
-  <PortAndFlows:FlowPort xmi:id="_5pOewcFQEeqMCpqAriphVA" base_Port="_5pOewMFQEeqMCpqAriphVA" direction="in"/>
-  <_150CHESS:ElementVariationPoint xmi:id="_sD25MMRZEeqJ1pGV39Dmsg" base_Comment="_q2DpUMRZEeqJ1pGV39Dmsg" featureExpr="CameraFrontANDRear"/>
   <CoreElements:Mode xmi:id="_xN4kMMqSEeqtVpQRM8-PpQ" base_State="_xIg8AMqSEeqtVpQRM8-PpQ"/>
   <ThreatsPropagation:InternalPropagation xmi:id="_F-iIoMqTEeqtVpQRM8-PpQ" base_Transition="_5jBqMMqSEeqtVpQRM8-PpQ" externalFaults="cameraLeftIn.valueCoarse AND cameraRightIn.valueCoarse"/>
   <ThreatsPropagation:ErrorState xmi:id="_d7sFUMqTEeqtVpQRM8-PpQ" base_State="_r_3nMMqSEeqtVpQRM8-PpQ"/>
   <ThreatsPropagation:InternalPropagation xmi:id="_xa53EMqTEeqtVpQRM8-PpQ" base_Transition="_vFHEYMqTEeqtVpQRM8-PpQ" externalFaults="cameraForwardIn.valueCoarse AND cameraBackIn.valueCoarse"/>
   <ThreatsPropagation:ErrorState xmi:id="_Em7AAMqUEeqtVpQRM8-PpQ" base_State="_mdypQMqTEeqtVpQRM8-PpQ"/>
-  <FailurePropagation:FLABehavior xmi:id="_jFXfcMqUEeqtVpQRM8-PpQ" base_Class="_bVQd4ME4EeqMCpqAriphVA" fptc="# BeginVP CameraSides AND CameraFrontANDRear:&#xD;&#xA;&#x9;# BeginVP AutoSteering AND AutoAcceleration:&#xD;&#xA;&#x9;&#x9;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse->torque.valueCoarse,angle.valueCoarse,alert.omission;&#xD;&#xA;&#x9;# EndVP&#xD;&#xA;&#x9;# BeginVP NOT AutoSteering AND AutoAcceleration:&#xD;&#xA;&#x9;&#x9;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse->torque.valueCoarse,alert.omission;&#xD;&#xA;&#x9;# EndVP&#xD;&#xA;&#x9;# BeginVP AutoSteering AND NOT AutoAcceleration:&#xD;&#xA;&#x9;&#x9;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse->angle.valueCoarse,alert.omission;&#xD;&#xA;&#x9;# EndVP&#xD;&#xA;&#x9;# BeginVP NOT AutoSteering AND NOT AutoAcceleration:&#xD;&#xA;&#x9;&#x9;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse->alert.omission;&#xD;&#xA;&#x9;# EndVP&#xD;&#xA;# EndVP&#xD;&#xA;&#xD;&#xA;# BeginVP CameraSides AND NOT CameraFrontANDRear:&#xD;&#xA;&#x9;# BeginVP AutoSteering AND NOT AutoAcceleration:&#xD;&#xA;&#x9;&#x9;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse->angle.valueCoarse,alert.omission;&#xD;&#xA;&#x9;# EndVP&#xD;&#xA;&#x9;# BeginVP NOT AutoSteering AND NOT AutoAcceleration:&#xD;&#xA;&#x9;&#x9;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse->alert.omission;&#xD;&#xA;&#x9;# EndVP&#xD;&#xA;# EndVP"/>
-  <_150CHESS:ElementVariationPoint xmi:id="_KLOEEMtaEeqtVpQRM8-PpQ" base_Comment="_szeG8MtZEeqtVpQRM8-PpQ" featureExpr="AutoSteering"/>
-  <_150CHESS:ElementVariationPoint xmi:id="_6aMCAMteEeqtVpQRM8-PpQ" base_Comment="_35wFkMteEeqtVpQRM8-PpQ" featureExpr="AutoAcceleration"/>
+  <FailurePropagation:FLABehavior xmi:id="_jFXfcMqUEeqtVpQRM8-PpQ" base_Class="_bVQd4ME4EeqMCpqAriphVA" fptc="cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse->alert.omission;&#xA;"/>
   <PortAndFlows:FlowPort xmi:id="_5UhIgMtgEeqtVpQRM8-PpQ" base_Port="_5UXXgMtgEeqtVpQRM8-PpQ" direction="out"/>
   <PortAndFlows:FlowPort xmi:id="_JZV3AMthEeqtVpQRM8-PpQ" base_Port="_JY5LEMthEeqtVpQRM8-PpQ" direction="out"/>
   <ThreatsPropagation:ErrorModel xmi:id="_h1VEwMthEeqtVpQRM8-PpQ" base_StateMachine="_YZk8AMthEeqtVpQRM8-PpQ"/>
@@ -849,13 +814,39 @@
     <mode>video.valueCoarse</mode>
   </ThreatsPropagation:Failure>
   <ThreatsPropagation:InternalFault xmi:id="_I7EKIMtiEeqtVpQRM8-PpQ" occurrence="1.0e-5" base_Transition="_E8uFQMtiEeqtVpQRM8-PpQ"/>
-  <StateBasedComponents:SimpleStochasticBehavior xmi:id="_7E-SIMtjEeqtVpQRM8-PpQ" base_Class="_bVQd4ME4EeqMCpqAriphVA" failureOccurrence="# BeginVP CompManufacturer1:&#xD;&#xA;&#x9;det(1.0e-6)&#xD;&#xA;# EndVP&#xD;&#xA;# BeginVP CompManufacturer2:&#xD;&#xA;&#x9;det(1.0-8)&#xD;&#xA;# EndVP" failureModesDistribution="# BeginVP AutoSteering AND AutoAcceleration:&#xD;&#xA;&#x9;torque.valueCoarse : 1.0, angle.valueCoarse : 1.0, alert.omission : 1.0&#xD;&#xA;# EndVP&#xD;&#xA;# BeginVP AutoSteering AND NOT AutoAcceleration:&#xD;&#xA;&#x9;angle.valueCoarse : 1.0, alert.omission : 1.0&#xD;&#xA;# EndVP&#xD;&#xA;# BeginVP NOT AutoSteering AND AutoAcceleration:&#xD;&#xA;&#x9;torque.valueCoarse : 1.0, alert.omission : 1.0&#xD;&#xA;# EndVP&#xD;&#xA;# BeginVP NOT AutoSteering AND NOT AutoAcceleration:&#xD;&#xA;&#x9;alert.omission : 1.0&#xD;&#xA;# EndVP"/>
-  <FailurePropagation:FLABehavior xmi:id="_6WGMkMuoEeqtVpQRM8-PpQ" base_Class="_WW8w0ME4EeqMCpqAriphVA" fptc="lensSensor.valueCoarse->video.valueCoarse;"/>
-  <StateBasedComponents:SimpleStochasticBehavior xmi:id="_HgJMAMupEeqtVpQRM8-PpQ" base_Class="_WW8w0ME4EeqMCpqAriphVA" failureOccurrence="# BeginVP CameraManufacturer1:&#xD;&#xA;&#x9;det(1.0e-6)&#xD;&#xA;# EndVP&#xD;&#xA;# BeginVP CameraManufacturer2:&#xD;&#xA;&#x9;det(1.0e-8)&#xD;&#xA;# EndVP" failureModesDistribution="valueCoarse : 1.0"/>
-  <FailurePropagation:FailurePropagationAnalysis xmi:id="_ERwH8MuqEeqtVpQRM8-PpQ" base_StructuredClassifier="_CmSrsMuqEeqtVpQRM8-PpQ" base_NamedElement="_CmSrsMuqEeqtVpQRM8-PpQ"/>
-  <Requirements:Requirement xmi:id="_owHrMNM5Eeqq7erY4k6RtA" base_Class="_opZ_MNM5Eeqq7erY4k6RtA"/>
-  <FailurePropagation:FLABehavior xmi:id="_-iPvMNW0EeqWr8ZxQ-SxKQ" base_Class="_km-g4ME4EeqMCpqAriphVA" fptc="longitudinalMovement.valueCoarse->torque.valueCoarse;"/>
-  <FailurePropagation:FLABehavior xmi:id="_AluC0NW1EeqWr8ZxQ-SxKQ" base_Class="_nReYQME4EeqMCpqAriphVA" fptc="lateralMovement.valueCoarse->angle.valueCoarse;"/>
-  <ModelElements:View xmi:id="_1zNXICjlEeu8aMCbmnntEw" base_Package="_oTUsQME3EeqMCpqAriphVA"/>
-  <_150CHESS:ElementVariationPoint xmi:id="_G3YdQDyDEeuMlOOcIpnZYA" base_Comment="_CHJocDyDEeuMlOOcIpnZYA" featureExpr="CameraSides"/>
+  <StateBasedComponents:SimpleStochasticBehavior xmi:id="_7E-SIMtjEeqtVpQRM8-PpQ" base_Class="_bVQd4ME4EeqMCpqAriphVA" failureOccurrence="det(1.0e-6)&#xD;&#xA;" failureModesDistribution="alert.omission : 1.0&#xD;&#xA;"/>
+  <FailurePropagation:FLABehavior xmi:id="_6WGMkMuoEeqtVpQRM8-PpQ" base_Class="_WW8w0ME4EeqMCpqAriphVA" fptc="lensSensor.valueCoarse->video.valueCoarse;&#xA;"/>
+  <StateBasedComponents:SimpleStochasticBehavior xmi:id="_HgJMAMupEeqtVpQRM8-PpQ" base_Class="_WW8w0ME4EeqMCpqAriphVA" failureOccurrence="det(1.0e-8)&#xD;&#xA;" failureModesDistribution="valueCoarse : 1.0"/>
+  <FailurePropagation:FailurePropagationAnalysis xmi:id="_ERwH8MuqEeqtVpQRM8-PpQ" base_StructuredClassifier="_CmSrsMuqEeqtVpQRM8-PpQ" base_NamedElement="_CmSrsMuqEeqtVpQRM8-PpQ" platform="_EDmysMu0Eeqkwq4Zl0MMdw"/>
+  <FailurePropagation:FPTCSpecification xmi:id="_bnPuEMuyEeqkwq4Zl0MMdw" base_Comment="_ZJOzgMuyEeqkwq4Zl0MMdw" partWithPort="_DRGtEMFTEeqMCpqAriphVA">
+    <failure>valueCoarse</failure>
+  </FailurePropagation:FPTCSpecification>
+  <FailurePropagation:FPTCSpecification xmi:id="_hLsOEMuyEeqkwq4Zl0MMdw" base_Comment="_fF-ewMuyEeqkwq4Zl0MMdw" partWithPort="_szURYMFSEeqMCpqAriphVA">
+    <failure>valueCoarse</failure>
+  </FailurePropagation:FPTCSpecification>
+  <FailurePropagation:FPTCSpecification xmi:id="_oTIK0MuyEeqkwq4Zl0MMdw" base_Comment="_oR74AMuyEeqkwq4Zl0MMdw" partWithPort="_JY5LEMthEeqtVpQRM8-PpQ">
+    <failure>noFailure</failure>
+  </FailurePropagation:FPTCSpecification>
+  <FailurePropagation:FPTCSpecification xmi:id="_oVW_cMuyEeqkwq4Zl0MMdw" base_Comment="_oTIK0cuyEeqkwq4Zl0MMdw" partWithPort="_szURYMFSEeqMCpqAriphVA">
+    <failure>noFailure</failure>
+  </FailurePropagation:FPTCSpecification>
+  <FailurePropagation:FPTCSpecification xmi:id="_oVqhcMuyEeqkwq4Zl0MMdw" base_Comment="_oVgwcMuyEeqkwq4Zl0MMdw" partWithPort="_trwf0MFTEeqMCpqAriphVA">
+    <failure>noFailure</failure>
+  </FailurePropagation:FPTCSpecification>
+  <FailurePropagation:FPTCSpecification xmi:id="_oVqhcsuyEeqkwq4Zl0MMdw" base_Comment="_oVqhccuyEeqkwq4Zl0MMdw" partWithPort="_trwf0MFTEeqMCpqAriphVA">
+    <failure>noFailure</failure>
+  </FailurePropagation:FPTCSpecification>
+  <FailurePropagation:FPTCSpecification xmi:id="_oV9cYMuyEeqkwq4Zl0MMdw" base_Comment="_oVzrYMuyEeqkwq4Zl0MMdw" partWithPort="_DRGtEMFTEeqMCpqAriphVA">
+    <failure>noFailure</failure>
+  </FailurePropagation:FPTCSpecification>
+  <Core:CHGaResourcePlatform xmi:id="_sjglcMuzEeqkwq4Zl0MMdw" base_Classifier="_-7ZsYME3EeqMCpqAriphVA"/>
+  <Core:CHGaResourcePlatform xmi:id="_w85nkMuzEeqkwq4Zl0MMdw" base_Package="_w8wdoMuzEeqkwq4Zl0MMdw"/>
+  <Core:CHGaResourcePlatform xmi:id="_EDmysMu0Eeqkwq4Zl0MMdw" resources="_EDmyssu0Eeqkwq4Zl0MMdw _ED6UsMu0Eeqkwq4Zl0MMdw _EEDeo8u0Eeqkwq4Zl0MMdw _EEXApcu0Eeqkwq4Zl0MMdw _EEgKlcu0Eeqkwq4Zl0MMdw _EEp7kMu0Eeqkwq4Zl0MMdw" base_InstanceSpecification="_EDdowcu0Eeqkwq4Zl0MMdw"/>
+  <GRM:Resource xmi:id="_EDmyssu0Eeqkwq4Zl0MMdw" base_InstanceSpecification="_EDmyscu0Eeqkwq4Zl0MMdw"/>
+  <GRM:Resource xmi:id="_ED6UsMu0Eeqkwq4Zl0MMdw" base_InstanceSpecification="_EDwjtMu0Eeqkwq4Zl0MMdw"/>
+  <GRM:Resource xmi:id="_EEDeo8u0Eeqkwq4Zl0MMdw" base_InstanceSpecification="_EEDeosu0Eeqkwq4Zl0MMdw"/>
+  <GRM:Resource xmi:id="_EEXApcu0Eeqkwq4Zl0MMdw" base_InstanceSpecification="_EEXApMu0Eeqkwq4Zl0MMdw"/>
+  <GRM:Resource xmi:id="_EEgKlcu0Eeqkwq4Zl0MMdw" base_InstanceSpecification="_EEgKlMu0Eeqkwq4Zl0MMdw"/>
+  <GRM:Resource xmi:id="_EEp7kMu0Eeqkwq4Zl0MMdw" base_InstanceSpecification="_EEgKmsu0Eeqkwq4Zl0MMdw"/>
+  <StateBasedAnalysis:StateBasedAnalysis xmi:id="_SHJl8Mu0Eeqkwq4Zl0MMdw" base_StructuredClassifier="_P9rYAMu0Eeqkwq4Zl0MMdw" base_NamedElement="_P9rYAMu0Eeqkwq4Zl0MMdw" platform="_w85nkMuzEeqkwq4Zl0MMdw" measure="Reliability{ instantOfTime = 8650 }"/>
 </xmi:XMI>

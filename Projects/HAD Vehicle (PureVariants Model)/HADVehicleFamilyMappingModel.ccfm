@@ -48,9 +48,9 @@
           <cm:target cm:id="igVPbn8PiR0GQuhSboQpzpAHvoza">./imcgYLLMhIHNzVTzZ</cm:target>
           <cm:target cm:id="i-hvs_w815zmI8UzXvJxBMlbeU6a">./ix8-tQncfKr0gatCd</cm:target>
           <cm:target cm:id="iv-6Uj7gtCwpHMPFowO39WWfPktb">./ir7HYzowsOldOdG2v</cm:target>
-          <cm:target cm:id="ikdu7WvfTEhmgaWOa6iCbcywq8ef">./iKcZBhbtx5epXV4hc</cm:target>
-          <cm:target cm:id="iLECAbjglGLDOkzmiWIgfR30xSFh">./iZV9cSeYn6ycREnPQ</cm:target>
-          <cm:target cm:id="ivNxB0RslEdQR4rgfVkUC7VhXGZc">./iAmPC47S-ILg4QISn</cm:target>
+          <cm:target cm:id="ihtydKl3qfP8g6dDe8em7YnzyK_k">./iRb3iSCy0P2Yv3SYv</cm:target>
+          <cm:target cm:id="i8v57QEGhvPEw7DcWeanUF9cgCho">./iM1ePCeiLvQ7GX0ke</cm:target>
+          <cm:target cm:id="ibQ7LVvuSlZw6Fsy7crAgn_ZqDKl">./ivU5LUtA8hFDJco7J</cm:target>
         </cm:relation>
         <cm:relation cm:id="io1sbDrPV5q7BW2aaPZPS7DZx3Nl" cm:type="ps:mandatory">
           <cm:target cm:id="i_fz2JJmHF9TXyeN1RxlMrlMD3Jf">./iV8vkxDjEcWDM8rRJ6Eqyej4ggYo</cm:target>
@@ -67,7 +67,7 @@
           <cm:constant cm:id="ir3V88zIb_75VykRj" cm:type="ps:string">Lucas</cm:constant>
         </cm:property>
         <cm:property cm:id="ivPb1--FwVykGQsDC" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
-          <cm:constant cm:id="iZw8jSrMpFEsOJzwz" cm:type="ps:datetime">2020-12-10T17:57:00.758Z</cm:constant>
+          <cm:constant cm:id="iZw8jSrMpFEsOJzwz" cm:type="ps:datetime">2020-12-15T23:14:51.156Z</cm:constant>
         </cm:property>
       </cm:properties>
     </cm:element>
@@ -88,7 +88,7 @@
           <cm:constant cm:id="irw1Cc21NZbjG2VNX" cm:type="ps:string">Lucas</cm:constant>
         </cm:property>
         <cm:property cm:id="iCNGskPdiJElMzNmR" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
-          <cm:constant cm:id="i4IGNz7onGA80jqAQ" cm:type="ps:datetime">2020-10-23T14:27:18.327Z</cm:constant>
+          <cm:constant cm:id="i4IGNz7onGA80jqAQ" cm:type="ps:datetime">2020-12-16T13:28:23.727Z</cm:constant>
         </cm:property>
         <cm:property cm:id="iPojAUjpSDcgvr-FVO964XD-RZRp" cm:type="ps:string" cm:fixed="true" cm:container="ps:list" cm:name="map:elements">
           <cm:constant cm:id="ieLj-2gRlcYAGuZ_Yxn46Un-IUbc" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_km-g4ME4EeqMCpqAriphVA</cm:constant>
@@ -97,7 +97,6 @@
           <cm:constant cm:id="iVEdZG6wvRTc7J4LoMgpmuj8Iqxl" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_9i9XIMFVEeqMCpqAriphVA</cm:constant>
           <cm:constant cm:id="iwamdZKQM2Yq71Sr2UhjwbZHhDzd" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_PO9pYMFXEeqMCpqAriphVA</cm:constant>
           <cm:constant cm:id="i0yUrlt62wW1buGtSuXXm32Wysqe" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_QYuGwMFXEeqMCpqAriphVA</cm:constant>
-          <cm:constant cm:id="i6kF97VLA0JLzg22NmzJMzNiWqib" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_9i0NMMFVEeqMCpqAriphVA</cm:constant>
         </cm:property>
       </cm:properties>
       <cm:vname>
@@ -145,15 +144,14 @@
           <cm:constant cm:id="ilmmVTTT6JBVVjkfa" cm:type="ps:string">Lucas</cm:constant>
         </cm:property>
         <cm:property cm:id="ioOoAyPrNvIRbe2As" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
-          <cm:constant cm:id="iwsbcGXyM2Y0iEVVc" cm:type="ps:datetime">2020-10-23T14:29:25.651Z</cm:constant>
+          <cm:constant cm:id="iwsbcGXyM2Y0iEVVc" cm:type="ps:datetime">2020-12-16T13:07:05.007Z</cm:constant>
         </cm:property>
         <cm:property cm:id="i_yeyhskUQfkMH6ZQr4cbK1VaqHm" cm:type="ps:string" cm:fixed="true" cm:container="ps:list" cm:name="map:elements">
           <cm:constant cm:id="izSsmeB-znZH4-cRPJIXkkzs6YCc" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_Qqu04ME4EeqMCpqAriphVA</cm:constant>
-          <cm:constant cm:id="ihHv47eVM8T7JjmORL0Zvs3CWAfn" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_s4MwMME4EeqMCpqAriphVA</cm:constant>
           <cm:constant cm:id="itZJrTNr_RxiORr7b5p-dmJ3LrRk" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_nReYQME4EeqMCpqAriphVA</cm:constant>
           <cm:constant cm:id="iL64Q_Rq2XE-g3OrLZXdNILbs93m" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_S0u2MMFXEeqMCpqAriphVA</cm:constant>
           <cm:constant cm:id="iVYvgR4NcNjzeGmbZCrzvbx4tOun" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_RwCfAMFXEeqMCpqAriphVA</cm:constant>
-          <cm:constant cm:id="i7eMoQ8Ta2RqRHFTKC8g8jrCJrlk" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_ZrrVUMFWEeqMCpqAriphVA</cm:constant>
+          <cm:constant cm:id="ihHv47eVM8T7JjmORL0Zvs3CWAfn" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_s4MwMME4EeqMCpqAriphVA</cm:constant>
           <cm:constant cm:id="ikiG4IDHw2AdiYwxD3kVh3biZo6c" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_Zr0fQMFWEeqMCpqAriphVA</cm:constant>
         </cm:property>
       </cm:properties>
@@ -225,103 +223,159 @@
         <cm:mimedesc cm:id="inmjy78z_id9_E6rD" cm:mimetype="text/plain" cm:encoding="utf-8">CameraSides</cm:mimedesc>
       </cm:vname>
     </cm:element>
-    <cm:element cm:id="iKcZBhbtx5epXV4hc" cm:type="map:calculation" cm:class="ps:component" cm:default="on">
-      <cm:relations cm:id="iKLjwijc5TGr72HfcVRhDdo1_RYa" cm:class="ps:parents">
-        <cm:relation cm:id="iMTP0_PFNGz_xko5e0UMQzvWWSym" cm:type="ps:parent">
-          <cm:target cm:id="iqtxe72bwGQvYpn0qKYOL-XX3Wfa">./iQhkdj0LFGLLx3xD2</cm:target>
+    <cm:element cm:id="iRb3iSCy0P2Yv3SYv" cm:type="map:calculation" cm:class="ps:component" cm:default="on">
+      <cm:relations cm:id="iLROJ_fMJPb4qtEAFAEH6k0GBhff" cm:class="ps:parents">
+        <cm:relation cm:id="i-bMVbJNZZZgSePqAFHWiPzzEofi" cm:type="ps:parent">
+          <cm:target cm:id="iBbzXBkVe9vsvuVuWET9LAYu9eKb">./iQhkdj0LFGLLx3xD2</cm:target>
         </cm:relation>
       </cm:relations>
       <cm:properties>
-        <cm:property cm:id="ij6flDyyX-r7KGZoK" cm:type="ps:string" cm:fixed="true" cm:name="expression">
-          <cm:calculate cm:id="iE7rLN2KyTIjiEP-u" cm:type="ps:string">
-            <cm:script cm:id="icuxKkB6B6lIp2qje" cm:language="ps:pvscl" cm:type="ps:string">CompManufacturer-&gt;failureOccurrence</cm:script>
+        <cm:property cm:id="iofFjgENdwh6Hf2QH" cm:type="ps:string" cm:fixed="true" cm:name="expression">
+          <cm:calculate cm:id="iYLGPzODsv7zhU3OX" cm:type="ps:string">
+            <cm:script cm:id="if2SGgcathjWHwC-S" cm:language="ps:pvscl" cm:type="ps:string">IF CameraManufacturer1 THEN &apos;det(1.0E-6)&apos; ELSE &apos;det(1.0E-8)&apos; ENDIF</cm:script>
           </cm:calculate>
         </cm:property>
-        <cm:property cm:id="iwxi7VrYmQWN5yC6-" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
-          <cm:constant cm:id="iVL7mUKgqr0Eon2g2" cm:type="ps:string">Lucas</cm:constant>
+        <cm:property cm:id="iYVoXR1NXn8BuyxIN" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="i59EygHGT9E0awEX8" cm:type="ps:string">Lucas</cm:constant>
         </cm:property>
-        <cm:property cm:id="i7r5TALKaZCfykhXm" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
-          <cm:constant cm:id="iKuaNANgr_cLqDCHD" cm:type="ps:datetime">2020-10-23T19:50:01.304Z</cm:constant>
+        <cm:property cm:id="i5ulBH4ugtk5b5Otr" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="i1xtsDEl2G5yQCiTc" cm:type="ps:datetime">2020-12-15T19:18:21.253Z</cm:constant>
         </cm:property>
-        <cm:property cm:id="izB19Pw19qTzcqJC-" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
-          <cm:constant cm:id="iOzFuh8NeDvatcgMt" cm:type="ps:string">Lucas</cm:constant>
+        <cm:property cm:id="iPUd2lB9J8F2KrugN" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iUvV_zT_kqPBnjtJI" cm:type="ps:string">Lucas</cm:constant>
         </cm:property>
-        <cm:property cm:id="iTxPdV6RUS_K4W_P8" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
-          <cm:constant cm:id="i9VkgzEHUVgv3uPcW" cm:type="ps:datetime">2020-10-23T19:50:01.404Z</cm:constant>
+        <cm:property cm:id="iJpie6aVJYaHolF25" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="i0iSNRyeKOaFL6iLB" cm:type="ps:datetime">2020-12-15T23:10:50.256Z</cm:constant>
         </cm:property>
-        <cm:property cm:id="iCGLD28xoslHG485MRTmECzL48uk" cm:type="ps:string" cm:fixed="true" cm:container="ps:list" cm:name="map:elements">
-          <cm:constant cm:id="iZ4X2vfo6--rQjS9S1MGvpSwhlae" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_7E-SIMtjEeqtVpQRM8-PpQ
+        <cm:property cm:id="iOTTPgoxtRY6pVioIUualx1qb6hb" cm:type="ps:string" cm:fixed="true" cm:container="ps:list" cm:name="map:elements">
+          <cm:constant cm:id="iPFCnfHRKvjYxCa0xT92Yw-J4Jya" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_HgJMAMupEeqtVpQRM8-PpQ
 http://CHESS#//StateBasedComponents/SimpleStochasticBehavior/failureOccurrence</cm:constant>
         </cm:property>
       </cm:properties>
       <cm:vname>
-        <cm:mimedesc cm:id="ia-rfJiPLmgS3gcCQ" cm:mimetype="text/plain" cm:encoding="utf-8">CompManufacturer-&gt;failureOccurrence</cm:mimedesc>
+        <cm:mimedesc cm:id="iXV9ubL2dYCvuAwm-" cm:mimetype="text/plain" cm:encoding="utf-8">IF CameraManufacturer1 THEN &apos;det(1.0E-6)&apos; ELSE &apos;det(1.0E-8)&apos; ENDIF</cm:mimedesc>
       </cm:vname>
     </cm:element>
-    <cm:element cm:id="iZV9cSeYn6ycREnPQ" cm:type="map:calculation" cm:class="ps:component" cm:default="on">
-      <cm:relations cm:id="ihMySSOHMld_1aLxSoM_SvAasdwj" cm:class="ps:parents">
-        <cm:relation cm:id="iyT0Jc2FQluUGGrqDp_5f4D8nqve" cm:type="ps:parent">
-          <cm:target cm:id="iEVHkwakYr-WUSmucwGuMSnNNRld">./iQhkdj0LFGLLx3xD2</cm:target>
+    <cm:element cm:id="iM1ePCeiLvQ7GX0ke" cm:type="map:calculation" cm:class="ps:component" cm:default="on">
+      <cm:relations cm:id="iISClEKg0cO0fJBJvuZKFGrsec1k" cm:class="ps:parents">
+        <cm:relation cm:id="ik2L8YnyZu8tR3_KdUo0dHN04cDe" cm:type="ps:parent">
+          <cm:target cm:id="i5LyLOtEjYvQVWoNxiJtV-2RIMUp">./iQhkdj0LFGLLx3xD2</cm:target>
         </cm:relation>
       </cm:relations>
       <cm:properties>
-        <cm:property cm:id="iJl60RxjgtZ1E7Ly4" cm:type="ps:string" cm:fixed="true" cm:name="expression">
-          <cm:calculate cm:id="i642IE2lE27pCL8d4" cm:type="ps:string">
-            <cm:script cm:id="iDl1GcCGTu8cfJh0n" cm:language="ps:pvscl" cm:type="ps:string">CameraManufacturer-&gt;failureOccurrence</cm:script>
+        <cm:property cm:id="iVnHIleNrcIVeH-Xv" cm:type="ps:string" cm:fixed="true" cm:name="expression">
+          <cm:calculate cm:id="ikIPV4lPbKmSDEWjy" cm:type="ps:string">
+            <cm:script cm:id="iJE8NfdSc0ohi7M7D" cm:language="ps:pvscl" cm:type="ps:string">IF CameraSides AND CameraFrontANDRear THEN
+	IF AutoSteering AND AutoAcceleration THEN
+		&apos;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse-&gt;torque.valueCoarse,angle.valueCoarse,alert.omission;&apos;
+	ELSE 
+		IF NOT(AutoSteering) AND AutoAcceleration THEN
+			&apos;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse-&gt;torque.valueCoarse,alert.omission;&apos;
+		ELSE 
+			IF AutoSteering AND NOT(AutoAcceleration) THEN
+				&apos;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse-&gt;angle.valueCoarse,alert.omission;&apos;
+			ELSE 
+				&apos;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse-&gt;alert.omission;&apos;
+			ENDIF
+		ENDIF
+	ENDIF
+ELSE
+	IF CameraSides AND NOT(CameraFrontANDRear) THEN
+		IF AutoSteering AND NOT(AutoAcceleration) THEN
+			&apos;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse-&gt;angle.valueCoarse,alert.omission;&apos;
+		ELSE
+			IF NOT(AutoSteering) AND NOT(AutoAcceleration) THEN
+				&apos;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse-&gt;alert.omission;&apos;
+			ELSE 
+				&apos;&apos; 
+			ENDIF
+		ENDIF
+	ELSE
+		&apos;&apos;
+	ENDIF
+ENDIF</cm:script>
           </cm:calculate>
         </cm:property>
-        <cm:property cm:id="i5a5_zXbdqWaCILzB" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
-          <cm:constant cm:id="iUJnTVYTci1asjjMs" cm:type="ps:string">Lucas</cm:constant>
+        <cm:property cm:id="iDMSb19wqBMSDGlCY" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iArTYNZEmzxN4PVIz" cm:type="ps:string">Lucas</cm:constant>
         </cm:property>
-        <cm:property cm:id="i3F5N5pwk_Y3XBLoe" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
-          <cm:constant cm:id="iiojIS8ZclgxD5BUj" cm:type="ps:datetime">2020-10-23T19:51:03.681Z</cm:constant>
+        <cm:property cm:id="i_7EdomPoYqHzvOFM" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iimkyTuFjQLx7OsMY" cm:type="ps:datetime">2020-12-15T23:13:12.961Z</cm:constant>
         </cm:property>
-        <cm:property cm:id="iLN9P9cOACxCcBDZP" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
-          <cm:constant cm:id="iBqoFqhwQbgigCx8d" cm:type="ps:string">Lucas</cm:constant>
+        <cm:property cm:id="iH4aEY0eWAriIGnIb" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iOX9zOBchIsjsx3NN" cm:type="ps:string">Lucas</cm:constant>
         </cm:property>
-        <cm:property cm:id="iO9WN6JM0yybvcIUV" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
-          <cm:constant cm:id="iLIdvw-HkQoIJ77qW" cm:type="ps:datetime">2020-10-23T19:51:03.733Z</cm:constant>
+        <cm:property cm:id="iki6644K0MazYLFtc" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iXhaTIIMGzKV_Nr6u" cm:type="ps:datetime">2020-12-15T23:13:22.025Z</cm:constant>
         </cm:property>
-        <cm:property cm:id="i4P5MSdPmApTtpX9b62UFup3gAsk" cm:type="ps:string" cm:fixed="true" cm:container="ps:list" cm:name="map:elements">
-          <cm:constant cm:id="iJ83l1NqGkNoFPa48gbqmBI4Rnoi" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_HgJMAMupEeqtVpQRM8-PpQ
-http://CHESS#//StateBasedComponents/SimpleStochasticBehavior/failureOccurrence</cm:constant>
-        </cm:property>
-      </cm:properties>
-      <cm:vname>
-        <cm:mimedesc cm:id="inIiMV1tbP3v0KJT6" cm:mimetype="text/plain" cm:encoding="utf-8">CameraManufacturer-&gt;failureOccurrence</cm:mimedesc>
-      </cm:vname>
-    </cm:element>
-    <cm:element cm:id="iAmPC47S-ILg4QISn" cm:type="map:calculation" cm:class="ps:component" cm:default="on">
-      <cm:relations cm:id="i2D_1RWyxupOon3R2iP5WezMBByh" cm:class="ps:parents">
-        <cm:relation cm:id="ieFhDmCJryybuIox95yub4m4ztjc" cm:type="ps:parent">
-          <cm:target cm:id="iqOBsP6C5XiZnN6zLGadk7Qi4uFk">./iQhkdj0LFGLLx3xD2</cm:target>
-        </cm:relation>
-      </cm:relations>
-      <cm:properties>
-        <cm:property cm:id="ioSrxy0whzX65UTaE" cm:type="ps:string" cm:fixed="true" cm:name="expression">
-          <cm:calculate cm:id="ixCCDSw05Y4mvmxVE" cm:type="ps:string">
-            <cm:script cm:id="icCIwN56IxvILlWzA" cm:language="ps:pvscl" cm:type="ps:string">VehicleComputer-&gt;fptc</cm:script>
-          </cm:calculate>
-        </cm:property>
-        <cm:property cm:id="i9InlbPZN35rn2P9X" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
-          <cm:constant cm:id="iscjQiKACyVjaHckB" cm:type="ps:string">Lucas</cm:constant>
-        </cm:property>
-        <cm:property cm:id="iXytQZgWcV0LRyLSo" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
-          <cm:constant cm:id="i9QaNa55HUvkE4kvB" cm:type="ps:datetime">2020-10-23T19:51:53.870Z</cm:constant>
-        </cm:property>
-        <cm:property cm:id="i71wnCEBmdiiU220j" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
-          <cm:constant cm:id="iBcFIfQvSrcUV-7QH" cm:type="ps:string">Lucas</cm:constant>
-        </cm:property>
-        <cm:property cm:id="ieeOkj7UN7JUfPHQb" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
-          <cm:constant cm:id="iYiNsXCVDd4XBij7T" cm:type="ps:datetime">2020-10-23T19:51:53.918Z</cm:constant>
-        </cm:property>
-        <cm:property cm:id="ihDo5E6N8slXp-NdAQOnXqzbChvj" cm:type="ps:string" cm:fixed="true" cm:container="ps:list" cm:name="map:elements">
-          <cm:constant cm:id="iYdh4sQz3YK85dfKQJVoY_4l3b2k" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_jFXfcMqUEeqtVpQRM8-PpQ
+        <cm:property cm:id="i6cYTWU2Wk4W2jv24PcTxcbx3QDh" cm:type="ps:string" cm:fixed="true" cm:container="ps:list" cm:name="map:elements">
+          <cm:constant cm:id="irKODafzqN6816B1Nq28mMSL8mri" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_jFXfcMqUEeqtVpQRM8-PpQ
 http://CHESS#//FailurePropagation/FLABehavior/fptc</cm:constant>
         </cm:property>
       </cm:properties>
       <cm:vname>
-        <cm:mimedesc cm:id="itQwX6TdSOtMu6Std" cm:mimetype="text/plain" cm:encoding="utf-8">VehicleComputer-&gt;fptc</cm:mimedesc>
+        <cm:mimedesc cm:id="ilOsyYuIRJkxD0CqE" cm:mimetype="text/plain" cm:encoding="utf-8">IF CameraSides AND CameraFrontANDRear THEN
+	IF AutoSteering AND AutoAcceleration THEN
+		&apos;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse-&gt;torque.valueCoarse,angle.valueCoarse,alert.omission;&apos;
+	ELSE 
+		IF NOT(AutoSteering) AND AutoAcceleration THEN
+			&apos;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse-&gt;torque.valueCoarse,alert.omission;&apos;
+		ELSE 
+			IF AutoSteering AND NOT(AutoAcceleration) THEN
+				&apos;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse-&gt;angle.valueCoarse,alert.omission;&apos;
+			ELSE 
+				&apos;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse-&gt;alert.omission;&apos;
+			ENDIF
+		ENDIF
+	ENDIF
+ELSE
+	IF CameraSides AND NOT(CameraFrontANDRear) THEN
+		IF AutoSteering AND NOT(AutoAcceleration) THEN
+			&apos;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse-&gt;angle.valueCoarse,alert.omission;&apos;
+		ELSE
+			IF NOT(AutoSteering) AND NOT(AutoAcceleration) THEN
+				&apos;cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse-&gt;alert.omission;&apos;
+			ELSE 
+				&apos;&apos; 
+			ENDIF
+		ENDIF
+	ELSE
+		&apos;&apos;
+	ENDIF
+ENDIF</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="ivU5LUtA8hFDJco7J" cm:type="map:calculation" cm:class="ps:component" cm:default="on">
+      <cm:relations cm:id="i3nQqJEKZn50QGrunQ02qyZUQXHd" cm:class="ps:parents">
+        <cm:relation cm:id="i1-IyMM3AOogtZ0HfKjBUloCye8m" cm:type="ps:parent">
+          <cm:target cm:id="iQG23yfl4hz-noVIWP2l7x3_5xVb">./iQhkdj0LFGLLx3xD2</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="icfe3AnF6oY9Tbojn" cm:type="ps:string" cm:fixed="true" cm:name="expression">
+          <cm:calculate cm:id="iHugAkla4rufH4dvq" cm:type="ps:string">
+            <cm:script cm:id="iuuvr67iqTC_Uxxb9" cm:language="ps:pvscl" cm:type="ps:string">IF CompManufacturer1 THEN &apos;det(1.0E-6)&apos; ELSE &apos;det(1.0E-8)&apos; ENDIF</cm:script>
+          </cm:calculate>
+        </cm:property>
+        <cm:property cm:id="idWqWlDpfnwcMcYot" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="i57W-9KW-aAyYfJnF" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iRcgyraaqFc5evTGS" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="it0F5bfZC9oAd9n7S" cm:type="ps:datetime">2020-12-15T23:14:40.065Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iwozkq5eV2fWJt440" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="i54QyWY78sKIJod_V" cm:type="ps:string">Lucas</cm:constant>
+        </cm:property>
+        <cm:property cm:id="im2U4vTVKUMimBVCM" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="itvfC2CFiSqqxpWUW" cm:type="ps:datetime">2020-12-16T12:23:32.642Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i09r79J3BrkyYXkgIrBxYpzdhdGm" cm:type="ps:string" cm:fixed="true" cm:container="ps:list" cm:name="map:elements">
+          <cm:constant cm:id="iJXEFCAYX4kn23HlUikyQ-pVgBCd" cm:type="ps:string">platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml#_7E-SIMtjEeqtVpQRM8-PpQ
+http://CHESS#//StateBasedComponents/SimpleStochasticBehavior/failureOccurrence</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="iG-j5C2HbhWYMiZfX" cm:mimetype="text/plain" cm:encoding="utf-8">IF CompManufacturer1 THEN &apos;det(1.0E-6)&apos; ELSE &apos;det(1.0E-8)&apos; ENDIF</cm:mimedesc>
       </cm:vname>
     </cm:element>
   </cm:elements>

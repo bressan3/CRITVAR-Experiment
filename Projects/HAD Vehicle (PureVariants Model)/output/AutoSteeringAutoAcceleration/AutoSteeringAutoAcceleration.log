@@ -1,0 +1,59 @@
+*** Transformation "Default" of "AutoSteeringAutoAcceleration" started at Dec 16 10:51:44
+
+Transformation Module States:
+-----------------------------
+
+Initialize Module "EMF Feature Mapping Module" [EMF Feature Mapping Module]
+	Status : OK
+Run Module "EMF Feature Mapping Module" [EMF Feature Mapping Module]
+	Status : OK
+Cleanup Module "EMF Feature Mapping Module" [EMF Feature Mapping Module]
+	Status : OK
+
+*** Transformation "Default" of "AutoSteeringAutoAcceleration" finished at Dec 16 10:51:44
+
+Transformation Module Logs:
+---------------------------
+
+*** Module "EMF Feature Mapping Module" [EMF Feature Mapping Module] ***
+Dec 16, 2020 10:51:44 AM: Starting transformation on resource set:
+  platform:/resource/HAD%20Vehicle%20(PureVariants)/HAD%20Vehicle%20SPL.uml
+Enabled Propagation Rules:
+  None
+Dec 16, 2020 10:51:44 AM: Found no elements to remove in mapping model
+Dec 16, 2020 10:51:44 AM: Processing calculations:
+  Setting attribute 'failureOccurrence : NFP_Real' of element 'Simple Stochastic Behavior # BeginVP CameraManufacturer1:
+	det(1.0e-6)
+# EndVP
+# BeginVP CameraManufacturer2:
+	det(1.0e-8)
+# EndVP' to value 'det(1.0E-6)'
+  Setting attribute 'failureOccurrence : NFP_Real' of element 'Simple Stochastic Behavior ' to value 'det(1.0E-6)'
+  Setting attribute 'fptc : NFP_String' of element 'FLA Behavior # BeginVP CameraSides AND CameraFrontANDRear:
+	# BeginVP AutoSteering AND AutoAcceleration:
+		cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse->torque.valueCoarse,angle.valueCoarse,alert.omission;
+	# EndVP
+	# BeginVP NOT AutoSteering AND AutoAcceleration:
+		cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse->torque.valueCoarse,alert.omission;
+	# EndVP
+	# BeginVP AutoSteering AND NOT AutoAcceleration:
+		cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse->angle.valueCoarse,alert.omission;
+	# EndVP
+	# BeginVP NOT AutoSteering AND NOT AutoAcceleration:
+		cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse->alert.omission;
+	# EndVP
+# EndVP
+
+# BeginVP CameraSides AND NOT CameraFrontANDRear:
+	# BeginVP AutoSteering AND NOT AutoAcceleration:
+		cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse->angle.valueCoarse,alert.omission;
+	# EndVP
+	# BeginVP NOT AutoSteering AND NOT AutoAcceleration:
+		cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse->alert.omission;
+	# EndVP
+# EndVP' to value 'cameraLeftIn.valueCoarse,cameraRightIn.valueCoarse,cameraForwardIn.valueCoarse,cameraBackIn.valueCoarse->torque.valueCoarse,angle.valueCoarse,alert.omission;'
+Dec 16, 2020 10:51:44 AM: Saving 'file:/C:/Users/Lucas/Documents/Mario2/HAD%20Vehicle%20(PureVariants%20Model)/output/AutoSteeringAutoAcceleration/HAD%20Vehicle%20SPL.uml
+  Running postprocessor 'com.ps.consul.eclipse.ui.mapping.ecore.transform.DiagramPostProcessor'
+
+
+
